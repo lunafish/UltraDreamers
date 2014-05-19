@@ -43,6 +43,7 @@ public class BullectControl : BulletBase {
 		homing_player,
 		Enemy_1,
 		Enemy_2,
+		Enemy_3,
 		PowerUp_Bear
 	}
 	
@@ -52,6 +53,8 @@ public class BullectControl : BulletBase {
 	[SerializeField] bool _RandomAngle = false;
 	[SerializeField] bool _CrushRandomAngle = false;
 	[SerializeField] bool _LookAtOption = false;
+	[SerializeField] bool _notResetAngle = false;
+	[SerializeField] List<GameObject> _enabledObjectList = new List<GameObject>();
 	//[SerializeField] bool _LookAtCameraOption = false;
 
 	[SerializeField] tk2dSpriteAnimator _crushEffect;
@@ -121,12 +124,14 @@ public class BullectControl : BulletBase {
 		_destroyOption._collistionControl.setDrowStage(/*_childBullet? null : */_selfTF, this, _obPoint, _stopTimeLine, _destroyOption._NonDestroyChack);
 		if(createParent && _baseTFValue != null) {
 			_selfTF.parent = _baseTFValue; 
-			Vector3 loatEG = Vector3.zero;
-			loatEG.z = _baseTFValue.localEulerAngles.y*-1;
-			loatEG.x = 54;
-			loatEG.y = 0;
-			
-			_selfTF.localEulerAngles = loatEG;
+			if(!_notResetAngle){
+				Vector3 loatEG = Vector3.zero;
+				loatEG.z = _baseTFValue.localEulerAngles.y*-1;
+				loatEG.x = 54;
+				loatEG.y = 0;
+				
+				_selfTF.localEulerAngles = loatEG;
+			}
 		}
 		//if(_otherTfChack == 1 && _LookAtCameraOption) settingLookAtTF();
 	}
@@ -169,7 +174,8 @@ public class BullectControl : BulletBase {
 			_selfTF.eulerAngles = endPosition;
 		}
 
-		_selectFlight.resetValue();
+		_selectFlight.resetValue(_nonresetValue);
+
 		_drowPoint = Vector3.zero;
 		_chackDrowTime = _selectFlight.drowTIme;
 		_smoothOption = _selectFlight.smoothOption;
@@ -248,6 +254,7 @@ public class BullectControl : BulletBase {
 	private Vector3 _endPosition = Vector3.zero;
 	private Vector3 _chaseEndPosition = Vector3.zero;
 	private List<int> _randomLinerControl = new List<int>();
+	private bool _nonresetValue = false;
 	void controlMoveOption(){
 		_chaseEndPosition = _endPosition = Vector3.zero;
 		_bullectModeControl = 0;
@@ -288,16 +295,23 @@ public class BullectControl : BulletBase {
 		case FlightOption.FlightTypeList.liner:
 			if(_baseTFValue == null) _baseTFValue = _selfTF;
 
-			if(!_selectFlight.randomLinerChack) _endPosition = getDirectionValue(_selectFlight.linerType);
-			else{
+			switch(_selectFlight.randomLinerChack){
+			case 0:
+				_endPosition = getDirectionValue(_selectFlight.linerType);
+				break;
+			case 1:
+				nextBlockObject();
+				return;
+			case 2:
 				if(_randomLinerControl.Count == 0){
 					for(int i = 0; i < 8; i++)
 						_randomLinerControl.Add(i);
 				}
-
+				
 				_currentCount--;
+				_nonresetValue = true;
 				FlightOption.LinerTypeList linerType = FlightOption.LinerTypeList.forward;
-
+				
 				int chackIndex = Random.Range(0, _randomLinerControl.Count);
 				switch(_randomLinerControl[chackIndex]){
 				case 1:
@@ -322,9 +336,10 @@ public class BullectControl : BulletBase {
 					linerType = FlightOption.LinerTypeList.Right_forward;
 					break;
 				}
-
+				
 				_randomLinerControl.RemoveAt(chackIndex);
 				_endPosition = getDirectionValue(linerType);
+				break;
 			}
 
 			if(_LookAtOption && _otherTfChack == 1){
@@ -435,6 +450,10 @@ public class BullectControl : BulletBase {
 		int maxCount = _bulletCreateList.Count;
 		if(maxCount > 0) for(int i = 0; i < maxCount; i++) _bulletCreateList[i].resetBullet(resetChack, bladeDelete);
 		else if(!resetChack && bladeDelete) _destroyOption._collistionControl.createCoinValue(_selfTF.position);
+
+		maxCount = _enabledObjectList.Count;
+		for(int i = 0; i < maxCount; i++)
+			_enabledObjectList[i].SetActive(resetChack);
 	}
 
 	private float _currentTime = 0;

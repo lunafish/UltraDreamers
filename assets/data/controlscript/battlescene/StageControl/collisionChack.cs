@@ -213,11 +213,11 @@ public class collisionChack : MonoBehaviour {
 				_removeChack = true;
 				switch( _select1TF.chackCrushPlayerValue(_copyVector3)){
 				case 1: // crush player
-					_playerControlSC.playerCollisionChack();
+					_playerControlSC.playerCollisionChack(_select1TF.VPosition);
 					break;
 				case 2: // crush of player and bullect
 					_drowC -= 1;
-					_playerControlSC.playerCollisionChack();
+					_playerControlSC.playerCollisionChack(_select1TF.VPosition);
 					break;
 				default:
 					_removeChack = false;

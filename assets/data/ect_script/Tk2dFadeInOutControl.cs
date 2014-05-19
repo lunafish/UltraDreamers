@@ -24,8 +24,6 @@ public class Tk2dFadeInOutControl : MonoBehaviour {
 
 	private float _delayedTime = 0.0f;
 	private Color _oroginalColor = Color.white;
-
-	private bool InOutStart = false;
 	private int _inOutCount = 0;
 
     void Awake()
@@ -121,16 +119,14 @@ public class Tk2dFadeInOutControl : MonoBehaviour {
 		}
 
 		_delayedTime = _inOutCount = 0;
-		InOutStart = false;
         return startFadeIn_OR_Out(speed, sColor, eColor);
     }
 
 	public void startFadeInAndOut(float speed, fadeControlAni startFade, fadeControlAni endFade, float delayedTime = 0, int drowCount = 1){
-		InOutStart = true;
-
 		startFadeIn_OR_Out(startFade, endFade, speed/2);
-		_delayedTime = delayedTime + _drowFSpeed;
+		_delayedTime = delayedTime;
 		_inOutCount = drowCount;
+		_delayStart = false;
 	}
 	/*
 	public void stopFadeAni(bool endColor){
@@ -164,24 +160,28 @@ public class Tk2dFadeInOutControl : MonoBehaviour {
 	void overWriteColor(Color overColor){
 		_CImgTk2d.color = overColor;
 	}
-	
+
+	private bool _delayStart = false;
 	void Update () {
         if (_FadeInOutAni)
         {
+			if(_delayStart){
+				if((_startFTime += Time.deltaTime) >= _delayedTime){
+					_startFTime = 0;
+					_delayStart = false;
+				} else return;
+			}
+
             if ((_startFTime += Time.deltaTime) >= _drowFSpeed)
             {
 				overWriteColor(_endColor);
-                if(!InOutStart) {
-					this.enabled = _FadeInOutAni = false;	
-					if(_inOutCount > 0 || _inOutCount < 0){
-						_inOutCount--;
-						startFadeIn_OR_Out(_drowFSpeed);
-					}else _inOutCount = 0;
-				}
-                else if(_startFTime > _delayedTime){
+				this.enabled = _FadeInOutAni = false;	
+				if(_inOutCount > 0 || _inOutCount < 0){
+					_inOutCount--;
+					_startFTime = 0;
+					_delayStart = true;
 					startFadeIn_OR_Out(_drowFSpeed);
-					InOutStart = false;
-				}
+				}else _inOutCount = 0;
             }
             else addColorControl(_drowColor * Time.deltaTime);
         }

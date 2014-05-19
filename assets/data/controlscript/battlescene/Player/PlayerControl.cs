@@ -10,6 +10,7 @@ public class PlayerControl : MonoBehaviour {
 	[SerializeField] bullectOption _PowerUpItem;
 	[SerializeField] NumberControl _coinNumberCount;
 	[SerializeField] Player_Hp _hpControlOption;
+	[SerializeField] Tk2dFadeInOutControl _brokenGralss;
 	//[SerializeField] collisionChack _collisionChack;
 
 	private int _PowerControl = 0;
@@ -26,8 +27,9 @@ public class PlayerControl : MonoBehaviour {
 	private GameObject _bulletTransformObject;
 
 	private GameObject _barrierObject;
-	private GameObject _barrierOutLine;
 	private GameObject _barrierChild;
+	private Transform _barrierSmall;
+	private tk2dSpriteAnimator _barrierSmallAni;
 
 	private Bounds _copyBounds;
 	private Vector3 _bladePosition = Vector3.zero;
@@ -104,13 +106,11 @@ public class PlayerControl : MonoBehaviour {
 		_barrierObject = spriteTF.gameObject;
 		_barrierObject.SetActive(false);
 		_barrierChild = spriteTF.FindChild("Barrier").gameObject;
-
-		spriteTF = spriteTF.FindChild("OutLine");
-		_barrierOutLine = spriteTF.gameObject;
-		(spriteTF.GetComponent("ObjectRotateControl") as ObjectRotateControl).rotateToPosition(new Vector3(0,0, 360), 4);
-
 		_barrierChild.transform.localScale = Vector3.zero;
-		_barrierOutLine.transform.localScale = Vector3.zero;
+		//_barrierAni = _barrierChild.transform.GetComponent("tk2dSpriteAnimator") as tk2dSpriteAnimator;
+
+		_barrierSmall = spriteTF.FindChild("Barrier_small");
+		_barrierSmallAni = _barrierSmall.GetComponent("tk2dSpriteAnimator") as tk2dSpriteAnimator;
 
 		_wingNormalTF = _selfTF.FindChild("Wing");
 		_wing_Normal_Left = _wingNormalTF.FindChild("NL_LeftWing").GetComponent("Animator") as Animator;
@@ -136,6 +136,8 @@ public class PlayerControl : MonoBehaviour {
 		for(int i = 0; i < maxCount; i++){
 			_createBullet[i].resetBullet(enabledControl, false);
 		}
+
+		if(enabledControl && maxCount >= 2 )_createBullet[0].resetBullet(false, false);
 	}
 
 	IEnumerator nomalWingAppearChack(){
@@ -161,7 +163,7 @@ public class PlayerControl : MonoBehaviour {
 	}
 
 	private tk2dSpriteAnimator _dieBoombAni = null;
-	public void playerCollisionChack(){
+	public void playerCollisionChack(Vector3 drowPosition){
 		//if(_drowSwitchIndex != 0) return;
 
 		collisionChack._allstopBulletCreate = true;
@@ -179,11 +181,17 @@ public class PlayerControl : MonoBehaviour {
 		_drowSpriteAni.Stop();
 		_drowSpriteAni.Play("Character_1_underAttack");
 		_hpControlOption.minusHpValueChack();
+		_brokenGralss.startFadeInAndOut(0.5f, Tk2dFadeInOutControl.fadeControlAni.hide, Tk2dFadeInOutControl.fadeControlAni.view, 0.5f, 1);
 
 		if(_dieCount > 1){
 			_dieCount--;
 			_drowSwitchIndex = 6;
 			activeBarrierObject();
+
+			Vector3 copyScale = Vector3.one;
+			_barrierSmall.position = drowPosition;
+			if(_barrierSmall.localPosition.x > 0) copyScale.x *= -1;
+			_barrierSmall.localScale = copyScale;
 		}
 		else {
 			_wing_Normal_Left.SetTrigger("Wing_DisAppear");
@@ -193,6 +201,25 @@ public class PlayerControl : MonoBehaviour {
 			_dieBoombAni = _selfTF.FindChild("DieBoomb").FindChild("Center2").GetComponent("tk2dSpriteAnimator") as tk2dSpriteAnimator;
 			_drowSwitchIndex = 8;
 		}
+	}
+
+	private bool _actBarrierChack = false;
+	void activeBarrierObject(){
+		_actBarrierChack = true;
+		_barrierObject.SetActive(true);
+		
+		_barrierSmallAni.Play("barrierAni_small");
+		//_barrierAni.Play("barrierAni");
+		ObjectScaleControl.scaleToObject(_barrierChild, 0.1f, Vector3.one, endObject:gameObject, EndFunction:"endActiveBarrier", delayValue:0.1f);
+	}
+	
+	void removeBarrierObject(){
+		ObjectScaleControl.scaleToObject(_barrierChild, 0.1f, Vector3.zero, endObject:gameObject, EndFunction:"removeActBarrier");
+	}
+	
+	void endActiveBarrier(){
+		_actBarrierChack = false;
+		if(_drowSwitchIndex == 7) this.enabled = true;
 	}
 
 	public void PowerUpItemChack(){
@@ -263,7 +290,7 @@ public class PlayerControl : MonoBehaviour {
 
 		return false;
 	}
-	
+
 	private int _boundXChackIndex = 0;
 	private int _boundYChackIndex = 0;
 	bool chackColliderSword(Bounds destroyBound){
@@ -495,25 +522,6 @@ public class PlayerControl : MonoBehaviour {
 		_drowSwitchIndex = 0;
 		this.enabled = false;
 		collisionChack._allstopBulletCreate = false;
-	}
-
-	private bool _actBarrierChack = false;
-	void activeBarrierObject(){
-		_actBarrierChack = true;
-		_barrierObject.SetActive(true);
-
-		ObjectScaleControl.scaleToObject(_barrierOutLine, 0.1f, Vector3.one);
-		ObjectScaleControl.scaleToObject(_barrierChild, 0.1f, Vector3.one, endObject:gameObject, EndFunction:"endActiveBarrier", delayValue:0.1f);
-	}
-
-	void removeBarrierObject(){
-		ObjectScaleControl.scaleToObject(_barrierOutLine, 0.1f, Vector3.zero);
-		ObjectScaleControl.scaleToObject(_barrierChild, 0.1f, Vector3.zero, endObject:gameObject, EndFunction:"removeActBarrier");
-	}
-
-	void endActiveBarrier(){
-		_actBarrierChack = false;
-		if(_drowSwitchIndex == 7) this.enabled = true;
 	}
 
 	void removeActBarrier(){

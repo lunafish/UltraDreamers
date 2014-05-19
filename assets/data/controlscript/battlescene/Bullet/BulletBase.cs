@@ -110,13 +110,13 @@ public class FlightOption{
 	[SerializeField] RotateOption _rotateOption = null;
 
 	private int _currentLinerRandomCount = 0;
-	public void resetValue(){
+	public void resetValue(bool nonLinerReset = false){
 		_currentTime = 0;
 		_chaseRenewCount = _chaseOption._chaseRenewCount;
 		_chaseRenewTime = _chaseOption._chaseRenewTime;
 		if(_chaseRenewTime <= 0) _chaseRenewTime = 0.1f;
 
-		_currentLinerRandomCount = _linerOption._randomLinerCount;
+		if(!nonLinerReset) _currentLinerRandomCount = _linerOption._randomLinerCount;
 		//_loopCount = _loopOption._loopCount;
 		//if(_loopCount < 0) _loopCount = 0;
 	}
@@ -195,18 +195,25 @@ public class FlightOption{
 		}
 	}
 
-	public bool randomLinerChack{
+	public int randomLinerChack{
 		get {
 			switch(_flightType){
 			case FlightTypeList.liner:
-				if(_linerOption._randomLiner && _currentLinerRandomCount != 0){
-					_currentLinerRandomCount--;
-					return true;
+				if(_linerOption._randomLiner){
+					if(_currentLinerRandomCount != 0){
+						_currentLinerRandomCount--;
+						Debug.Log(_currentLinerRandomCount);
+						return 2;
+					}
+
+					Debug.Log("reset : "+_currentLinerRandomCount);
+					_currentLinerRandomCount = _linerOption._randomLinerCount;
+					return 1;
 				}
-				else return false;
+				break;
 			}
 			
-			return false;
+			return 0;
 		}
 	}
 	

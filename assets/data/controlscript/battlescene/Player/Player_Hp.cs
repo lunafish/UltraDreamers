@@ -25,7 +25,7 @@ public class Player_Hp : MonoBehaviour {
 			yield return new WaitForSeconds(0.2f);
 		}
 
-		_minusBase = maxCount/_maxDieCount;
+		_minusBase = (float)maxCount/(float)_maxDieCount;
 		_currentCount = maxCount;
 		_drowHPSpriteList[maxCount-1].startFadeInAndOut(0.3f, Tk2dFadeInOutControl.fadeControlAni.view, Tk2dFadeInOutControl.fadeControlAni.halfView, 0, -1);
 	}

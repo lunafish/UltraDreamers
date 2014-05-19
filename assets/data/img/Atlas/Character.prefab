@@ -62,7 +62,7 @@ MonoBehaviour:
   atlasWidth: 2048
   atlasHeight: 2048
   forceSquareAtlas: 0
-  atlasWastage: 35.6483917
+  atlasWastage: 31.5992584
   allowMultipleAtlases: 0
   removeDuplicates: 1
   textureParams:
@@ -476,11 +476,11 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: 
+  - name: Transform_barrier_3
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: 49f9e362bccee467c892902e5878d6d7, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -517,15 +517,15 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: 
+  - name: barrier_UnderAttack_2
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: 128d4268c8cab49f2a72e1b499672464, type: 3}
     materialId: 0
-    anchor: 4
-    anchorX: 0
-    anchorY: 0
+    anchor: 9
+    anchorX: 90
+    anchorY: 116
     overrideMesh: {fileID: 0}
     doubleSidedSprite: 0
     customSpriteGeometry: 0
@@ -3642,6 +3642,47 @@ MonoBehaviour:
     anchor: 4
     anchorX: 0
     anchorY: 0
+    overrideMesh: {fileID: 0}
+    doubleSidedSprite: 0
+    customSpriteGeometry: 0
+    geometryIslands: []
+    dice: 0
+    diceUnitX: 64
+    diceUnitY: 64
+    diceFilter: 0
+    pad: 0
+    extraPadding: 0
+    source: 0
+    fromSpriteSheet: 0
+    hasSpriteSheetId: 0
+    spriteSheetId: 0
+    spriteSheetX: 0
+    spriteSheetY: 0
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    regionId: 0
+    colliderType: 0
+    colliderData: []
+    boxColliderMin: {x: 0, y: 0}
+    boxColliderMax: {x: 0, y: 0}
+    polyColliderIslands: []
+    polyColliderCap: 1
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    colliderColor: 0
+    attachPoints: []
+  - name: barrier_UnderAttack_1
+    disableTrimming: 0
+    additive: 0
+    scale: {x: 1, y: 1, z: 1}
+    texture: {fileID: 2800000, guid: ccd20d69c68bd45ae9a9d5e0a26d75df, type: 3}
+    materialId: 0
+    anchor: 9
+    anchorX: 91
+    anchorY: 78
     overrideMesh: {fileID: 0}
     doubleSidedSprite: 0
     customSpriteGeometry: 0

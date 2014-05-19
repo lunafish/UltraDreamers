@@ -6,20 +6,15 @@ public class BulletCreate : MonoBehaviour {
 
 	[SerializeField] float _fistDelayDuration = 0.2f;
 	[SerializeField] bool _createParent = false;
-	//[SerializeField] bool _LoopOption = true;
-	//[SerializeField] int _loopCount = 0;
-	/*[SerializeField] */float _loopDelay = 0;
 	[SerializeField] PlayerControl _playerControl;
 	[SerializeField] bullectOption _bullectOption;
 	[SerializeField] int _powerUpOptionChack = -1;
-	
+	[SerializeField] float _delayLoopShotTime = 0;
+
 	private float _currentSpeed = 0;
 	protected Transform _selfTF = null;
 	private int _copyDrowCount = 0;
 	private bool _EnabledControl = true;
-
-	private int _CurrentLoopCount = 0;
-	private float _currentLoopDuration = 0;
 	private int _switchOption = 0;
 	//private bool _ChildChaseOption = false;
 
@@ -32,8 +27,6 @@ public class BulletCreate : MonoBehaviour {
 	public void resetBullet(bool enableV, bool bladeDelete){
 		resetOptionValue();
 
-		_CurrentLoopCount = 0;
-		//if(_LoopOption) _CurrentLoopCount = _loopCount;
 		if(!enableV && bladeDelete && _controlBulletList.Count > 0)
 			_playerControl.createCoinValue(_controlBulletList, Vector3.zero);
 
@@ -46,7 +39,6 @@ public class BulletCreate : MonoBehaviour {
 	void resetOptionValue(){
 
 		_switchOption = 0;
-		_currentLoopDuration = 0;
 		currentPowerOption = _powerUpOptionChack;
 		_copyDrowCount = _bullectOption.drowShotCount;
 		if(_fistDelayDuration <= 0) {
@@ -112,24 +104,20 @@ public class BulletCreate : MonoBehaviour {
 					_controlBulletList.Add (_copyBullet);
 					_bulletListCount = _controlBulletList.Count;
 				}
-				if(--_copyDrowCount == 0) _switchOption = 1;
+				if(--_copyDrowCount == 0){
+					resetBullet(false, false);
+					if(_delayLoopShotTime > 0){
+						_switchOption = 1;
+						_EnabledControl = this.enabled = true;
+					}
+				}
 			}
 			break;
 		case 1:
-			switch(_CurrentLoopCount){
-			case 0:
-				resetBullet(false, false);
-				break;
-			default:
-				_currentLoopDuration += Time.deltaTime;
-				if(_loopDelay <= _currentLoopDuration){
-					_currentLoopDuration -= _loopDelay;
-					_CurrentLoopCount--;
-					resetOptionValue();
-				}
-				break;
-			}
+			_currentSpeed += Time.deltaTime;
+			if(_delayLoopShotTime > _currentSpeed) return;
 
+			resetBullet(true, false);
 			break;
 		}
 		
