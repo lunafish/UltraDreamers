@@ -181,7 +181,7 @@ public class PlayerControl : MonoBehaviour {
 		_drowSpriteAni.Stop();
 		_drowSpriteAni.Play("Character_1_underAttack");
 		_hpControlOption.minusHpValueChack();
-		_brokenGralss.startFadeInAndOut(0.5f, Tk2dFadeInOutControl.fadeControlAni.hide, Tk2dFadeInOutControl.fadeControlAni.view, 0.5f, 1);
+		_brokenGralss.startFadeInAndOut(0.1f, 0.5f, Tk2dFadeInOutControl.fadeControlAni.hide, Tk2dFadeInOutControl.fadeControlAni.view, 0.5f, 1);
 
 		if(_dieCount > 1){
 			_dieCount--;

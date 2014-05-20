@@ -26,6 +26,9 @@ public class Tk2dFadeInOutControl : MonoBehaviour {
 	private Color _oroginalColor = Color.white;
 	private int _inOutCount = 0;
 
+	// lunafish for differant
+	private float _endspeed = 0.0f;
+
     void Awake()
     {
 		_CImgTk2d = GetComponent("tk2dSprite") as tk2dSprite;
@@ -127,7 +130,18 @@ public class Tk2dFadeInOutControl : MonoBehaviour {
 		_delayedTime = delayedTime;
 		_inOutCount = drowCount;
 		_delayStart = false;
+		_endspeed = speed;
 	}
+
+	// differant start speed and end speed
+	public void startFadeInAndOut(float startSpeed, float endSpeed, fadeControlAni startFade, fadeControlAni endFade, float delayedTime = 0, int drowCount = 1){
+		startFadeIn_OR_Out(startFade, endFade, startSpeed/2);
+		_delayedTime = delayedTime;
+		_inOutCount = drowCount;
+		_delayStart = false;
+		_endspeed = endSpeed;
+	}
+
 	/*
 	public void stopFadeAni(bool endColor){
 		if(nullChackControl()) return;
@@ -172,8 +186,10 @@ public class Tk2dFadeInOutControl : MonoBehaviour {
 				} else return;
 			}
 
-            if ((_startFTime += Time.deltaTime) >= _drowFSpeed)
+			if ((_startFTime += Time.deltaTime) >= _drowFSpeed)
             {
+				_drowFSpeed = _endspeed; // setting end speed
+
 				overWriteColor(_endColor);
 				this.enabled = _FadeInOutAni = false;	
 				if(_inOutCount > 0 || _inOutCount < 0){
