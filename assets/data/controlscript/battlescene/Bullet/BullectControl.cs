@@ -302,10 +302,17 @@ public class BullectControl : BulletBase {
 			case 1:
 				nextBlockObject();
 				return;
-			case 2:
+			case 2:// 주변을 렌덤으로 둥둥 떠다니는 옵션
+
 				if(_randomLinerControl.Count == 0){
-					for(int i = 0; i < 8; i++)
+					for(int i = 0; i < 8; i++){
 						_randomLinerControl.Add(i);
+					}
+
+					// forward 타입을 추가로 더 줘서 점점더 앞으로 전진하도록 수정
+					_randomLinerControl.Add(0);
+					_randomLinerControl.Add(0);
+					_randomLinerControl.Add(0);
 				}
 				
 				_currentCount--;
@@ -661,7 +668,7 @@ public class BullectControl : BulletBase {
 	public bool destroyBullectChack(bool bladeDelete){
 		return destroyBullectChack(_backDrowPoint, !destroyChack, bladeDelete);
 	}
-	
+
 	public int chackCrushPlayerValue(Vector3 _playerPS){
 		if(returnMagnitude(_playerPS) <= _destroyOption._destroySize){
 			return destroyBullectChack(false) ? 2 : 1;

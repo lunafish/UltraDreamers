@@ -47,6 +47,7 @@ public class PlayerControl : MonoBehaviour {
 	private Transform _wingTF_Transform = null;
 	private Vector3 _wingTF_OriPosition = Vector3.zero;
 
+	private GameObject _PowerUpEffect;
 	private BulletCreate_Laser[] _laserComponent;
 	void Awake(){
 		_selfTF = transform;
@@ -58,10 +59,18 @@ public class PlayerControl : MonoBehaviour {
 		_drowSprite = spriteTF.GetComponent("tk2dSprite") as tk2dSprite;
 		_drowSpriteAni = spriteTF.GetComponent("tk2dSpriteAnimator") as tk2dSpriteAnimator;
 
+		spriteTF = _selfTF.FindChild("PowerUpEffect");
+		spriteTF.localScale = Vector3.zero;
+		_PowerUpEffect = spriteTF.gameObject;
+
 		spriteTF = _selfTF.FindChild("BladeChack");
 		_BladeAni = spriteTF.GetComponent("tk2dSpriteAnimator") as tk2dSpriteAnimator;
 		_bladeSprite = spriteTF.GetComponent("tk2dSprite") as tk2dSprite;
 		_bladeSprite.color = Color.clear;
+
+		Vector3 drowScale = _bladeSprite.scale;
+		drowScale.x *= -1;
+		_bladeSprite.scale = drowScale;
 
 		BoxCollider colliderSize = (BoxCollider)(spriteTF.collider);
 
@@ -181,7 +190,7 @@ public class PlayerControl : MonoBehaviour {
 		_drowSpriteAni.Stop();
 		_drowSpriteAni.Play("Character_1_underAttack");
 		_hpControlOption.minusHpValueChack();
-		_brokenGralss.startFadeInAndOut(0.1f, 0.5f, Tk2dFadeInOutControl.fadeControlAni.hide, Tk2dFadeInOutControl.fadeControlAni.view, 0.5f, 1);
+		_brokenGralss.startFadeInAndOut(0.05f, 0.5f, Tk2dFadeInOutControl.fadeControlAni.hide, Tk2dFadeInOutControl.fadeControlAni.view, 0.5f, 1);
 
 		if(_dieCount > 1){
 			_dieCount--;
@@ -224,6 +233,13 @@ public class PlayerControl : MonoBehaviour {
 
 	public void PowerUpItemChack(){
 		_PowerControl++;
+
+		float drowTime = 0.3f;
+		_PowerUpEffect.transform.eulerAngles = new Vector3(53,0,0);
+		ObjectRotateControl.rotateToObject(_PowerUpEffect, drowTime*2, new Vector3(53,0,-180));
+		ObjectScaleControl.scaleToObject(_PowerUpEffect, drowTime, Vector3.one);
+		ObjectScaleControl.scaleToObject(_PowerUpEffect, drowTime, Vector3.zero, delayValue:drowTime);
+
 		if(_PowerControl >= _createBullet.Length) {
 			_currentCoinValue += 5;
 			_coinNumberCount.ViewNumberCount(_currentCoinValue, 0.3f);
@@ -389,6 +405,10 @@ public class PlayerControl : MonoBehaviour {
 		_blockScript.stopSpriteAni();
 		_drowSprite.SetSprite("Unit_Sword");
 		_BladeAni.Play("bladeAttack");
+
+		Vector3 drowScale = _bladeSprite.scale;
+		drowScale.x *= -1;
+		_bladeSprite.scale = drowScale;
 		_bladeSprite.color = Color.white;
 
 		_drowSprite.scale = Vector3.one;

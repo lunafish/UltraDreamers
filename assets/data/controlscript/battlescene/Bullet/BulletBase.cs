@@ -202,11 +202,9 @@ public class FlightOption{
 				if(_linerOption._randomLiner){
 					if(_currentLinerRandomCount != 0){
 						_currentLinerRandomCount--;
-						Debug.Log(_currentLinerRandomCount);
 						return 2;
 					}
 
-					Debug.Log("reset : "+_currentLinerRandomCount);
 					_currentLinerRandomCount = _linerOption._randomLinerCount;
 					return 1;
 				}

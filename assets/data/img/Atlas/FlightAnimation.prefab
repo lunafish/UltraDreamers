@@ -179,7 +179,7 @@ MonoBehaviour:
       eventInfo: 
       eventInt: 0
       eventFloat: 0
-    fps: 15
+    fps: 20
     loopStart: 0
     wrapMode: 2
   - name: Character_1

@@ -10,6 +10,7 @@ public class BulletCreate : MonoBehaviour {
 	[SerializeField] bullectOption _bullectOption;
 	[SerializeField] int _powerUpOptionChack = -1;
 	[SerializeField] float _delayLoopShotTime = 0;
+	[SerializeField] bool _closeAllDelete = false;
 
 	private float _currentSpeed = 0;
 	protected Transform _selfTF = null;
@@ -25,12 +26,22 @@ public class BulletCreate : MonoBehaviour {
 	}
 
 	public void resetBullet(bool enableV, bool bladeDelete){
+		if(!enableV){
+			if(bladeDelete && _controlBulletList.Count > 0)
+				_playerControl.createCoinValue(_controlBulletList, Vector3.zero);
+			else if(_closeAllDelete){
+				_bulletListCount = _controlBulletList.Count;
+				for(int i = 0; i < _bulletListCount; i++)
+					_controlBulletList[i].stopBulletObject(notDestroyParent:false);
+			}
+		}
+
+		if(!enableV) _controlBulletList.Clear();
+		resetBullet(enableV);
+	}
+
+	void resetBullet(bool enableV = false){
 		resetOptionValue();
-
-		if(!enableV && bladeDelete && _controlBulletList.Count > 0)
-			_playerControl.createCoinValue(_controlBulletList, Vector3.zero);
-
-		_controlBulletList.Clear();
 		_bulletListCount = 0;
 		_EnabledControl = this.enabled = enableV;
 	}
@@ -60,7 +71,6 @@ public class BulletCreate : MonoBehaviour {
 	public virtual void crushChildBullet(BullectControl copyBullet){
 		_controlBulletList.Remove(copyBullet);
 		_bulletListCount = _controlBulletList.Count;
-
 		/*
 		_lastIndex = _controlBulletList.IndexOf(copyBullet) -1;
 		for(_deleteIndex = 0; _deleteIndex < _lastIndex; _deleteIndex++)
@@ -104,8 +114,9 @@ public class BulletCreate : MonoBehaviour {
 					_controlBulletList.Add (_copyBullet);
 					_bulletListCount = _controlBulletList.Count;
 				}
+	
 				if(--_copyDrowCount == 0){
-					resetBullet(false, false);
+					resetBullet(); // code clear chack, dumy
 					if(_delayLoopShotTime > 0){
 						_switchOption = 1;
 						_EnabledControl = this.enabled = true;
@@ -117,7 +128,7 @@ public class BulletCreate : MonoBehaviour {
 			_currentSpeed += Time.deltaTime;
 			if(_delayLoopShotTime > _currentSpeed) return;
 
-			resetBullet(true, false);
+			resetBullet(true);
 			break;
 		}
 		

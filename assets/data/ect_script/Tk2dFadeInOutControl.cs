@@ -27,6 +27,7 @@ public class Tk2dFadeInOutControl : MonoBehaviour {
 	private int _inOutCount = 0;
 
 	// lunafish for differant
+	private float _startSpeed = 0.0f;
 	private float _endspeed = 0.0f;
 
     void Awake()
@@ -81,15 +82,6 @@ public class Tk2dFadeInOutControl : MonoBehaviour {
         return false;
     }
 
-	private bool startFadeIn_OR_Out(float speed)
-	{
-		Color copyColor = sColor;
-		sColor = eColor;
-		eColor = copyColor;
-		
-		return startFadeIn_OR_Out(speed, sColor, eColor);
-	}
-
 	private Color sColor = Color.white;
 	private Color eColor = Color.white;
 	public bool startFadeIn_OR_Out(fadeControlAni startFade, fadeControlAni endFade, float speed)
@@ -130,15 +122,21 @@ public class Tk2dFadeInOutControl : MonoBehaviour {
 		_delayedTime = delayedTime;
 		_inOutCount = drowCount;
 		_delayStart = false;
-		_endspeed = speed;
+		_swapSpeedControl = false;
+
+		_startSpeed = _endspeed = speed/2;
 	}
 
+	private bool _swapSpeedControl = false;
 	// differant start speed and end speed
 	public void startFadeInAndOut(float startSpeed, float endSpeed, fadeControlAni startFade, fadeControlAni endFade, float delayedTime = 0, int drowCount = 1){
-		startFadeIn_OR_Out(startFade, endFade, startSpeed/2);
+		startFadeIn_OR_Out(startFade, endFade, startSpeed);
 		_delayedTime = delayedTime;
 		_inOutCount = drowCount;
 		_delayStart = false;
+		_swapSpeedControl = false;
+
+		_startSpeed = startSpeed;
 		_endspeed = endSpeed;
 	}
 
@@ -188,15 +186,21 @@ public class Tk2dFadeInOutControl : MonoBehaviour {
 
 			if ((_startFTime += Time.deltaTime) >= _drowFSpeed)
             {
-				_drowFSpeed = _endspeed; // setting end speed
+				if(!_swapSpeedControl) _drowFSpeed = _endspeed; // setting end speed
+				else _drowFSpeed = _startSpeed;
+				_swapSpeedControl = !_swapSpeedControl;
 
 				overWriteColor(_endColor);
 				this.enabled = _FadeInOutAni = false;	
 				if(_inOutCount > 0 || _inOutCount < 0){
 					_inOutCount--;
 					_startFTime = 0;
-					_delayStart = true;
-					startFadeIn_OR_Out(_drowFSpeed);
+					if(_delayedTime > 0) _delayStart = true;
+
+					Color copyColor = sColor;
+					sColor = eColor;
+					eColor = copyColor;
+					startFadeIn_OR_Out(_drowFSpeed, sColor, eColor);
 				}else _inOutCount = 0;
             }
             else addColorControl(_drowColor * Time.deltaTime);
