@@ -236,9 +236,9 @@ public class PlayerControl : MonoBehaviour {
 
 		float drowTime = 0.3f;
 		_PowerUpEffect.transform.eulerAngles = new Vector3(53,0,0);
-		ObjectRotateControl.rotateToObject(_PowerUpEffect, drowTime*2, new Vector3(53,0,-180));
-		ObjectScaleControl.scaleToObject(_PowerUpEffect, drowTime, Vector3.one);
-		ObjectScaleControl.scaleToObject(_PowerUpEffect, drowTime, Vector3.zero, delayValue:drowTime);
+		ObjectRotateControl.rotateToObject(_PowerUpEffect, drowTime, new Vector3(53,0,-180));
+		ObjectScaleControl.scaleToObject(_PowerUpEffect, drowTime * 0.5f, Vector3.one * 2.0f);
+		ObjectScaleControl.scaleToObject(_PowerUpEffect, drowTime * 0.5f, Vector3.zero, delayValue:drowTime);
 
 		if(_PowerControl >= _createBullet.Length) {
 			_currentCoinValue += 5;

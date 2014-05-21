@@ -24,7 +24,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: .600000024}
+  m_LocalPosition: {x: -.160976797, y: 5.72416782, z: 1.07838583}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -34,7 +34,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  lengthInSec: 5
+  lengthInSec: .100000001
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -50,14 +50,14 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: .247838601
+          value: .100137249
           inSlope: 0
           outSlope: 0
           tangentMode: 0
-        - time: 1
-          value: 0
-          inSlope: -.39543891
-          outSlope: -.39543891
+        - time: .997915208
+          value: .100137249
+          inSlope: 0
+          outSlope: 0
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -79,13 +79,13 @@ ParticleSystem:
         m_Curve:
         - time: 0
           value: 1
-          inSlope: -1.10582006
-          outSlope: -1.10582006
+          inSlope: 0
+          outSlope: 0
           tangentMode: 10
         - time: 1
-          value: -.10582006
-          inSlope: -1.10582006
-          outSlope: -1.10582006
+          value: 1
+          inSlope: 0
+          outSlope: 0
           tangentMode: 10
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -242,12 +242,12 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: 0
     inheritVelocity: 0
-    maxNumParticles: 50
+    maxNumParticles: 500
   ShapeModule:
     serializedVersion: 2
     enabled: 1
     type: 0
-    radius: .100000001
+    radius: .00999999978
     angle: 0
     length: 5
     boxX: 1
@@ -260,7 +260,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 80
+      scalar: 300
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -299,9 +299,14 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: .223652691
+          value: .0452676043
           inSlope: 0
           outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: -.0438652895
+          outSlope: -.0438652895
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -352,7 +357,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 1
   ColorModule:
-    enabled: 1
+    enabled: 0
     gradient:
       maxGradient:
         key0:
@@ -448,7 +453,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 1
   UVModule:
-    enabled: 1
+    enabled: 0
     frameOverTime:
       scalar: 1
       maxCurve:
@@ -479,7 +484,7 @@ ParticleSystem:
     cycles: 1
     randomRow: 1
   VelocityModule:
-    enabled: 1
+    enabled: 0
     x:
       scalar: 0
       maxCurve:
@@ -519,7 +524,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     y:
-      scalar: .100000001
+      scalar: .00999999978
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -840,7 +845,7 @@ ParticleSystem:
       minMaxState: 1
     range: {x: 0, y: 1}
   RotationBySpeedModule:
-    enabled: 1
+    enabled: 0
     curve:
       scalar: 4.71238899
       maxCurve:
@@ -1012,7 +1017,7 @@ ParticleSystemRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: a2f8c04392cad4cd7801f0ca624d3b70, type: 2}
+  - {fileID: 2100000, guid: b94c379813a7546d7b843880c1966cfd, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
