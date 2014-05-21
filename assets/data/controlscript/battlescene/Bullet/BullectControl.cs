@@ -59,6 +59,7 @@ public class BullectControl : BulletBase {
 
 	[SerializeField] tk2dSpriteAnimator _crushEffect;
 	[SerializeField] tk2dSprite _drowSprite;
+	[SerializeField] ParticleSystem _drowParticle = null;
 
 	//[SerializeField] rotateOption _rotateOption;
 	[SerializeField] destroyOption _destroyOption;
@@ -148,6 +149,8 @@ public class BullectControl : BulletBase {
 				break;
 			}
 		}
+
+		if(_drowParticle != null) _drowParticle.startColor = Color.white;
 
 		_currentCount = 0;
 		addCollisitionControl(createParent);
@@ -266,17 +269,16 @@ public class BullectControl : BulletBase {
 		switch(_selectFlight.flightType){
 		case FlightOption.FlightTypeList.chaser:
 			_bullectModeControl = 2;
-
+			bool noAngleChack = false;
+			BullectControl copyChaseBullet = null;
 			switch(_obPoint){
 			case BullectControl.objectPosition.palyer:
-				BullectControl copyBullet = _destroyOption._collistionControl.enemyChasePosition(_copyVPosition);
-				//_endPosition
-				if(copyBullet == null){
-					_bullectModeControl = 0;
+				copyChaseBullet = _destroyOption._collistionControl.enemyChasePosition(_copyVPosition);
+				if(copyChaseBullet == null){
+					noAngleChack = true;
 					_endPosition = getDirectionValue(FlightOption.LinerTypeList.forward);
-					if(_endPosition.z < 0) _endPosition.z *= -1;
-					else if(_endPosition.z == 0) _endPosition.z = 0.1f;
-				}else _endPosition = copyBullet._selfTF.localPosition;
+					resetRotateTF();
+				}else _endPosition = copyChaseBullet._selfTF.localPosition;
 				break;
 			default:
 				_endPosition = _selectFlight.getChasePosition;
@@ -285,11 +287,22 @@ public class BullectControl : BulletBase {
 				break;
 			}
 
-			if(_LookAtOption && _otherTfChack == 1) {
-				_selfTF.LookAt(_endPosition);
-				settingLookAtTF();
+
+			if(!noAngleChack){
+				if(_LookAtOption && _otherTfChack == 1) {
+					switch(_obPoint){
+					case objectPosition.palyer:
+						//if(_baseTFValue == null)
+						_selfTF.LookAt(copyChaseBullet._selfTF.position);
+						break;
+					default:
+						_selfTF.LookAt(_endPosition);
+						break;
+					}
+					settingLookAtTF();
+				}
+				_endPosition -= _selfTF.localPosition;
 			}
-			_endPosition -= _selfTF.localPosition;
 			_chaseEndPosition = _endPosition;
 			break;
 		case FlightOption.FlightTypeList.liner:
@@ -576,16 +589,20 @@ public class BullectControl : BulletBase {
 		if(_otherTfChack == 1)
 		{
 			Vector3 loatEG = _selfTF.localEulerAngles;
-			
-			loatEG.z = loatEG.y*-1;
+			loatEG.z = 360 - loatEG.y;
 			loatEG.x = 54;
 			loatEG.y = 0;
-			
 			_drowSpriteTF.eulerAngles = loatEG;
-			
-			loatEG = _startSpriteScale;
-			loatEG.y *= -1;
-			_drowSprite.scale = loatEG;
+
+			switch(_obPoint){
+			case objectPosition.palyer:
+				break;
+			default:
+				loatEG = _startSpriteScale;
+				loatEG.y *= -1;
+				_drowSprite.scale = loatEG;
+				break;
+			}
 		}
 	}
 
@@ -636,6 +653,7 @@ public class BullectControl : BulletBase {
 
 		if(_crushEffect != null && !string.IsNullOrEmpty(_selectEffectAni)) {
 			if(_drowSprite != null) _drowSprite.scale = Vector3.one*2;
+			if(_drowParticle != null) _drowParticle.startColor = Color.clear;
 			_crushEffect.Play(_selectEffectAni);
 		}
 
