@@ -796,6 +796,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -820,6 +821,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -849,6 +851,7 @@ MonoBehaviour:
         _linerType: 3
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -873,6 +876,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -897,6 +901,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -926,6 +931,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf:
@@ -958,6 +964,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -1004,6 +1011,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -1050,6 +1058,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -1737,6 +1746,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -1761,6 +1771,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -1945,6 +1956,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 1124316701}
         _randromChaseTf: []
@@ -1969,6 +1981,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 1124316701}
         _randromChaseTf: []
@@ -2129,6 +2142,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -2541,6 +2555,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -2703,6 +2718,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -2855,6 +2871,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -4284,6 +4301,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -4517,6 +4535,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -5085,6 +5104,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -5601,6 +5621,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -5949,6 +5970,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -6082,6 +6104,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -6329,6 +6352,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 1124316701}
         _randromChaseTf: []
@@ -6353,6 +6377,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 1124316701}
         _randromChaseTf: []
@@ -6554,6 +6579,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -6627,6 +6653,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -6863,6 +6890,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -6887,6 +6915,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 1124316701}
         _randromChaseTf: []
@@ -7206,6 +7235,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -7230,6 +7260,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -7254,6 +7285,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -7852,6 +7884,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -7993,6 +8026,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -8180,6 +8214,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -8363,6 +8398,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -8512,6 +8548,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -8712,7 +8749,7 @@ MonoBehaviour:
     _NonDestroyChack: 1
     _backDrowOption: 0
     _destroySize: .300000012
-    _penetrateCount: 1
+    _penetrateCount: 0
     _drowCrushEffectAni: 0
 --- !u!1 &620316498
 GameObject:
@@ -8768,6 +8805,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -8792,6 +8830,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: -1
         _randomLiner: 1
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -8865,6 +8904,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -8889,6 +8929,7 @@ MonoBehaviour:
         _linerType: 2
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -8913,6 +8954,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -8937,6 +8979,7 @@ MonoBehaviour:
         _linerType: 1
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -8961,6 +9004,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -9262,6 +9306,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -9335,6 +9380,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -9794,6 +9840,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -9818,6 +9865,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: -1
         _randomLiner: 1
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -9974,6 +10022,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -10344,6 +10393,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -10368,6 +10418,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: -1
         _randomLiner: 1
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -12279,6 +12330,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -12509,6 +12561,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 1124316701}
         _randromChaseTf: []
@@ -12533,6 +12586,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 1124316701}
         _randromChaseTf: []
@@ -12685,6 +12739,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -12709,6 +12764,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -12733,6 +12789,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -12948,6 +13005,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -12972,6 +13030,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -13129,6 +13188,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -13153,6 +13213,7 @@ MonoBehaviour:
         _linerType: 6
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -13177,6 +13238,7 @@ MonoBehaviour:
         _linerType: 6
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -13462,6 +13524,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -13633,6 +13696,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -13782,6 +13846,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -14465,6 +14530,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -14656,6 +14722,7 @@ MonoBehaviour:
         _linerType: 6
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -14680,6 +14747,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -14726,6 +14794,7 @@ MonoBehaviour:
         _linerType: 4
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -14750,6 +14819,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -14796,6 +14866,7 @@ MonoBehaviour:
         _linerType: 2
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -14820,6 +14891,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -14844,6 +14916,7 @@ MonoBehaviour:
         _linerType: 4
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 1124316701}
         _randromChaseTf: []
@@ -14890,6 +14963,7 @@ MonoBehaviour:
         _linerType: 1
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -14914,6 +14988,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -14938,6 +15013,7 @@ MonoBehaviour:
         _linerType: 6
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 1124316701}
         _randromChaseTf: []
@@ -14984,6 +15060,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -15008,6 +15085,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -15335,6 +15413,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -15456,6 +15535,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -15738,6 +15818,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -15977,6 +16058,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -16249,6 +16331,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -16876,6 +16959,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -16951,6 +17035,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -17290,6 +17375,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -17314,6 +17400,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -17360,6 +17447,7 @@ MonoBehaviour:
         _linerType: 2
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -17384,6 +17472,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -17408,6 +17497,7 @@ MonoBehaviour:
         _linerType: 4
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 1124316701}
         _randromChaseTf: []
@@ -17454,6 +17544,7 @@ MonoBehaviour:
         _linerType: 1
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -17478,6 +17569,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -17502,6 +17594,7 @@ MonoBehaviour:
         _linerType: 6
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 1124316701}
         _randromChaseTf: []
@@ -17548,6 +17641,7 @@ MonoBehaviour:
         _linerType: 6
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -17572,6 +17666,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -17618,6 +17713,7 @@ MonoBehaviour:
         _linerType: 4
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -17642,6 +17738,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -17796,6 +17893,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -17820,6 +17918,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -17844,6 +17943,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -17982,6 +18082,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -18238,6 +18339,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -18375,6 +18477,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -18706,6 +18809,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -18785,6 +18889,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -19263,6 +19368,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 1124316701}
         _randromChaseTf: []
@@ -19287,6 +19393,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 1124316701}
         _randromChaseTf: []
@@ -19821,6 +19928,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -19845,6 +19953,7 @@ MonoBehaviour:
         _linerType: 4
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -19869,6 +19978,7 @@ MonoBehaviour:
         _linerType: 4
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -19942,6 +20052,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 1124316701}
         _randromChaseTf: []
@@ -19966,6 +20077,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 1124316701}
         _randromChaseTf: []
@@ -20182,6 +20294,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 1124316701}
         _randromChaseTf: []
@@ -20206,6 +20319,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 1124316701}
         _randromChaseTf: []
@@ -20380,6 +20494,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -20538,6 +20653,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -21049,6 +21165,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -21250,6 +21367,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -21540,6 +21658,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -21655,6 +21774,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -21679,6 +21799,7 @@ MonoBehaviour:
         _linerType: 1
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -21703,6 +21824,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -21727,6 +21849,7 @@ MonoBehaviour:
         _linerType: 2
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -21751,6 +21874,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -21824,6 +21948,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -21848,6 +21973,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -21872,6 +21998,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -21949,6 +22076,7 @@ MonoBehaviour:
         _linerType: 6
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -21973,6 +22101,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -22019,6 +22148,7 @@ MonoBehaviour:
         _linerType: 4
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -22043,6 +22173,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -22089,6 +22220,7 @@ MonoBehaviour:
         _linerType: 2
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -22113,6 +22245,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -22137,6 +22270,7 @@ MonoBehaviour:
         _linerType: 4
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 1124316701}
         _randromChaseTf: []
@@ -22183,6 +22317,7 @@ MonoBehaviour:
         _linerType: 1
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -22207,6 +22342,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -22231,6 +22367,7 @@ MonoBehaviour:
         _linerType: 6
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 1124316701}
         _randromChaseTf: []
@@ -22277,6 +22414,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -22301,6 +22439,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -22836,6 +22975,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -22939,6 +23079,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -22963,6 +23104,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: -1
         _randomLiner: 1
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -23131,6 +23273,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -23732,6 +23875,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -23939,6 +24083,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -24202,6 +24347,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -24621,7 +24767,7 @@ MonoBehaviour:
     _NonDestroyChack: 0
     _backDrowOption: 0
     _destroySize: .5
-    _penetrateCount: 50
+    _penetrateCount: 500
     _drowCrushEffectAni: 0
 --- !u!114 &1706420910
 MonoBehaviour:
@@ -24650,6 +24796,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: -1
         _randomLiner: 1
+        _randomForwardCount: 0
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -24696,6 +24843,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: -1
         _randomLiner: 1
+        _randomForwardCount: 0
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -26510,6 +26658,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -26679,6 +26828,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -26703,6 +26853,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: -1
         _randomLiner: 1
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -27176,6 +27327,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -27200,6 +27352,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -27384,6 +27537,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -27722,6 +27876,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -28137,6 +28292,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -28274,6 +28430,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -28298,6 +28455,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: -1
         _randomLiner: 1
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -28439,6 +28597,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -29083,7 +29242,7 @@ MonoBehaviour:
     _NonDestroyChack: 1
     _backDrowOption: 0
     _destroySize: .300000012
-    _penetrateCount: 1
+    _penetrateCount: 0
     _drowCrushEffectAni: 0
 --- !u!1 &1958712605
 GameObject:
@@ -29139,6 +29298,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -29835,6 +29995,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -29859,6 +30020,7 @@ MonoBehaviour:
         _linerType: 4
         _randomLinerCount: -1
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -29883,6 +30045,7 @@ MonoBehaviour:
         _linerType: 6
         _randomLinerCount: -1
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -29907,6 +30070,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 4
         _randomLiner: 1
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -29931,6 +30095,7 @@ MonoBehaviour:
         _linerType: 6
         _randomLinerCount: -1
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -29955,6 +30120,7 @@ MonoBehaviour:
         _linerType: 5
         _randomLinerCount: -1
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -29979,6 +30145,7 @@ MonoBehaviour:
         _linerType: 6
         _randomLinerCount: -1
         _randomLiner: 1
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -31052,6 +31219,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 1124316701}
         _randromChaseTf: []
@@ -31076,6 +31244,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 1124316701}
         _randromChaseTf: []
@@ -31289,6 +31458,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -31491,6 +31661,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -31737,6 +31908,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -31883,6 +32055,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []
@@ -32039,6 +32212,7 @@ MonoBehaviour:
         _linerType: 0
         _randomLinerCount: 0
         _randomLiner: 0
+        _randomForwardCount: 1
       _chaseOption:
         _chasesTF: {fileID: 0}
         _randromChaseTf: []

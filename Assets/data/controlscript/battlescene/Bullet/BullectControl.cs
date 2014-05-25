@@ -323,9 +323,9 @@ public class BullectControl : BulletBase {
 					}
 
 					// forward 타입을 추가로 더 줘서 점점더 앞으로 전진하도록 수정
-					_randomLinerControl.Add(0);
-					_randomLinerControl.Add(0);
-					_randomLinerControl.Add(0);
+					for(int i = 0; i < _selectFlight.randomForwardCount; i++)
+						_randomLinerControl.Add(0);
+					
 				}
 				
 				_currentCount--;
@@ -359,6 +359,7 @@ public class BullectControl : BulletBase {
 				
 				_randomLinerControl.RemoveAt(chackIndex);
 				_endPosition = getDirectionValue(linerType);
+				_nextObjectChack = true;
 				break;
 			}
 

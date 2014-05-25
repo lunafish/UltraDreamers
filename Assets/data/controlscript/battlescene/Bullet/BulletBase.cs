@@ -67,6 +67,7 @@ public class FlightOption{
 
 		public int _randomLinerCount = 0;
 		public bool _randomLiner = false;
+		public int _randomForwardCount = 1;
 	}
 	
 	[System.Serializable]
@@ -207,6 +208,20 @@ public class FlightOption{
 
 					_currentLinerRandomCount = _linerOption._randomLinerCount;
 					return 1;
+				}
+				break;
+			}
+			
+			return 0;
+		}
+	}
+
+	public int randomForwardCount{
+		get{
+			switch(_flightType){
+			case FlightTypeList.liner:
+				if(_linerOption._randomLiner){
+					return _linerOption._randomForwardCount;
 				}
 				break;
 			}
