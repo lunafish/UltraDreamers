@@ -32,6 +32,7 @@ public class BullectControl : BulletBase {
 		public float _destroySize = 0.3f;
 		public int _penetrateCount = 1;
 		public crushEffectList _drowCrushEffectAni = crushEffectList.CrushEffect;
+		public int _dieCreateCoinNumber = 1;
 	}
 
 	public enum idelAnimation{
@@ -66,31 +67,21 @@ public class BullectControl : BulletBase {
 	
 	private List<BullectControl> _bullectList = new List<BullectControl>();
 	private int _nameObject = 0;
-
-	private Vector3 _drowPoint = Vector3.zero;
+	
 	private Vector3 _backDrowPoint = Vector3.zero;
 	private int _currentPenetrate = 0;
 
-	private bool _nextObjectChack = false;
-	private float _chackDrowTime;
 	private BullectControl _originalData;
-	private int _currentCount = 0;
 	private bullectOption _bullectOp;
 
 	private Transform _baseTFValue = null;
-
-	private Bounds _copyBounds;
-	private Vector3 _copyVPosition = Vector3.zero;
-
-	private FlightOption.moveSpeedOption _smoothOption = FlightOption.moveSpeedOption.linear;
+	
 	private bool _curshEffectChack = false;
 	private BulletCreate _createBullet = null;
 	private bool _powerOption = false;
-	
-	public Vector3 VPosition { get { return _selfTF.position; } }
-	public Bounds destroyBound { get { return _copyBounds; } }
-	public bool destroyChack { get { return _destroyOption._destroyChack; } }
-	public BullectControl CreateBullectValue(bullectOption bullectOp, Transform baseTF, Vector3 startPosition, BulletCreate parentCreate, bool createParent, bool dropPowerUp){
+
+	public override bool destroyChack { get { return _destroyOption._destroyChack; } }
+	public override BulletBase CreateBullectValue(bullectOption bullectOp, Transform baseTF, Vector3 startPosition, BulletCreate parentCreate, bool createParent, bool dropPowerUp){
 
 		BullectControl copyBullect = null;
 		if(_bullectList.Count == 0) 
@@ -134,7 +125,7 @@ public class BullectControl : BulletBase {
 				_selfTF.localEulerAngles = loatEG;
 			}
 		}
-		//if(_otherTfChack == 1 && _LookAtCameraOption) settingLookAtTF();
+		//if(_otherTfChack == 1 && _LookAtCameraOption) settingLookAtTF(_otherTfChack == 1 ? _drowSprite : null , _obPoint, _startSpriteScale);
 	}
 
 	void resetCurrent(bool createParent){
@@ -162,7 +153,7 @@ public class BullectControl : BulletBase {
 	}
 
 	private FlightOption _selectFlight = null;
-	void nextBlockObject(){
+	protected override void nextBlockObject(){
 
 		_selectFlight = _bullectOp.flightType(_currentCount++);
 		if(_selectFlight == null) {
@@ -191,72 +182,8 @@ public class BullectControl : BulletBase {
 		controlMoveOption();
 	}
 
-	Vector3 getDirectionValue(FlightOption.LinerTypeList linerType){
-		Vector3 endPosition = Vector3.zero;
-		switch(linerType){
-		case FlightOption.LinerTypeList.forward:
-			endPosition = _baseTFValue.forward;
-			break;
-		case FlightOption.LinerTypeList.backward:
-			endPosition = _baseTFValue.forward * -1; 
-			break;
-		case FlightOption.LinerTypeList.left:
-			endPosition = _baseTFValue.right;
-			break;
-		case FlightOption.LinerTypeList.right: 
-			endPosition = _baseTFValue.right * -1; // 플레이어 기준
-			break;
-		case FlightOption.LinerTypeList.left_forward:
-			endPosition = _baseTFValue.forward + _baseTFValue.right;
-			break;
-		case FlightOption.LinerTypeList.left_backward:
-			endPosition = (_baseTFValue.forward * -1) + _baseTFValue.right;
-			break;
-		case FlightOption.LinerTypeList.Right_forward:
-			endPosition = _baseTFValue.forward + (_baseTFValue.right * -1);
-			break;
-		case FlightOption.LinerTypeList.Right_backward:
-			endPosition = (_baseTFValue.forward * -1) + (_baseTFValue.right * -1);
-			break;
-		}
-
-		return endPosition;
-	}
-
-	Vector3 getEulerAnglesValue(){
-		Vector3 EulerAngles = _baseTFValue.eulerAngles;
-	
-		EulerAngles.x = EulerAngles.z = 0;
-		switch(_selectFlight.linerType){
-		case FlightOption.LinerTypeList.backward:
-			EulerAngles.y *= -1;
-			break;
-		case FlightOption.LinerTypeList.left:
-			EulerAngles.y += 90;
-			break;
-		case FlightOption.LinerTypeList.right: 
-			EulerAngles.y -= 90;
-			break;
-		case FlightOption.LinerTypeList.left_forward:
-			EulerAngles.y += 45;
-			break;
-		case FlightOption.LinerTypeList.left_backward:
-			EulerAngles.y += 135;
-			break;
-		case FlightOption.LinerTypeList.Right_forward:
-			EulerAngles.y -= 45;
-			break;
-		case FlightOption.LinerTypeList.Right_backward:
-			EulerAngles.y -= 135;
-			break;
-		}
-
-		return EulerAngles;
-	}
-	
 	private Vector3 _endPosition = Vector3.zero;
 	private Vector3 _chaseEndPosition = Vector3.zero;
-	private List<int> _randomLinerControl = new List<int>();
 	private bool _nonresetValue = false;
 	void controlMoveOption(){
 		_chaseEndPosition = _endPosition = Vector3.zero;
@@ -270,15 +197,15 @@ public class BullectControl : BulletBase {
 		case FlightOption.FlightTypeList.chaser:
 			_bullectModeControl = 2;
 			bool noAngleChack = false;
-			BullectControl copyChaseBullet = null;
+			BulletBase copyChaseBullet = null;
 			switch(_obPoint){
 			case BullectControl.objectPosition.palyer:
 				copyChaseBullet = _destroyOption._collistionControl.enemyChasePosition(_copyVPosition);
 				if(copyChaseBullet == null){
 					noAngleChack = true;
-					_endPosition = getDirectionValue(FlightOption.LinerTypeList.forward);
+					_endPosition = getDirectionValue(FlightOption.LinerTypeList.forward, _baseTFValue);
 					resetRotateTF();
-				}else _endPosition = copyChaseBullet._selfTF.localPosition;
+				}else _endPosition = copyChaseBullet.LPosition;
 				break;
 			default:
 				_endPosition = _selectFlight.getChasePosition;
@@ -287,19 +214,18 @@ public class BullectControl : BulletBase {
 				break;
 			}
 
-
 			if(!noAngleChack){
 				if(_LookAtOption && _otherTfChack == 1) {
 					switch(_obPoint){
 					case objectPosition.palyer:
 						//if(_baseTFValue == null)
-						_selfTF.LookAt(copyChaseBullet._selfTF.position);
+						_selfTF.LookAt(copyChaseBullet.VPosition);
 						break;
 					default:
 						_selfTF.LookAt(_endPosition);
 						break;
 					}
-					settingLookAtTF();
+					settingLookAtTF((_otherTfChack == 1 ? _drowSpriteTF : null), _drowSprite , _obPoint, _startSpriteScale);
 				}
 				_endPosition -= _selfTF.localPosition;
 			}
@@ -308,65 +234,17 @@ public class BullectControl : BulletBase {
 		case FlightOption.FlightTypeList.liner:
 			if(_baseTFValue == null) _baseTFValue = _selfTF;
 
-			switch(_selectFlight.randomLinerChack){
-			case 0:
-				_endPosition = getDirectionValue(_selectFlight.linerType);
-				break;
-			case 1:
-				nextBlockObject();
-				return;
-			case 2:// 주변을 렌덤으로 둥둥 떠다니는 옵션
+			_endPosition = linerOptionControl(_selectFlight.randomLinerChack, _selectFlight.linerType, _baseTFValue, _selectFlight.randomForwardCount);
+			if(_endPosition.Equals(Vector3.zero)) return;
 
-				if(_randomLinerControl.Count == 0){
-					for(int i = 0; i < 8; i++){
-						_randomLinerControl.Add(i);
-					}
-
-					// forward 타입을 추가로 더 줘서 점점더 앞으로 전진하도록 수정
-					for(int i = 0; i < _selectFlight.randomForwardCount; i++)
-						_randomLinerControl.Add(0);
-					
-				}
-				
-				_currentCount--;
-				_nonresetValue = true;
-				FlightOption.LinerTypeList linerType = FlightOption.LinerTypeList.forward;
-				
-				int chackIndex = Random.Range(0, _randomLinerControl.Count);
-				switch(_randomLinerControl[chackIndex]){
-				case 1:
-					linerType = FlightOption.LinerTypeList.backward;
-					break;
-				case 2:
-					linerType = FlightOption.LinerTypeList.left;
-					break;
-				case 3:
-					linerType = FlightOption.LinerTypeList.right;
-					break;
-				case 4:
-					linerType = FlightOption.LinerTypeList.left_backward;
-					break;
-				case 5:
-					linerType = FlightOption.LinerTypeList.Right_backward;
-					break;
-				case 6:
-					linerType = FlightOption.LinerTypeList.left_forward;
-					break;
-				case 7:
-					linerType = FlightOption.LinerTypeList.Right_forward;
-					break;
-				}
-				
-				_randomLinerControl.RemoveAt(chackIndex);
-				_endPosition = getDirectionValue(linerType);
+			if(_selectFlight.randomLinerChack == 2){
 				_nextObjectChack = true;
-				break;
+				_nonresetValue = true;
+				_currentCount--;
 			}
-
 			if(_LookAtOption && _otherTfChack == 1){
-				//_selfTF.LookAt(_endPosition);
-				_selfTF.localEulerAngles = getEulerAnglesValue();
-				settingLookAtTF();
+				_selfTF.localEulerAngles = getEulerAnglesValue(_selectFlight.linerType, _baseTFValue);
+				settingLookAtTF(_otherTfChack == 1 ? _drowSpriteTF : null, _drowSprite , _obPoint, _startSpriteScale);
 			}
 
 			break;
@@ -385,8 +263,8 @@ public class BullectControl : BulletBase {
 			return;
 		case FlightOption.FlightTypeList.rotate:
 			if(_selectFlight.MoveSpeed == 0 && _selectFlight.drowTIme == 0){
-				_selfTF.localEulerAngles = getEulerAnglesValue();
-				//settingLookAtTF();
+				_selfTF.localEulerAngles = getEulerAnglesValue(_selectFlight.linerType, _baseTFValue);
+				//settingLookAtTF(_otherTfChack == 1 ? _drowSprite : null , _obPoint, _startSpriteScale);
 				nextBlockObject();
 				return;
 			}
@@ -400,7 +278,6 @@ public class BullectControl : BulletBase {
 	}
 
 	//private bool _childBullet = false;
-	private Transform _selfTF;
 	private int _originalImgIndex = 0;
 	private Transform _drowSpriteTF;
 	private int _otherTfChack = 0;
@@ -456,10 +333,10 @@ public class BullectControl : BulletBase {
 			if(!_drowSpriteTF.Equals(_selfTF)) _otherTfChack = 1;
 		}
 
-		_copyBounds.size = new Vector3(_destroyOption._destroySize,0,_destroyOption._destroySize);
+		SetDestorySize(_destroyOption._destroySize,_destroyOption._destroySize);
 	}
 
-	public void allStopBulletValue(bool enabledControl){
+	public override void allStopBulletValue(bool enabledControl){
 		this.enabled = enabledControl;
 		if(_crushEffect != null) _crushEffect.enabled = enabledControl;
 
@@ -467,20 +344,16 @@ public class BullectControl : BulletBase {
 		for(int i = 0; i < maxCount; i++) _bulletCreateList[i].enabled = enabledControl;
 	}
 
-	void resetBullet(bool resetChack, bool bladeDelete = false){
+	protected override void resetBullet(bool resetChack, bool bladeDelete = false){
 		int maxCount = _bulletCreateList.Count;
 		if(maxCount > 0) for(int i = 0; i < maxCount; i++) _bulletCreateList[i].resetBullet(resetChack, bladeDelete);
-		else if(!resetChack && bladeDelete) _destroyOption._collistionControl.createCoinValue(_selfTF.position);
+		else if(!resetChack && bladeDelete) _destroyOption._collistionControl.createCoinValue(_selfTF.position, _destroyOption._dieCreateCoinNumber);
 
 		maxCount = _enabledObjectList.Count;
 		for(int i = 0; i < maxCount; i++)
 			_enabledObjectList[i].SetActive(resetChack);
 	}
-
-	private float _currentTime = 0;
-	private float zData = 0;
-	private float xData = 0;
-	private Vector3 position;
+	
 	private int _bullectModeControl = 0;
 	private float _backMoveTime = 0;
 	void Update(){
@@ -512,13 +385,8 @@ public class BullectControl : BulletBase {
 			return;
 		}
 
-		_currentTime += Time.deltaTime;
-		if(_nextObjectChack && _chackDrowTime <= _currentTime){
-			_nextObjectChack = false;
-			_chackDrowTime -= _currentTime;
-			nextBlockObject();
-		}
 
+		if(chackDrowTime()) nextBlockObject();
 	}
 
 	void resetDrowSprite(){
@@ -532,28 +400,8 @@ public class BullectControl : BulletBase {
 	private bool _fristChack = false;
 	bool moveTFControl(){
 
-		float delta = 1;
-		switch(_smoothOption){
-		case FlightOption.moveSpeedOption.FastAndSlow:
-			delta = ((_chackDrowTime - _currentTime)/_chackDrowTime*90);
-			delta = Mathf.Sin(delta/180*Mathf.PI);
-			break;
-		case FlightOption.moveSpeedOption.SlowAndFast:
-			delta = 0.5f + ((_chackDrowTime - _currentTime)/_chackDrowTime*90);
-			delta = Mathf.Sin(delta/180*Mathf.PI);
-			break;
-		}
-	
-
-		_selfTF.localPosition += (_drowPoint*Time.deltaTime*delta);
-		position = _selfTF.position;
-		_copyVPosition = position;
-		_copyVPosition.y = 0;
-		_copyBounds.center = _copyVPosition;
-
-		zData = position.z;
-		xData = position.x;
-		if(/*!_childBullet && */(zData < 0 || 9 < zData || xData < -2.5f || 2.5f < xData)){
+		Vector3 copyPosition = MoveControlFunction();
+		if(/*!_childBullet && */(copyPosition.z < 0 || 9 < copyPosition.z || copyPosition.x < -2.5f || 2.5f < copyPosition.x)){
 			if(_fristChack){
 				stopBulletObject();
 				return false;
@@ -566,7 +414,7 @@ public class BullectControl : BulletBase {
 		return true;
 	}
 	
-	public bool stopBulletObject(bool notAddStorage = false, bool notDestroyParent = true/*, bool deleteBullet = false*/){
+	public override bool stopBulletObject(bool notAddStorage = false, bool notDestroyParent = true/*, bool deleteBullet = false*/){
 		if(!notDestroyParent && destroyChack/* && !deleteBullet*/) return false;
 
 		_bullectModeControl = -1;
@@ -584,27 +432,6 @@ public class BullectControl : BulletBase {
 		}}*/
 
 		return true;
-	}
-
-	void settingLookAtTF(){
-		if(_otherTfChack == 1)
-		{
-			Vector3 loatEG = _selfTF.localEulerAngles;
-			loatEG.z = 360 - loatEG.y;
-			loatEG.x = 54;
-			loatEG.y = 0;
-			_drowSpriteTF.eulerAngles = loatEG;
-
-			switch(_obPoint){
-			case objectPosition.palyer:
-				break;
-			default:
-				loatEG = _startSpriteScale;
-				loatEG.y *= -1;
-				_drowSprite.scale = loatEG;
-				break;
-			}
-		}
 	}
 
 	void resetRotateTF(){
@@ -668,7 +495,7 @@ public class BullectControl : BulletBase {
 
 	private float _copyMagnitude = 0;
 	private int _returnBulletValue = 0;
-	public int chackCollisionValue(BullectControl chackBullet){
+	public override int chackCollisionValue(BullectControl chackBullet){
 		_copyMagnitude = returnMagnitude(chackBullet._copyVPosition);
 		if(_copyMagnitude < _destroyOption._destroySize || _copyMagnitude < chackBullet._destroyOption._destroySize){
 			_returnBulletValue = 0;
@@ -680,22 +507,22 @@ public class BullectControl : BulletBase {
 		return 0;
 	}
 
-	public float returnMagnitude(Vector3 basePositon){
+	public override float returnMagnitude(Vector3 basePositon){
 		return (_copyVPosition - basePositon).magnitude;
 	}
 
-	public bool destroyBullectChack(bool bladeDelete){
+	public override bool destroyBullectChack(bool bladeDelete){
 		return destroyBullectChack(_backDrowPoint, !destroyChack, bladeDelete);
 	}
 
-	public int chackCrushPlayerValue(Vector3 _playerPS){
+	public override int chackCrushPlayerValue(Vector3 _playerPS){
 		if(returnMagnitude(_playerPS) <= _destroyOption._destroySize){
 			return destroyBullectChack(false) ? 2 : 1;
 		}
 		return 0;
 	}
 
-	public void coinChaseFlowAct(bool actChack){
+	public override void coinChaseFlowAct(bool actChack){
 		if(actChack && _currentCount == 2){
 			nextBlockObject();
 		}

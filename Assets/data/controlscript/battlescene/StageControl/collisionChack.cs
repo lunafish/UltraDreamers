@@ -14,15 +14,15 @@ public class collisionChack : MonoBehaviour {
 	[SerializeField] List<GameObject> _moveStageControl;
 
 	private Transform _playerTF;
-	private List<BullectControl> _playerBullectList = new List<BullectControl>();
-	private List<BullectControl> _allEnemyList = new List<BullectControl>();
-	private List<BullectControl> _enemyDestroyList = new List<BullectControl>();
-	private List<BullectControl> _allCoinList = new List<BullectControl>();
-	private List<BullectControl> _PowerUpList = new List<BullectControl>();
-	//private List<BullectControl> _onotherList = new List<BullectControl>();
+	private List<BulletBase> _playerBullectList = new List<BulletBase>();
+	private List<BulletBase> _allEnemyList = new List<BulletBase>();
+	private List<BulletBase> _enemyDestroyList = new List<BulletBase>();
+	private List<BulletBase> _allCoinList = new List<BulletBase>();
+	private List<BulletBase> _PowerUpList = new List<BulletBase>();
+	//private List<BulletBase> _onotherList = new List<BulletBase>();
 
 	private List<Transform> _stopTiLine = new List<Transform>();
-	public void addStroageData(Transform bullet, BullectControl copyBullet, bool stopTimeLine){
+	public void addStroageData(Transform bullet, BulletBase copyBullet, bool stopTimeLine){
 		if(bullet != null) bullet.parent = _bullectStorage;
 		if(stopTimeLine){
 			_stopTiLine.Remove(bullet);
@@ -39,18 +39,21 @@ public class collisionChack : MonoBehaviour {
 		}
 	}
 
-	public void createCoinValue(Vector3 _drowPosition){
-		_playerControlSC.createCoinValue(null, _drowPosition);
+	public void createCoinValue(Vector3 _drowPosition, int number){
+		_playerControlSC.createCoinValue(null, _drowPosition, number);
 	}
 
-	public void setDrowStage(Transform bullect, BullectControl copyBullet, BulletBase.objectPosition obPoint, bool stopTimeLine, bool NonDestroyChack){
+	public void setDrowStage(Transform bullect, BulletBase copyBullet, BulletBase.objectPosition obPoint, bool stopTimeLine, bool NonDestroyChack){
 		if(bullect != null) bullect.parent = _drowStage;
+		//Debug.Log(bullect.name + " " + bullect.parent.name);
+		//UnityEditor.EditorApplication.isPaused = true;
+
 		if(stopTimeLine){
 			if(_stopTiLine.IndexOf(bullect) < 0) _stopTiLine.Add(bullect);
 			_controlTimeLine.enabled = false;
 		}
 
-		if(!NonDestroyChack)
+		if(!NonDestroyChack && copyBullet != null)
 		switch(obPoint){
 		case BulletBase.objectPosition.enemy:
 			_allEnemyList.Add(copyBullet);
@@ -99,7 +102,7 @@ public class collisionChack : MonoBehaviour {
 	}
 
 	public Vector3 PlayerPosition { get { return _playerTF.localPosition; } }
-	public BullectControl enemyChasePosition(Vector3 basePosition){
+	public BulletBase enemyChasePosition(Vector3 basePosition){
 		int maxCount = _enemyDestroyList.Count;
 		if(maxCount > 0){
 
@@ -132,8 +135,8 @@ public class collisionChack : MonoBehaviour {
 	private int _max1Count = 0;
 	private int _max2Count = 0;
 	private bool _removeChack = false;
-	private BullectControl _select1TF = null;
-	private BullectControl _select2TF = null;
+	private BulletBase _select1TF = null;
+	private BulletBase _select2TF = null;
 	private Vector3 _copyVector3 = Vector3.zero;
 	private bool _chaseCoinControl = false;
 	void Update() {
@@ -184,7 +187,7 @@ public class collisionChack : MonoBehaviour {
 					for(_indexB = 0; _indexB < _max2Count; _indexB++){
 						_select2TF = _playerBullectList[_drowB++];
 						_removeChack = true;
-						switch(_select1TF.chackCollisionValue(_select2TF)){
+						switch(_select1TF.chackCollisionValue((BullectControl)_select2TF)){
 						case 1: // enemy crush
 							_drowC -= 1;
 							_playerControlSC.setScorePlayerBound(PlayerControl.enemyCrushType.bullet_Die);

@@ -11,21 +11,28 @@ public class BulletCreate : MonoBehaviour {
 	[SerializeField] int _powerUpOptionChack = -1;
 	[SerializeField] float _delayLoopShotTime = 0;
 	[SerializeField] bool _closeAllDelete = false;
+	[SerializeField] int _popLoopCount = 0;
 
 	private float _currentSpeed = 0;
 	protected Transform _selfTF = null;
 	private int _copyDrowCount = 0;
 	private bool _EnabledControl = true;
 	private int _switchOption = 0;
+	private int _popLoopSave = 0;
 	//private bool _ChildChaseOption = false;
 
 	protected virtual void Awake(){
 		_selfTF = transform;
+		_popLoopSave = _popLoopCount;
 		_copyDrowCount = _bullectOption.drowShotCount;
 		//_ChildChaseOption = _beamBaseImgControl != null;
 	}
 
 	public void resetBullet(bool enableV, bool bladeDelete){
+
+		if(--_popLoopSave > 0) return;
+		_popLoopSave = _popLoopCount;
+
 		if(!enableV){
 			if(bladeDelete && _controlBulletList.Count > 0)
 				_playerControl.createCoinValue(_controlBulletList, Vector3.zero);

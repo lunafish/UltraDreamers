@@ -1031,6 +1031,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!114 &48357852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1078,6 +1079,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &54266328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1791,6 +1793,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &106820184
 GameObject:
   m_ObjectHideFlags: 0
@@ -2001,6 +2004,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &114937931
 GameObject:
   m_ObjectHideFlags: 0
@@ -2162,6 +2166,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1001 &133073851
 Prefab:
   m_ObjectHideFlags: 0
@@ -2575,6 +2580,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &164169908
 GameObject:
   m_ObjectHideFlags: 0
@@ -2738,6 +2744,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
   _headTf: {fileID: 1967586668}
   _crushEffect: {fileID: 1967586670}
   _drowSprite: {fileID: 1967586669}
@@ -2891,6 +2898,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!114 &172459628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2975,6 +2983,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 5
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!114 &172459632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3906,7 +3915,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &244442837
 Transform:
   m_ObjectHideFlags: 0
@@ -4321,6 +4330,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &294589875
 GameObject:
   m_ObjectHideFlags: 0
@@ -4555,6 +4565,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &301212808
 GameObject:
   m_ObjectHideFlags: 0
@@ -5050,6 +5061,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 20
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!1 &319558331
 GameObject:
   m_ObjectHideFlags: 0
@@ -5124,6 +5136,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &326018957
 GameObject:
   m_ObjectHideFlags: 0
@@ -5182,6 +5195,7 @@ MonoBehaviour:
     _destroySize: .5
     _penetrateCount: 1
     _drowCrushEffectAni: 2
+    _dieCreateCoinNumber: 1
 --- !u!1 &347721709
 GameObject:
   m_ObjectHideFlags: 0
@@ -5192,7 +5206,7 @@ GameObject:
   - 4: {fileID: 347721710}
   - 95: {fileID: 347721711}
   m_Layer: 0
-  m_Name: BossImgLeft
+  m_Name: BossImgRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5455,6 +5469,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 1
     _drowCrushEffectAni: 1
+    _dieCreateCoinNumber: 1
 --- !u!114 &365631055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5641,6 +5656,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &381101454
 GameObject:
   m_ObjectHideFlags: 0
@@ -5990,6 +6006,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &416917151
 GameObject:
   m_ObjectHideFlags: 0
@@ -6050,6 +6067,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 5
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!1 &418902164
 GameObject:
   m_ObjectHideFlags: 0
@@ -6124,6 +6142,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1001 &426895730
 Prefab:
   m_ObjectHideFlags: 0
@@ -6321,7 +6340,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 438202317}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -1.5, y: 0, z: 3}
+  m_LocalPosition: {x: -1.5, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 888563225}
@@ -6397,6 +6416,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1001 &441371589
 Prefab:
   m_ObjectHideFlags: 0
@@ -6599,6 +6619,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &458126096
 GameObject:
   m_ObjectHideFlags: 0
@@ -6673,6 +6694,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &470370968
 GameObject:
   m_ObjectHideFlags: 0
@@ -6737,6 +6759,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 20
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!114 &470370971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6863,6 +6886,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 1
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!114 &482715936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6935,6 +6959,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &498151264
 GameObject:
   m_ObjectHideFlags: 0
@@ -7305,6 +7330,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1001 &510059741
 Prefab:
   m_ObjectHideFlags: 0
@@ -7610,6 +7636,14 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 169925611a95545fe8883fe0f0980c7b, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 169925611a95545fe8883fe0f0980c7b, type: 2}
+      propertyPath: m_Name
+      value: BossImgRight
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 169925611a95545fe8883fe0f0980c7b, type: 2}
   m_RootGameObject: {fileID: 347721709}
@@ -7904,6 +7938,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
   _headTf: {fileID: 1375260541}
   _crushEffect: {fileID: 1375260543}
   _drowSprite: {fileID: 1375260542}
@@ -8046,6 +8081,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!114 &567053394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8076,6 +8112,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 5
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!1 &568793847
 GameObject:
   m_ObjectHideFlags: 0
@@ -8234,6 +8271,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &570584390
 GameObject:
   m_ObjectHideFlags: 0
@@ -8331,7 +8369,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &581358572
 Transform:
   m_ObjectHideFlags: 0
@@ -8418,6 +8456,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1001 &603291499
 Prefab:
   m_ObjectHideFlags: 0
@@ -8568,6 +8607,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1001 &610079115
 Prefab:
   m_ObjectHideFlags: 0
@@ -8751,6 +8791,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 0
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!1 &620316498
 GameObject:
   m_ObjectHideFlags: 0
@@ -8850,6 +8891,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &623291883
 GameObject:
   m_ObjectHideFlags: 0
@@ -9024,6 +9066,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &632658818
 GameObject:
   m_ObjectHideFlags: 0
@@ -9198,6 +9241,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 1
     _drowCrushEffectAni: 1
+    _dieCreateCoinNumber: 1
 --- !u!114 &633550305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9326,6 +9370,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &672960665
 GameObject:
   m_ObjectHideFlags: 0
@@ -9400,6 +9445,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1001 &679064374
 Prefab:
   m_ObjectHideFlags: 0
@@ -9706,6 +9752,7 @@ MonoBehaviour:
     _destroySize: .5
     _penetrateCount: 200
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!1001 &706093994
 Prefab:
   m_ObjectHideFlags: 0
@@ -9885,6 +9932,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &722465642
 GameObject:
   m_ObjectHideFlags: 0
@@ -10042,6 +10090,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: .5
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &745178132
 GameObject:
   m_ObjectHideFlags: 0
@@ -10438,6 +10487,7 @@ MonoBehaviour:
   _powerUpOptionChack: 1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!4 &774954947
 Transform:
   m_ObjectHideFlags: 0
@@ -12350,6 +12400,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1001 &839160670
 Prefab:
   m_ObjectHideFlags: 0
@@ -12606,6 +12657,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &855627476
 GameObject:
   m_ObjectHideFlags: 0
@@ -12809,6 +12861,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1001 &879273316
 Prefab:
   m_ObjectHideFlags: 0
@@ -12937,6 +12990,7 @@ Transform:
   - {fileID: 111948261}
   - {fileID: 1809367658}
   - {fileID: 2013526747}
+  - {fileID: 1124544293}
   m_Father: {fileID: 861044780}
 --- !u!114 &888563226
 MonoBehaviour:
@@ -13050,6 +13104,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &895141446
 GameObject:
   m_ObjectHideFlags: 0
@@ -13258,6 +13313,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &921650009
 GameObject:
   m_ObjectHideFlags: 0
@@ -13373,6 +13429,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 1
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!114 &921650015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13544,6 +13601,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &943566228
 GameObject:
   m_ObjectHideFlags: 0
@@ -13716,6 +13774,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1001 &948765737
 Prefab:
   m_ObjectHideFlags: 0
@@ -13866,6 +13925,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1001 &949081374
 Prefab:
   m_ObjectHideFlags: 0
@@ -14550,6 +14610,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
   _headTf: {fileID: 973137393}
   _crushEffect: {fileID: 973137394}
   _drowSprite: {fileID: 973137395}
@@ -14664,6 +14725,7 @@ MonoBehaviour:
     _destroySize: .5
     _penetrateCount: 1
     _drowCrushEffectAni: 2
+    _dieCreateCoinNumber: 1
 --- !u!1 &1000297385
 GameObject:
   m_ObjectHideFlags: 0
@@ -14767,6 +14829,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!114 &1000297388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14839,6 +14902,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!114 &1000297389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14936,6 +15000,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!114 &1000297390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15033,6 +15098,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!114 &1000297391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15105,6 +15171,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &1007223646
 GameObject:
   m_ObjectHideFlags: 0
@@ -15433,6 +15500,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1001 &1012964515
 Prefab:
   m_ObjectHideFlags: 0
@@ -15555,6 +15623,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &1019652751
 GameObject:
   m_ObjectHideFlags: 0
@@ -15838,6 +15907,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &1029432158
 GameObject:
   m_ObjectHideFlags: 0
@@ -16078,6 +16148,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &1052496641
 GameObject:
   m_ObjectHideFlags: 0
@@ -16351,6 +16422,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
   _headTf: {fileID: 1342198466}
   _crushEffect: {fileID: 1342198468}
   _drowSprite: {fileID: 1342198467}
@@ -16879,6 +16951,7 @@ MonoBehaviour:
     _destroySize: .800000012
     _penetrateCount: 200
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!1 &1124316700
 GameObject:
   m_ObjectHideFlags: 0
@@ -16905,6 +16978,81 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 683936034}
+--- !u!1 &1124544292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1124544293}
+  - 114: {fileID: 1124544294}
+  m_Layer: 0
+  m_Name: spot14Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1124544293
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1124544292}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 70}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 888563225}
+--- !u!114 &1124544294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1124544292}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dc3862fcbe3444f8bcd9b90ad13535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fistDelayDuration: .0500000007
+  _createParent: 0
+  _playerControl: {fileID: 48357850}
+  _bullectOption:
+    bullectOriginal: {fileID: 1913849425}
+    _drowShotCount: 1
+    _createSpeed: .100000001
+    _flightType:
+    - _smoothMoveChack: 1
+      _flightType: 0
+      _linerOption:
+        _moveSpeed: 4
+        _drowTime: 1
+        _linerType: 0
+        _randomLinerCount: 0
+        _randomLiner: 0
+        _randomForwardCount: 1
+      _chaseOption:
+        _chasesTF: {fileID: 0}
+        _randromChaseTf: []
+        _moveSpeed: 4
+        _drowTime: 0
+        _chaseRenewCount: 0
+        _chaseRenewTime: .100000001
+      _delayOption:
+        _drowTime: 1
+      _loopOption:
+        _loopStartIndex: 0
+      _rotateOption:
+        _linerType: 0
+        _rotateAni: 0
+        _rotateSpeed: 0
+        _rotateTime: 0
+  _powerUpOptionChack: -1
+  _delayLoopShotTime: 0
+  _closeAllDelete: 0
+  _popLoopCount: 2
 --- !u!1 &1124820075
 GameObject:
   m_ObjectHideFlags: 0
@@ -16979,6 +17127,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &1127655464
 GameObject:
   m_ObjectHideFlags: 0
@@ -17055,6 +17204,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!114 &1127655467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17085,6 +17235,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 5
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!1 &1130382742
 GameObject:
   m_ObjectHideFlags: 0
@@ -17420,6 +17571,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!114 &1143265131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17517,6 +17669,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!114 &1143265132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17614,6 +17767,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!114 &1143265133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17686,6 +17840,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!114 &1143265134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17758,6 +17913,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &1145159553
 GameObject:
   m_ObjectHideFlags: 0
@@ -17963,6 +18119,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &1155509742
 GameObject:
   m_ObjectHideFlags: 0
@@ -18028,6 +18185,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 0
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!1 &1165736144
 GameObject:
   m_ObjectHideFlags: 0
@@ -18102,6 +18260,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &1169220438
 GameObject:
   m_ObjectHideFlags: 0
@@ -18359,6 +18518,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1001 &1203213051
 Prefab:
   m_ObjectHideFlags: 0
@@ -18497,6 +18657,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: .5
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &1210933832
 GameObject:
   m_ObjectHideFlags: 0
@@ -18560,6 +18721,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 50
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!114 &1210933835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18829,6 +18991,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
   _headTf: {fileID: 432595275}
   _crushEffect: {fileID: 432595276}
   _drowSprite: {fileID: 432595277}
@@ -18909,6 +19072,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &1234293597
 GameObject:
   m_ObjectHideFlags: 0
@@ -19413,6 +19577,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!4 &1277781445
 Transform:
   m_ObjectHideFlags: 0
@@ -19565,6 +19730,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 1
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!1001 &1307176118
 Prefab:
   m_ObjectHideFlags: 0
@@ -19998,6 +20164,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &1351339207
 GameObject:
   m_ObjectHideFlags: 0
@@ -20097,6 +20264,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &1356522537
 GameObject:
   m_ObjectHideFlags: 0
@@ -20339,6 +20507,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &1375260540
 GameObject:
   m_ObjectHideFlags: 0
@@ -20514,6 +20683,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
   _headTf: {fileID: 812856032}
   _crushEffect: {fileID: 812856033}
   _drowSprite: {fileID: 812856029}
@@ -20673,6 +20843,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!114 &1394705953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20703,6 +20874,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 5
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!1 &1396055012
 GameObject:
   m_ObjectHideFlags: 0
@@ -21109,6 +21281,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 1
     _drowCrushEffectAni: 1
+    _dieCreateCoinNumber: 1
 --- !u!1 &1445279060
 GameObject:
   m_ObjectHideFlags: 0
@@ -21185,6 +21358,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!114 &1445279063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21215,6 +21389,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 5
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!1 &1447076839
 GameObject:
   m_ObjectHideFlags: 0
@@ -21387,6 +21562,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1001 &1462911356
 Prefab:
   m_ObjectHideFlags: 0
@@ -21678,6 +21854,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!114 &1466000569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21708,6 +21885,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 5
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!4 &1466000570
 Transform:
   m_ObjectHideFlags: 0
@@ -21894,6 +22072,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &1469153650
 GameObject:
   m_ObjectHideFlags: 0
@@ -22018,6 +22197,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &1471605803
 GameObject:
   m_ObjectHideFlags: 0
@@ -22121,6 +22301,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!114 &1471605806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22193,6 +22374,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!114 &1471605807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22290,6 +22472,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!114 &1471605808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22387,6 +22570,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!114 &1471605809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22459,6 +22643,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &1475247753
 GameObject:
   m_ObjectHideFlags: 0
@@ -22995,6 +23180,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!114 &1527027355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23025,6 +23211,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 5
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!1 &1528855920
 GameObject:
   m_ObjectHideFlags: 0
@@ -23124,6 +23311,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1001 &1537136991
 Prefab:
   m_ObjectHideFlags: 0
@@ -23293,6 +23481,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &1552000659
 GameObject:
   m_ObjectHideFlags: 0
@@ -23895,6 +24084,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1001 &1609164962
 Prefab:
   m_ObjectHideFlags: 0
@@ -24103,6 +24293,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!114 &1624940957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24133,6 +24324,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 5
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!1 &1630027406
 GameObject:
   m_ObjectHideFlags: 0
@@ -24367,6 +24559,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &1657335355
 GameObject:
   m_ObjectHideFlags: 0
@@ -24767,8 +24960,9 @@ MonoBehaviour:
     _NonDestroyChack: 0
     _backDrowOption: 0
     _destroySize: .5
-    _penetrateCount: 500
+    _penetrateCount: 100
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 20
 --- !u!114 &1706420910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24816,6 +25010,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 1
+  _popLoopCount: 0
 --- !u!114 &1706420911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24863,6 +25058,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 1
+  _popLoopCount: 0
 --- !u!1 &1724005265
 GameObject:
   m_ObjectHideFlags: 0
@@ -25187,6 +25383,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 1
     _drowCrushEffectAni: 1
+    _dieCreateCoinNumber: 1
 --- !u!114 &1753380032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25275,6 +25472,10 @@ Prefab:
     - target: {fileID: 3300006, guid: 169925611a95545fe8883fe0f0980c7b, type: 2}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 169925611a95545fe8883fe0f0980c7b, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 169925611a95545fe8883fe0f0980c7b, type: 2}
@@ -26604,6 +26805,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 20
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!1 &1797392878
 GameObject:
   m_ObjectHideFlags: 0
@@ -26678,6 +26880,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &1808317562
 GameObject:
   m_ObjectHideFlags: 0
@@ -26873,6 +27076,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1001 &1816983048
 Prefab:
   m_ObjectHideFlags: 0
@@ -27300,6 +27504,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 5
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!114 &1833865674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27372,6 +27577,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &1842786653
 GameObject:
   m_ObjectHideFlags: 0
@@ -27557,6 +27763,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &1861856847
 GameObject:
   m_ObjectHideFlags: 0
@@ -27896,6 +28103,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
   _headTf: {fileID: 2016439288}
   _crushEffect: {fileID: 2016439290}
   _drowSprite: {fileID: 2016439289}
@@ -28139,6 +28347,7 @@ MonoBehaviour:
     _destroySize: .100000001
     _penetrateCount: 1
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!1 &1879586919
 GameObject:
   m_ObjectHideFlags: 0
@@ -28312,6 +28521,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1001 &1887040702
 Prefab:
   m_ObjectHideFlags: 0
@@ -28475,6 +28685,7 @@ MonoBehaviour:
   _powerUpOptionChack: 1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1001 &1895412230
 Prefab:
   m_ObjectHideFlags: 0
@@ -28617,6 +28828,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &1907070732
 GameObject:
   m_ObjectHideFlags: 0
@@ -28756,6 +28968,154 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c75f084b41d8416fa07065f51c303db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destorySize: .300000012
+  _collistionControl: {fileID: 1146370973}
+  _bossControlOption:
+  - _flightType: 2
+    _delayOption:
+      _drowTime: 0
+      _EndDelayActObject:
+      - {fileID: 244442836}
+      - {fileID: 581358571}
+    _animationControl:
+      _animationList: []
+    _linerOption:
+      _moveSpeed: 4
+      _drowTime: 1
+      _linerType: 0
+      _smoothMoveChack: 1
+      _randomLinerCount: 0
+      _randomLiner: 0
+      _randomForwardCount: 1
+    _loopOption:
+      _loopStartIndex: 0
+  - _flightType: 0
+    _delayOption:
+      _drowTime: .300000012
+      _EndDelayActObject:
+      - {fileID: 244442836}
+      - {fileID: 581358571}
+    _animationControl:
+      _animationList: []
+    _linerOption:
+      _moveSpeed: 4
+      _drowTime: 0
+      _linerType: 0
+      _smoothMoveChack: 0
+      _randomLinerCount: 0
+      _randomLiner: 0
+      _randomForwardCount: 1
+    _loopOption:
+      _loopStartIndex: 0
+  - _flightType: 1
+    _delayOption:
+      _drowTime: 0
+      _EndDelayActObject: []
+    _animationControl:
+      _animationList:
+      - _actObject:
+        - {fileID: 833453854}
+        - {fileID: 347721711}
+        _stopChackAni: BossAnimation_Appear_Left
+        _playChackAni: 
+    _linerOption:
+      _moveSpeed: 4
+      _drowTime: 0
+      _linerType: 0
+      _smoothMoveChack: 0
+      _randomLinerCount: 0
+      _randomLiner: 0
+      _randomForwardCount: 1
+    _loopOption:
+      _loopStartIndex: 0
+  - _flightType: 1
+    _delayOption:
+      _drowTime: -1
+      _EndDelayActObject: []
+    _animationControl:
+      _animationList:
+      - _actObject:
+        - {fileID: 833453854}
+        _stopChackAni: BossAnimation_HugeAttack_Left
+        _playChackAni: AttackLeft
+      - _actObject:
+        - {fileID: 347721711}
+        _stopChackAni: BossAnimation_HugeAttack_Right
+        _playChackAni: AttackRight
+    _linerOption:
+      _moveSpeed: 4
+      _drowTime: 0
+      _linerType: 0
+      _smoothMoveChack: 0
+      _randomLinerCount: 0
+      _randomLiner: 0
+      _randomForwardCount: 1
+    _loopOption:
+      _loopStartIndex: 0
+  - _flightType: 1
+    _delayOption:
+      _drowTime: -1
+      _EndDelayActObject: []
+    _animationControl:
+      _animationList:
+      - _actObject:
+        - {fileID: 833453854}
+        _stopChackAni: BossAnimation_HugeAttack_Left
+        _playChackAni: AttackLeft
+      - _actObject:
+        - {fileID: 347721711}
+        _stopChackAni: BossAnimation_HugeAttack_Right
+        _playChackAni: AttackRight
+    _linerOption:
+      _moveSpeed: 4
+      _drowTime: 0
+      _linerType: 0
+      _smoothMoveChack: 0
+      _randomLinerCount: 0
+      _randomLiner: 0
+      _randomForwardCount: 1
+    _loopOption:
+      _loopStartIndex: 0
+  - _flightType: 1
+    _delayOption:
+      _drowTime: -1
+      _EndDelayActObject: []
+    _animationControl:
+      _animationList:
+      - _actObject:
+        - {fileID: 347721711}
+        _stopChackAni: BossAnimation_HugeAttack_Left
+        _playChackAni: AttackLeft
+      - _actObject:
+        - {fileID: 833453854}
+        _stopChackAni: BossAnimation_HugeAttack_Right
+        _playChackAni: AttackRight
+    _linerOption:
+      _moveSpeed: 4
+      _drowTime: 0
+      _linerType: 0
+      _smoothMoveChack: 0
+      _randomLinerCount: 0
+      _randomLiner: 0
+      _randomForwardCount: 1
+    _loopOption:
+      _loopStartIndex: 0
+  - _flightType: 3
+    _delayOption:
+      _drowTime: -1
+      _EndDelayActObject: []
+    _animationControl:
+      _animationList: []
+    _linerOption:
+      _moveSpeed: 4
+      _drowTime: 0
+      _linerType: 0
+      _smoothMoveChack: 0
+      _randomLinerCount: 0
+      _randomLiner: 0
+      _randomForwardCount: 1
+    _loopOption:
+      _loopStartIndex: 3
 --- !u!1001 &1924278686
 Prefab:
   m_ObjectHideFlags: 0
@@ -29244,6 +29604,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 0
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!1 &1958712605
 GameObject:
   m_ObjectHideFlags: 0
@@ -29318,6 +29679,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &1963454075
 GameObject:
   m_ObjectHideFlags: 0
@@ -30165,6 +30527,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1001 &2013823217
 Prefab:
   m_ObjectHideFlags: 0
@@ -30299,6 +30662,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 1
     _drowCrushEffectAni: 1
+    _dieCreateCoinNumber: 1
 --- !u!114 &2015933854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30607,6 +30971,7 @@ MonoBehaviour:
     _destroySize: .100000001
     _penetrateCount: 1
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!1 &2030301915
 GameObject:
   m_ObjectHideFlags: 0
@@ -31264,6 +31629,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1001 &2101290798
 Prefab:
   m_ObjectHideFlags: 0
@@ -31478,6 +31844,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
   _headTf: {fileID: 943566229}
   _crushEffect: {fileID: 943566230}
   _drowSprite: {fileID: 943566231}
@@ -31681,6 +32048,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!114 &2114118890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31711,6 +32079,7 @@ MonoBehaviour:
     _destroySize: .300000012
     _penetrateCount: 5
     _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
 --- !u!1001 &2114418076
 Prefab:
   m_ObjectHideFlags: 0
@@ -31928,6 +32297,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1001 &2130206857
 Prefab:
   m_ObjectHideFlags: 0
@@ -32075,6 +32445,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &2138326446
 GameObject:
   m_ObjectHideFlags: 0
@@ -32232,6 +32603,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
+  _popLoopCount: 0
 --- !u!1 &2146892003
 GameObject:
   m_ObjectHideFlags: 0

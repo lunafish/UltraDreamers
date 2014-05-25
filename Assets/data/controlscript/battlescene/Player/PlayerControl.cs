@@ -388,14 +388,19 @@ public class PlayerControl : MonoBehaviour {
 	}
 	
 	private int controlBulletListMaxCount;
-	public void createCoinValue(List<BullectControl> controlBulletList, Vector3 _drowPosition){
+	public void createCoinValue(List<BullectControl> controlBulletList, Vector3 _drowPosition, int number = 0){
 		if(controlBulletList != null){
 			controlBulletListMaxCount = controlBulletList.Count;
 			for(int i = 0; i < controlBulletListMaxCount; i++) {
 				if(controlBulletList[i].stopBulletObject(notDestroyParent:false))
 					_coinEffect.CreateBullectValue(null, controlBulletList[i].VPosition , null, false, false);
 			}
-		}else _coinEffect.CreateBullectValue(null, _drowPosition , null, false, false);
+		}else {
+			for(int i = 0; i < number; i++){
+				_coinEffect.CreateBullectValue(null, _drowPosition + new Vector3(Random.Range(-0.3f, 0.3f),0,Random.Range(-0.3f, 0.3f)) , null, false, false);
+			}
+
+		}
 	}
 
 	void aniPlayAttackBladAttack(){
