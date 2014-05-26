@@ -335,7 +335,7 @@ public class BullectControl : BulletBase {
 
 		SetDestorySize(_destroyOption._destroySize,_destroyOption._destroySize);
 	}
-
+	/*
 	public override void allStopBulletValue(bool enabledControl){
 		this.enabled = enabledControl;
 		if(_crushEffect != null) _crushEffect.enabled = enabledControl;
@@ -343,7 +343,7 @@ public class BullectControl : BulletBase {
 		int maxCount = _bulletCreateList.Count;
 		for(int i = 0; i < maxCount; i++) _bulletCreateList[i].enabled = enabledControl;
 	}
-
+*/
 	protected override void resetBullet(bool resetChack, bool bladeDelete = false){
 		int maxCount = _bulletCreateList.Count;
 		if(maxCount > 0) for(int i = 0; i < maxCount; i++) _bulletCreateList[i].resetBullet(resetChack, bladeDelete);

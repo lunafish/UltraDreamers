@@ -17001,7 +17001,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1124544292}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 70}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 888563225}
@@ -17052,7 +17052,7 @@ MonoBehaviour:
   _powerUpOptionChack: -1
   _delayLoopShotTime: 0
   _closeAllDelete: 0
-  _popLoopCount: 2
+  _popLoopCount: 0
 --- !u!1 &1124820075
 GameObject:
   m_ObjectHideFlags: 0
@@ -28978,6 +28978,8 @@ MonoBehaviour:
       - {fileID: 244442836}
       - {fileID: 581358571}
     _animationControl:
+      _swapChackAni: 
+      _stopChackAni: []
       _animationList: []
     _linerOption:
       _moveSpeed: 4
@@ -28996,6 +28998,8 @@ MonoBehaviour:
       - {fileID: 244442836}
       - {fileID: 581358571}
     _animationControl:
+      _swapChackAni: 
+      _stopChackAni: []
       _animationList: []
     _linerOption:
       _moveSpeed: 4
@@ -29012,11 +29016,13 @@ MonoBehaviour:
       _drowTime: 0
       _EndDelayActObject: []
     _animationControl:
+      _swapChackAni: 
+      _stopChackAni:
+      - BossAnimation_Appear_Left
       _animationList:
       - _actObject:
         - {fileID: 833453854}
         - {fileID: 347721711}
-        _stopChackAni: BossAnimation_Appear_Left
         _playChackAni: 
     _linerOption:
       _moveSpeed: 4
@@ -29033,14 +29039,16 @@ MonoBehaviour:
       _drowTime: -1
       _EndDelayActObject: []
     _animationControl:
+      _swapChackAni: BossAnimation_Idle_Left
+      _stopChackAni:
+      - BossAnimation_HugeAttack_Left
+      - BossAnimation_HugeAttack_Right
       _animationList:
       - _actObject:
         - {fileID: 833453854}
-        _stopChackAni: BossAnimation_HugeAttack_Left
         _playChackAni: AttackLeft
       - _actObject:
         - {fileID: 347721711}
-        _stopChackAni: BossAnimation_HugeAttack_Right
         _playChackAni: AttackRight
     _linerOption:
       _moveSpeed: 4
@@ -29057,14 +29065,16 @@ MonoBehaviour:
       _drowTime: -1
       _EndDelayActObject: []
     _animationControl:
+      _swapChackAni: BossAnimation_Idle_Left
+      _stopChackAni:
+      - BossAnimation_HugeAttack_Left
+      - BossAnimation_HugeAttack_Right
       _animationList:
       - _actObject:
         - {fileID: 833453854}
-        _stopChackAni: BossAnimation_HugeAttack_Left
         _playChackAni: AttackLeft
       - _actObject:
         - {fileID: 347721711}
-        _stopChackAni: BossAnimation_HugeAttack_Right
         _playChackAni: AttackRight
     _linerOption:
       _moveSpeed: 4
@@ -29081,14 +29091,16 @@ MonoBehaviour:
       _drowTime: -1
       _EndDelayActObject: []
     _animationControl:
+      _swapChackAni: BossAnimation_Idle_Left
+      _stopChackAni:
+      - BossAnimation_HugeAttack_Left
+      - BossAnimation_HugeAttack_Right
       _animationList:
       - _actObject:
         - {fileID: 347721711}
-        _stopChackAni: BossAnimation_HugeAttack_Left
         _playChackAni: AttackLeft
       - _actObject:
         - {fileID: 833453854}
-        _stopChackAni: BossAnimation_HugeAttack_Right
         _playChackAni: AttackRight
     _linerOption:
       _moveSpeed: 4
@@ -29105,6 +29117,8 @@ MonoBehaviour:
       _drowTime: -1
       _EndDelayActObject: []
     _animationControl:
+      _swapChackAni: 
+      _stopChackAni: []
       _animationList: []
     _linerOption:
       _moveSpeed: 4

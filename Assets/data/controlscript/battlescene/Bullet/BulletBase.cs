@@ -320,7 +320,7 @@ public class BulletBase : MonoBehaviour {
 		return null;
 	}
 
-	public virtual void allStopBulletValue(bool enabledControl){}
+	//public virtual void allStopBulletValue(bool enabledControl){}
 	public virtual bool stopBulletObject(bool notAddStorage = false, bool notDestroyParent = true){ return false; }
 	public virtual int chackCollisionValue(BullectControl chackBullet){ return 0; }
 	

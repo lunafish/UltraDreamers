@@ -25,10 +25,11 @@ public class bossControlOption{
 		[Serializable]
 		public class animationList{
 			public List<Animator> _actObject = new List<Animator>();
-			public string _stopChackAni = "";
 			public string _playChackAni = "";
 		}
 
+		public string _swapChackAni = "";
+		public List<string> _stopChackAni = new List<string>();
 		public List<animationList> _animationList = new List<animationList>();
 	}
 
@@ -55,12 +56,19 @@ public class bossControlOption{
 	[SerializeField] LinerOption _linerOption = null;
 	[SerializeField] loopOption _loopOption = null;
 
-	private string _stopChackAni = "";
+	private int _controlAniChackIndex = 0;
+	private int _maxStopAniCount = 0;
+	private string _swapChackAni = "";
+	private List<string> _stopChackAni = new List<string>();
 	private int _currentLinerRandomCount = 0;
 	private Animator _chackSelectAni = null;
 	public void resetControl(){
 
-		_stopChackAni = "";
+		_controlAniChackIndex = 0;
+		_maxStopAniCount = 0;
+		_stopChackAni.Clear();
+		_swapChackAni = "";
+
 		_chackSelectAni = null;
 		_currentLinerRandomCount = 0;
 
@@ -174,19 +182,32 @@ public class bossControlOption{
 		switch(_flightType){
 		case selectControlOption.animation_Control:
 
+			_maxStopAniCount = _animationControl._stopChackAni.Count;
+			if(_maxStopAniCount > 0) _stopChackAni.AddRange(_animationControl._stopChackAni);
+			else{
+				_maxStopAniCount = 0;
+				_stopChackAni.Clear();
+			}
+
+			_swapChackAni = _animationControl._swapChackAni;
+			if(!string.IsNullOrEmpty(_swapChackAni)) _controlAniChackIndex = 1;
+			else _controlAniChackIndex = 0;
+
 			int maxCount = _animationControl._animationList.Count;
 			animation_Control.animationList selectAnimationList = null;
+
 			for(int i = 0; i < maxCount; i++){
 				selectAnimationList = _animationControl._animationList[i];
-				if(i == 0) _chackSelectAni = selectAnimationList._actObject[0];
+				if(i == 0) {
+					//Debug.Log("_playChackAni  : " + selectAnimationList._playChackAni);
+					_chackSelectAni = selectAnimationList._actObject[0];
+				}
 
 				if(!string.IsNullOrEmpty(selectAnimationList._playChackAni)){
 					int nMaxCount = selectAnimationList._actObject.Count;
 					for(int j = 0; j < nMaxCount; j++)
 						selectAnimationList._actObject[j].SetTrigger(selectAnimationList._playChackAni);
 				}
-
-				if(i == 0 && !string.IsNullOrEmpty(selectAnimationList._stopChackAni)) _stopChackAni = selectAnimationList._stopChackAni;
 			}
 
 			break;
@@ -197,9 +218,32 @@ public class bossControlOption{
 		get{
 			switch(_flightType){
 			case selectControlOption.animation_Control:
-				if(_chackSelectAni.GetCurrentAnimatorStateInfo(0).IsName(_stopChackAni)){ return false; }
-				_chackSelectAni = null;
-				return true;
+				switch(_controlAniChackIndex){
+				case 1:
+					if(_chackSelectAni.GetCurrentAnimatorStateInfo(0).IsName(_swapChackAni)) {
+						return false; 
+					}
+
+					_swapChackAni = "";
+					_controlAniChackIndex = 0;
+					break;
+				default:
+					//Debug.Log("chackANi :" + _maxStopAniCount);
+					//Debug.Log(_chackSelectAni.GetCurrentAnimatorStateInfo(0).nameHash);
+
+					for(int i = 0; i < _maxStopAniCount; i++){
+						//Debug.Log("pause ani : " + Animator.StringToHash("Base Layer." + _stopChackAni[i]));
+						if(_chackSelectAni.GetCurrentAnimatorStateInfo(0).IsName(_stopChackAni[i])) {
+							return false; 
+						}
+					}
+					
+					//Debug.Log("End_ANi");
+					_chackSelectAni = null;
+					return true;
+					break;
+				}
+				break;
 			}
 			
 			return false;
@@ -257,6 +301,7 @@ public class BossControl : BulletBase {
 	}
 	
 	void controlMoveOption(){
+		//Debug.Log("--------------" + _flightList);
 		switch(_flightList){
 		case bossControlOption.selectControlOption.LinerOption:
 			Vector3 endPosition = linerOptionControl(_selectFlight.randomLinerChack, _selectFlight.linerType, _selfTF, _selectFlight.randomForwardCount);
@@ -294,14 +339,14 @@ public class BossControl : BulletBase {
 			}
 			break;
 		case bossControlOption.selectControlOption.animation_Control:
-			if(_selectFlight.endAnimationChack){
+			if(_selectFlight.endAnimationChack)
 				nextBlockObject();
-			}
+			
 			break;
 		}
 	}
 
-	public override void allStopBulletValue(bool enabledControl){}
+	//public override void allStopBulletValue(bool enabledControl){}
 	public override bool stopBulletObject(bool notAddStorage = false, bool notDestroyParent = true){ return false; }
 	public override int chackCollisionValue(BullectControl chackBullet){ return 0; }
 	
