@@ -388,16 +388,16 @@ MonoBehaviour:
     wrapMode: 2
   - name: EnemyBullet
     frames:
-    - spriteCollection: {fileID: 11400000, guid: 6d1086537491841b8af96a3de89048ff,
+    - spriteCollection: {fileID: 11400000, guid: 885a4371decc0d343ba1f7e6b23f30c3,
         type: 2}
-      spriteId: 4
+      spriteId: 12
       triggerEvent: 0
       eventInfo: 
       eventInt: 0
       eventFloat: 0
-    - spriteCollection: {fileID: 11400000, guid: 6d1086537491841b8af96a3de89048ff,
+    - spriteCollection: {fileID: 11400000, guid: 885a4371decc0d343ba1f7e6b23f30c3,
         type: 2}
-      spriteId: 5
+      spriteId: 15
       triggerEvent: 0
       eventInfo: 
       eventInt: 0
