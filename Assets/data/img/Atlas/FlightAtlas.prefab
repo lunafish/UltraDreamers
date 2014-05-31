@@ -62,7 +62,7 @@ MonoBehaviour:
   atlasWidth: 2048
   atlasHeight: 2048
   forceSquareAtlas: 1
-  atlasWastage: 49.769928
+  atlasWastage: 48.3035583
   allowMultipleAtlases: 0
   removeDuplicates: 1
   textureParams:
@@ -271,11 +271,11 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: 
+  - name: Start_Count_honeycom
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: e4a8e56d61f824409b8223a52556a4fe, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -2157,13 +2157,13 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: 
+  - name: Start_Count_line
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: ce0e29464229a41d0bbdc0109d716e62, type: 3}
     materialId: 0
-    anchor: 4
+    anchor: 3
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -2198,13 +2198,13 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: 
+  - name: Start_Count_Text_stage
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: fdf26650e7c694bafbdc0a02ad3dd9d5, type: 3}
     materialId: 0
-    anchor: 4
+    anchor: 5
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -2239,13 +2239,13 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: 
+  - name: Start_Count_Stage_1
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: f7cba3cfdc77d4799a2b780104f49e77, type: 3}
     materialId: 0
-    anchor: 4
+    anchor: 7
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}

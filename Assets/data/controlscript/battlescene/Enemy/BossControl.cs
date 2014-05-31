@@ -241,7 +241,6 @@ public class bossControlOption{
 					//Debug.Log("End_ANi");
 					_chackSelectAni = null;
 					return true;
-					break;
 				}
 				break;
 			}

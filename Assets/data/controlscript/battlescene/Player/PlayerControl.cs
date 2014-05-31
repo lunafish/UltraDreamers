@@ -55,9 +55,12 @@ public class PlayerControl : MonoBehaviour {
 		_createBaldEffect.y = _selfTF.position.y;
 		//_startPosition = _createBaldEffect = _selfTF.position;
 
+		_currentCoinValue = 0;
+
 		Transform spriteTF =  _selfTF.FindChild("FlightUnit");
 		_drowSprite = spriteTF.GetComponent("tk2dSprite") as tk2dSprite;
 		_drowSpriteAni = spriteTF.GetComponent("tk2dSpriteAnimator") as tk2dSpriteAnimator;
+		_drowSpriteAni.Play();
 
 		spriteTF = _selfTF.FindChild("PowerUpEffect");
 		spriteTF.localScale = Vector3.zero;
@@ -125,6 +128,7 @@ public class PlayerControl : MonoBehaviour {
 		_wing_Normal_Left = _wingNormalTF.FindChild("NL_LeftWing").GetComponent("Animator") as Animator;
 		_wing_Normal_RIght = _wingNormalTF.FindChild("NL_RighttWing").GetComponent("Animator") as Animator;
 		_wingNormalOriPosition = _wingNormalTF.localPosition;
+		_wingNormalTF.gameObject.SetActive(false);
 
 		_PowerControl = 1;
 		_createBullet = _selfTF.GetComponentsInChildren<BulletCreate>();
@@ -132,7 +136,7 @@ public class PlayerControl : MonoBehaviour {
 
 		_drowSwitchIndex = 0;
 		_blockScript.enabled = false;
-		this.enabled = true;
+		this.enabled = false;
 	}
 
 	void bulletEnabledControl(bool enabledControl){
@@ -164,13 +168,16 @@ public class PlayerControl : MonoBehaviour {
 		}
 	}
 
-	private bool _viewPlayerHPObject = true;
-	void Start(){
-		_coinNumberCount.ViewNumberCount(0, true);
+	private bool _startCharacterControl = false;
+	public void viewPlayerWingObject(){
+		if(_startCharacterControl) return;
+
+		_startCharacterControl = true;
+		_wingNormalTF.gameObject.SetActive(true);
 		StartCoroutine("nomalWingAppearChack");
-		this.enabled = false;
 	}
 
+	private bool _viewPlayerHPObject = true;
 	private tk2dSpriteAnimator _dieBoombAni = null;
 	public void playerCollisionChack(Vector3 drowPosition){
 		//if(_drowSwitchIndex != 0) return;
@@ -275,7 +282,7 @@ public class PlayerControl : MonoBehaviour {
 		_coinNumberCount.ViewNumberCount(_currentCoinValue, 0.3f);
 	}
 
-	private int _currentCoinValue = 0;
+	static public int _currentCoinValue = 0;
 	public void coindCollisionChack(){
 		_currentCoinValue += 10;
 		_coinNumberCount.ViewNumberCount(_currentCoinValue, 0.3f);
@@ -512,6 +519,7 @@ public class PlayerControl : MonoBehaviour {
 		case 8: // die player
 			if(_dieBoombAni.Playing) return;
 
+			StartScene._viewRankObject = true;
 			_drowSpriteAni.Play("Character_die");
 			_drowSwitchIndex = 9;
 			break;

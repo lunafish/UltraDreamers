@@ -11,8 +11,7 @@ public class NumberControl : MonoBehaviour {
 		right
 	}
 	
-	public Alignment vAlign = Alignment.right;
-	private Alignment _copyAlign = Alignment.right;
+	[SerializeField] Alignment vAlign = Alignment.right;
 	
 	protected Transform _selfTF;
 	protected int _countNumber = 0;
@@ -25,17 +24,24 @@ public class NumberControl : MonoBehaviour {
 	private List<Transform> _numberTransform = new List<Transform>();
 	
 	void Awake(){
+		resetNumberValue();
+	}
+
+	public void resetNumberValue(){
+		if(_selfTF != null) return;
+		
 		settingValue();
 		removeNumber();
 		this.enabled = false;
+		ViewNumberCount(0, true);
 	}
 	
-	protected void settingValue(){
+	void settingValue(){
 		_selfTF = transform;
-		_copyAlign = vAlign;
+
 		Transform numberTF = transform.FindChild("Number");
 		_originalSprite = numberTF.GetComponent("tk2dSprite") as tk2dSprite;
-		switch (_copyAlign)
+		switch (vAlign)
 		{
 		case Alignment.left:
 			numberTF.localPosition = new Vector3(_intervalX,0,0);
@@ -49,8 +55,8 @@ public class NumberControl : MonoBehaviour {
 		_numberSprite.Add(_originalSprite);
 		_numberTransform.Add(numberTF);
 	}
-	
-	protected void removeNumber(){
+
+	void removeNumber(){
 		_countNumber = 0;
 		StopAllCoroutines();
 		int maxCount = _numberSprite.Count;
@@ -159,7 +165,7 @@ public class NumberControl : MonoBehaviour {
 				copyTF.parent = _selfTF;
 				copyTF.localScale = Vector3.one;
 				copyTF.localEulerAngles = Vector3.zero;
-				switch (_copyAlign)
+				switch (vAlign)
 				{
 				case Alignment.left:
 					copyTF.localPosition = new Vector3(_intervalX * (indexCount+1),0,0);
@@ -175,7 +181,7 @@ public class NumberControl : MonoBehaviour {
 			_numberSprite[indexCount++].SetSprite("combo_"+drowCount);
 		}
 		_indexCount = indexCount;
-		switch (_copyAlign)
+		switch (vAlign)
 		{
 		case Alignment.center:
 			if(_indexCount != oldMaxCount){
