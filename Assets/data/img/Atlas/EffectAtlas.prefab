@@ -59,10 +59,10 @@ MonoBehaviour:
   forcedTextureWidth: 2048
   forcedTextureHeight: 2048
   textureCompression: 0
-  atlasWidth: 512
+  atlasWidth: 1024
   atlasHeight: 1024
   forceSquareAtlas: 0
-  atlasWastage: 24.2635727
+  atlasWastage: 36.4561081
   allowMultipleAtlases: 0
   removeDuplicates: 1
   textureParams:
@@ -113,7 +113,7 @@ MonoBehaviour:
     scale: {x: 1, y: 1, z: 1}
     texture: {fileID: 2800000, guid: b4510650eb9f2435ca2251c22ec1fe8d, type: 3}
     materialId: 0
-    anchor: 4
+    anchor: 1
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -154,7 +154,7 @@ MonoBehaviour:
     scale: {x: 1, y: 1, z: 1}
     texture: {fileID: 2800000, guid: 0336fd231bcae4962b1ffde7f16e6be1, type: 3}
     materialId: 0
-    anchor: 7
+    anchor: 1
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -195,7 +195,7 @@ MonoBehaviour:
     scale: {x: 1, y: 1, z: 1}
     texture: {fileID: 2800000, guid: 3b80ce28346be42db9b85163e00446f3, type: 3}
     materialId: 0
-    anchor: 4
+    anchor: 1
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -236,7 +236,7 @@ MonoBehaviour:
     scale: {x: 1, y: 1, z: 1}
     texture: {fileID: 2800000, guid: 2e39fc4b754f74ab99d94074fd04d5f5, type: 3}
     materialId: 0
-    anchor: 7
+    anchor: 1
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -277,7 +277,7 @@ MonoBehaviour:
     scale: {x: 1, y: 1, z: 1}
     texture: {fileID: 2800000, guid: a7ae3dacdcfc24c689d707893c81081f, type: 3}
     materialId: 0
-    anchor: 4
+    anchor: 1
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -359,7 +359,7 @@ MonoBehaviour:
     scale: {x: 1, y: 1, z: 1}
     texture: {fileID: 2800000, guid: fdb7fb5d0a53041dba8c583a16cf5a51, type: 3}
     materialId: 0
-    anchor: 7
+    anchor: 1
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -400,7 +400,7 @@ MonoBehaviour:
     scale: {x: 1, y: 1, z: 1}
     texture: {fileID: 2800000, guid: 14285d7ee8a00423da020662761087dd, type: 3}
     materialId: 0
-    anchor: 7
+    anchor: 1
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -727,6 +727,47 @@ MonoBehaviour:
     additive: 0
     scale: {x: 1, y: 1, z: 1}
     texture: {fileID: 2800000, guid: 6805cafa7ff2d4b028aaaa5d0601da86, type: 3}
+    materialId: 0
+    anchor: 4
+    anchorX: 0
+    anchorY: 0
+    overrideMesh: {fileID: 0}
+    doubleSidedSprite: 0
+    customSpriteGeometry: 0
+    geometryIslands: []
+    dice: 0
+    diceUnitX: 64
+    diceUnitY: 64
+    diceFilter: 0
+    pad: 0
+    extraPadding: 0
+    source: 0
+    fromSpriteSheet: 0
+    hasSpriteSheetId: 0
+    spriteSheetId: 0
+    spriteSheetX: 0
+    spriteSheetY: 0
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    regionId: 0
+    colliderType: 0
+    colliderData: []
+    boxColliderMin: {x: 0, y: 0}
+    boxColliderMax: {x: 0, y: 0}
+    polyColliderIslands: []
+    polyColliderCap: 1
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    colliderColor: 0
+    attachPoints: []
+  - name: bullet_player_2
+    disableTrimming: 0
+    additive: 0
+    scale: {x: 1, y: 1, z: 1}
+    texture: {fileID: 2800000, guid: 76361e9b2911e41c89efad3292d56895, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0

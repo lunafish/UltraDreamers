@@ -14,15 +14,15 @@ public class collisionChack : MonoBehaviour {
 	[SerializeField] List<GameObject> _moveStageControl;
 
 	private Transform _playerTF;
-	private List<BulletBase> _playerBullectList = new List<BulletBase>();
-	private List<BulletBase> _allEnemyList = new List<BulletBase>();
-	private List<BulletBase> _enemyDestroyList = new List<BulletBase>();
-	private List<BulletBase> _allCoinList = new List<BulletBase>();
-	private List<BulletBase> _PowerUpList = new List<BulletBase>();
-	//private List<BulletBase> _onotherList = new List<BulletBase>();
+	private List<DestoryOption> _playerBullectList = new List<DestoryOption>();
+	private List<DestoryOption> _allEnemyList = new List<DestoryOption>();
+	private List<DestoryOption> _enemyDestroyList = new List<DestoryOption>();
+	private List<DestoryOption> _allCoinList = new List<DestoryOption>();
+	private List<DestoryOption> _PowerUpList = new List<DestoryOption>();
+	//private List<DestoryOption> _onotherList = new List<DestoryOption>();
 
 	private List<Transform> _stopTiLine = new List<Transform>();
-	public void addStroageData(Transform bullet, BulletBase copyBullet, bool stopTimeLine){
+	public void addStroageData(Transform bullet, DestoryOption copyBullet, bool stopTimeLine){
 		if(bullet != null) bullet.parent = _bullectStorage;
 		if(stopTimeLine){
 			_stopTiLine.Remove(bullet);
@@ -43,7 +43,7 @@ public class collisionChack : MonoBehaviour {
 		_playerControlSC.createCoinValue(null, _drowPosition, number);
 	}
 
-	public void setDrowStage(Transform bullect, BulletBase copyBullet, BulletBase.objectPosition obPoint, bool stopTimeLine, bool NonDestroyChack){
+	public void setDrowStage(Transform bullect, DestoryOption copyBullet, DestoryOption.objectPosition obPoint, bool stopTimeLine, bool NonDestroyChack){
 		if(bullect != null) bullect.parent = _drowStage;
 		//Debug.Log(bullect.name + " " + bullect.parent.name);
 		//UnityEditor.EditorApplication.isPaused = true;
@@ -55,17 +55,17 @@ public class collisionChack : MonoBehaviour {
 
 		if(!NonDestroyChack && copyBullet != null)
 		switch(obPoint){
-		case BulletBase.objectPosition.enemy:
+		case DestoryOption.objectPosition.enemy:
 			_allEnemyList.Add(copyBullet);
 			if(copyBullet.destroyChack) _enemyDestroyList.Add(copyBullet);
 			break;
-		case BulletBase.objectPosition.palyer:
+		case DestoryOption.objectPosition.palyer:
 			_playerBullectList.Add(copyBullet);
 			break;
-		case BulletBase.objectPosition.coin:
+		case DestoryOption.objectPosition.coin:
 			_allCoinList.Add(copyBullet);
 			break;
-		case BulletBase.objectPosition.powerUp:
+		case DestoryOption.objectPosition.powerUp:
 			_PowerUpList.Add(copyBullet);
 			break;
 		}
@@ -102,7 +102,7 @@ public class collisionChack : MonoBehaviour {
 	}
 
 	public Vector3 PlayerPosition { get { return _playerTF.localPosition; } }
-	public BulletBase enemyChasePosition(Vector3 basePosition){
+	public DestoryOption enemyChasePosition(Vector3 basePosition){
 		int maxCount = _enemyDestroyList.Count;
 		if(maxCount > 0){
 
@@ -135,8 +135,8 @@ public class collisionChack : MonoBehaviour {
 	private int _max1Count = 0;
 	private int _max2Count = 0;
 	private bool _removeChack = false;
-	private BulletBase _select1TF = null;
-	private BulletBase _select2TF = null;
+	private DestoryOption _select1TF = null;
+	private DestoryOption _select2TF = null;
 	private Vector3 _copyVector3 = Vector3.zero;
 	private bool _chaseCoinControl = false;
 	void Update() {
@@ -146,6 +146,7 @@ public class collisionChack : MonoBehaviour {
 		_max1Count = _allCoinList.Count;
 		_copyVector3 = _playerControlSC.VPosition;
 		_chaseCoinControl = _blockControlSC._chaseCoinControl;
+		int playerStatus = _playerControlSC.getPlayerStatus;
 
 		for(_indexC = 0; _indexC < _max1Count; _indexC++){
 			_select1TF = _allCoinList[_drowC++];
@@ -155,13 +156,15 @@ public class collisionChack : MonoBehaviour {
 			}else _select1TF.coinChaseFlowAct(_chaseCoinControl);
 		}
 
-		_drowC = 0;
-		_max1Count = _PowerUpList.Count;
-		for(_indexC = 0; _indexC < _max1Count; _indexC++){
-			_select1TF = _PowerUpList[_drowC++];
-			if(_select1TF.chackCrushPlayerValue(_copyVector3) > 0){
-				_drowC -= 1;
-				_playerControlSC.PowerUpItemChack();
+		if(playerStatus == 0){
+			_drowC = 0;
+			_max1Count = _PowerUpList.Count;
+			for(_indexC = 0; _indexC < _max1Count; _indexC++){
+				_select1TF = _PowerUpList[_drowC++];
+				if(_select1TF.chackCrushPlayerValue(_copyVector3) > 0){
+					_drowC -= 1;
+					_playerControlSC.PowerUpItemChack();
+				}
 			}
 		}
 

@@ -175,7 +175,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400012, guid: 68e00c98c9d8e4c3c80bac097f3bc631, type: 2}
   m_PrefabInternal: {fileID: 446018227}
   m_GameObject: {fileID: 16720443}
-  m_LocalRotation: {x: .106364205, y: .00489867525, z: -.045745369, w: .993262351}
+  m_LocalRotation: {x: .106364198, y: .00489867479, z: -.0457453653, w: .993262291}
   m_LocalPosition: {x: -.202657193, y: -.0157970786, z: .00109592883}
   m_LocalScale: {x: .600000024, y: .600000024, z: .600000024}
   m_Children:
@@ -484,7 +484,7 @@ MonoBehaviour:
   collection: {fileID: 11400000, guid: 6d1086537491841b8af96a3de89048ff, type: 2}
   _color: {r: 1, g: 1, b: 1, a: 1}
   _scale: {x: 1.5, y: 1.5, z: 1}
-  _spriteId: 1
+  _spriteId: 0
   boxCollider2D: {fileID: 0}
   polygonCollider2D: []
   edgeCollider2D: []
@@ -2707,7 +2707,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 169416427}
-  m_LocalRotation: {x: 0, y: .0610485412, z: 0, w: .998134792}
+  m_LocalRotation: {x: 0, y: .0610485449, z: 0, w: .998134851}
   m_LocalPosition: {x: -.132988125, y: 0, z: .548979819}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2810,7 +2810,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 46e95cced86eb4d3d9ac6eb7dea9ac5f, type: 2}
       propertyPath: defaultClipId
-      value: 29
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 46e95cced86eb4d3d9ac6eb7dea9ac5f, type: 2}
       propertyPath: m_Name
@@ -2830,7 +2830,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 46e95cced86eb4d3d9ac6eb7dea9ac5f, type: 2}
       propertyPath: playAutomatically
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46e95cced86eb4d3d9ac6eb7dea9ac5f, type: 2}
@@ -2982,6 +2982,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 1
+    _NonDestroyChack: 0
+    _backDrowOption: 1
+    _destroySize: .300000012
+    _penetrateCount: 5
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 0
   _stopTimeLine: 0
@@ -2993,15 +3002,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 172459632}
   _drowSprite: {fileID: 172459628}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 1
-    _NonDestroyChack: 0
-    _backDrowOption: 1
-    _destroySize: .300000012
-    _penetrateCount: 5
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!114 &172459632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3764,7 +3764,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
       propertyPath: _spriteId
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4099,6 +4099,7 @@ Transform:
   - {fileID: 921650010}
   - {fileID: 1753380030}
   - {fileID: 633550302}
+  - {fileID: 1753317812}
   - {fileID: 1440079055}
   - {fileID: 994642213}
   - {fileID: 365631053}
@@ -5096,6 +5097,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 1
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 20
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 7
   _stopTimeLine: 1
@@ -5107,15 +5117,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 250812404}
   _drowSprite: {fileID: 250812403}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 1
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .300000012
-    _penetrateCount: 20
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!1 &319558331
 GameObject:
   m_ObjectHideFlags: 0
@@ -5230,6 +5231,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 0
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .5
+    _penetrateCount: 1
+    _drowCrushEffectAni: 2
+    _dieCreateCoinNumber: 1
   _obPoint: 3
   _selectIdel: 9
   _stopTimeLine: 0
@@ -5241,15 +5251,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 1907070734}
   _drowSprite: {fileID: 1907070735}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 0
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .5
-    _penetrateCount: 1
-    _drowCrushEffectAni: 2
-    _dieCreateCoinNumber: 1
 --- !u!1 &347721709
 GameObject:
   m_ObjectHideFlags: 0
@@ -5504,6 +5505,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 0
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 1
+    _drowCrushEffectAni: 1
+    _dieCreateCoinNumber: 1
   _obPoint: 1
   _selectIdel: 0
   _stopTimeLine: 0
@@ -5515,15 +5525,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 365631055}
   _drowSprite: {fileID: 365631056}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 0
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .300000012
-    _penetrateCount: 1
-    _drowCrushEffectAni: 1
-    _dieCreateCoinNumber: 1
 --- !u!114 &365631055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5838,8 +5839,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   library: {fileID: 11400000, guid: b25b8040af7464e83b467602b4df1a00, type: 2}
-  defaultClipId: 29
-  playAutomatically: 0
+  defaultClipId: 35
+  playAutomatically: 1
 --- !u!114 &401662556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6102,6 +6103,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 1
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 5
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 0
   _stopTimeLine: 0
@@ -6113,15 +6123,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 39356157}
   _drowSprite: {fileID: 39356156}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 1
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .300000012
-    _penetrateCount: 5
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!1 &418902164
 GameObject:
   m_ObjectHideFlags: 0
@@ -6794,6 +6795,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 1
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 20
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 6
   _stopTimeLine: 1
@@ -6805,15 +6815,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 470370971}
   _drowSprite: {fileID: 470370972}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 1
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .300000012
-    _penetrateCount: 20
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!114 &470370971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6921,6 +6922,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 0
+    _NonDestroyChack: 1
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 1
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 0
   _stopTimeLine: 0
@@ -6932,15 +6942,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 0}
   _drowSprite: {fileID: 0}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 0
-    _NonDestroyChack: 1
-    _backDrowOption: 0
-    _destroySize: .300000012
-    _penetrateCount: 1
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!114 &482715936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8156,6 +8157,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 1
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 5
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 0
   _stopTimeLine: 0
@@ -8167,15 +8177,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 1863386756}
   _drowSprite: {fileID: 1863386755}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 1
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .300000012
-    _penetrateCount: 5
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!1 &568793847
 GameObject:
   m_ObjectHideFlags: 0
@@ -8835,6 +8836,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 0
+    _NonDestroyChack: 1
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 0
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 0
   _stopTimeLine: 0
@@ -8846,15 +8856,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 975068842}
   _drowSprite: {fileID: 975068841}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 0
-    _NonDestroyChack: 1
-    _backDrowOption: 0
-    _destroySize: .300000012
-    _penetrateCount: 0
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!1 &620316498
 GameObject:
   m_ObjectHideFlags: 0
@@ -9285,17 +9286,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _obPoint: 1
-  _selectIdel: 0
-  _stopTimeLine: 0
-  _RandomAngle: 0
-  _CrushRandomAngle: 1
-  _LookAtOption: 0
-  _notResetAngle: 0
-  _enabledObjectList: []
-  _crushEffect: {fileID: 633550303}
-  _drowSprite: {fileID: 633550305}
-  _drowParticle: {fileID: 0}
   _destroyOption:
     _collistionControl: {fileID: 1146370973}
     _destroyChack: 0
@@ -9305,6 +9295,17 @@ MonoBehaviour:
     _penetrateCount: 1
     _drowCrushEffectAni: 1
     _dieCreateCoinNumber: 1
+  _obPoint: 1
+  _selectIdel: 11
+  _stopTimeLine: 0
+  _RandomAngle: 0
+  _CrushRandomAngle: 1
+  _LookAtOption: 0
+  _notResetAngle: 0
+  _enabledObjectList: []
+  _crushEffect: {fileID: 633550303}
+  _drowSprite: {fileID: 633550305}
+  _drowParticle: {fileID: 0}
 --- !u!114 &633550305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9805,6 +9806,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 1
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .5
+    _penetrateCount: 200
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 0
   _stopTimeLine: 1
@@ -9816,15 +9826,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 1085278710}
   _drowSprite: {fileID: 1085278711}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 1
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .5
-    _penetrateCount: 200
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!1001 &706093994
 Prefab:
   m_ObjectHideFlags: 0
@@ -10029,7 +10030,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
   m_PrefabInternal: {fileID: 1452933467}
   m_GameObject: {fileID: 722465642}
-  m_LocalRotation: {x: .707106888, y: 0, z: 0, w: .707106769}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -10412,7 +10413,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
   m_PrefabInternal: {fileID: 2110852875}
   m_GameObject: {fileID: 760416587}
-  m_LocalRotation: {x: .707106888, y: 0, z: 0, w: .707106769}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -12071,7 +12072,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
   m_PrefabInternal: {fileID: 279640131}
   m_GameObject: {fileID: 812856028}
-  m_LocalRotation: {x: .707106888, y: 0, z: 0, w: .707106769}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -13509,6 +13510,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 0
+    _NonDestroyChack: 1
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 1
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 1
   _selectIdel: 1
   _stopTimeLine: 0
@@ -13520,15 +13530,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 921650015}
   _drowSprite: {fileID: 0}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 0
-    _NonDestroyChack: 1
-    _backDrowOption: 0
-    _destroySize: .300000012
-    _penetrateCount: 1
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!114 &921650015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13567,7 +13568,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
   m_PrefabInternal: {fileID: 1020998634}
   m_GameObject: {fileID: 924192746}
-  m_LocalRotation: {x: .707106888, y: 0, z: 0, w: .707106769}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -13726,7 +13727,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
   m_PrefabInternal: {fileID: 2047568876}
   m_GameObject: {fileID: 943566228}
-  m_LocalRotation: {x: .707106888, y: 0, z: 0, w: .707106769}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -14805,6 +14806,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 0
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .5
+    _penetrateCount: 1
+    _drowCrushEffectAni: 2
+    _dieCreateCoinNumber: 1
   _obPoint: 2
   _selectIdel: 2
   _stopTimeLine: 0
@@ -14816,15 +14826,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 302049597}
   _drowSprite: {fileID: 0}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 0
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .5
-    _penetrateCount: 1
-    _drowCrushEffectAni: 2
-    _dieCreateCoinNumber: 1
 --- !u!1 &1000297385
 GameObject:
   m_ObjectHideFlags: 0
@@ -17067,6 +17068,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 1
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .800000012
+    _penetrateCount: 200
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 0
   _stopTimeLine: 1
@@ -17078,15 +17088,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 190790472}
   _drowSprite: {fileID: 190790473}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 1
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .800000012
-    _penetrateCount: 200
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!1 &1124316700
 GameObject:
   m_ObjectHideFlags: 0
@@ -17351,6 +17352,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 1
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 5
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 0
   _stopTimeLine: 0
@@ -17362,15 +17372,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 1508645927}
   _drowSprite: {fileID: 1508645928}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 1
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .300000012
-    _penetrateCount: 5
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!1 &1130382742
 GameObject:
   m_ObjectHideFlags: 0
@@ -18301,6 +18302,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 0
+    _NonDestroyChack: 1
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 0
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 0
   _stopTimeLine: 0
@@ -18312,15 +18322,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 0}
   _drowSprite: {fileID: 0}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 0
-    _NonDestroyChack: 1
-    _backDrowOption: 0
-    _destroySize: .300000012
-    _penetrateCount: 0
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!1 &1165736144
 GameObject:
   m_ObjectHideFlags: 0
@@ -18837,6 +18838,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 1
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 50
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 6
   _stopTimeLine: 1
@@ -18848,15 +18858,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 1210933835}
   _drowSprite: {fileID: 1210933836}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 1
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .300000012
-    _penetrateCount: 50
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!114 &1210933835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19873,6 +19874,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 1
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 1
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 0
   _stopTimeLine: 0
@@ -19884,15 +19894,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 181228923}
   _drowSprite: {fileID: 181228926}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 1
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .300000012
-    _penetrateCount: 1
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!1001 &1307176118
 Prefab:
   m_ObjectHideFlags: 0
@@ -20579,6 +20580,67 @@ Prefab:
   m_RootGameObject: {fileID: 1052496641}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1001 &1363985452
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 265271484}
+    m_Modifications:
+    - target: {fileID: 3300000, guid: 6d451a336a0974f798e535532856675c, type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6d451a336a0974f798e535532856675c, type: 2}
+      propertyPath: m_Name
+      value: Bullet_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
+      propertyPath: renderLayer
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 6d451a336a0974f798e535532856675c, type: 2}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
+      propertyPath: _spriteId
+      value: 62
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
+      propertyPath: _scale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: .446198106
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .894934237
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
+      propertyPath: collection
+      value: 
+      objectReference: {fileID: 11400000, guid: 6d1086537491841b8af96a3de89048ff,
+        type: 2}
+    - target: {fileID: 2300000, guid: 6d451a336a0974f798e535532856675c, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 396fbbc4e3c654a43806691d03eb30d6, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6d451a336a0974f798e535532856675c, type: 2}
+  m_RootGameObject: {fileID: 1753317811}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1373222391
 GameObject:
   m_ObjectHideFlags: 0
@@ -20704,7 +20766,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
   m_PrefabInternal: {fileID: 1007914387}
   m_GameObject: {fileID: 1375260540}
-  m_LocalRotation: {x: .707106888, y: 0, z: 0, w: .707106769}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -20860,7 +20922,7 @@ MonoBehaviour:
   _drowSprite: {fileID: 812856029}
   _drowIdleImgName: Laser_beam_2
   _ImgScaleTF: {fileID: 1673874910}
-  _scaleSize: 3.5
+  _scaleSize: 2.0999999
 --- !u!1001 &1389706607
 Prefab:
   m_ObjectHideFlags: 0
@@ -21026,6 +21088,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 1
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 5
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 0
   _stopTimeLine: 0
@@ -21037,15 +21108,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 106820187}
   _drowSprite: {fileID: 106820186}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 1
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .300000012
-    _penetrateCount: 5
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!1 &1396055012
 GameObject:
   m_ObjectHideFlags: 0
@@ -21433,6 +21495,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 0
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 1
+    _drowCrushEffectAni: 1
+    _dieCreateCoinNumber: 1
   _obPoint: 1
   _selectIdel: 5
   _stopTimeLine: 0
@@ -21444,15 +21515,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 745178136}
   _drowSprite: {fileID: 745178135}
   _drowParticle: {fileID: 776443191}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 0
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .300000012
-    _penetrateCount: 1
-    _drowCrushEffectAni: 1
-    _dieCreateCoinNumber: 1
 --- !u!1 &1445279060
 GameObject:
   m_ObjectHideFlags: 0
@@ -21541,6 +21603,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 1
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 5
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 0
   _stopTimeLine: 0
@@ -21552,15 +21623,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 1724005267}
   _drowSprite: {fileID: 1724005268}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 1
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .300000012
-    _penetrateCount: 5
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!1 &1447076839
 GameObject:
   m_ObjectHideFlags: 0
@@ -22046,6 +22108,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 1
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 5
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 0
   _stopTimeLine: 0
@@ -22057,15 +22128,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 1600066247}
   _drowSprite: {fileID: 1600066246}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 1
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .300000012
-    _penetrateCount: 5
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!4 &1466000570
 Transform:
   m_ObjectHideFlags: 0
@@ -22848,7 +22910,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
   m_PrefabInternal: {fileID: 1012964515}
   m_GameObject: {fileID: 1475247753}
-  m_LocalRotation: {x: .707106888, y: 0, z: 0, w: .707106769}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -23372,6 +23434,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 1
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 5
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 0
   _stopTimeLine: 0
@@ -23383,15 +23454,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 1759286735}
   _drowSprite: {fileID: 1759286736}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 1
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .300000012
-    _penetrateCount: 5
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!1 &1528855920
 GameObject:
   m_ObjectHideFlags: 0
@@ -24494,6 +24556,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 1
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 5
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 0
   _stopTimeLine: 0
@@ -24505,15 +24576,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 55024329}
   _drowSprite: {fileID: 55024328}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 1
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .300000012
-    _penetrateCount: 5
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!1 &1630027406
 GameObject:
   m_ObjectHideFlags: 0
@@ -24828,7 +24890,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
   m_PrefabInternal: {fileID: 219397203}
   m_GameObject: {fileID: 1673874909}
-  m_LocalRotation: {x: .707106888, y: 0, z: 0, w: .707106769}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
   m_LocalPosition: {x: -0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -24954,7 +25016,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
       propertyPath: _spriteId
-      value: 4
+      value: 77
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 6d451a336a0974f798e535532856675c, type: 2}
       propertyPath: m_SortingOrder
@@ -24983,6 +25045,14 @@ Prefab:
     - target: {fileID: 100000, guid: 6d451a336a0974f798e535532856675c, type: 2}
       propertyPath: m_Name
       value: TransformObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
+      propertyPath: _scale.x
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
+      propertyPath: _scale.y
+      value: .5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d451a336a0974f798e535532856675c, type: 2}
@@ -25130,6 +25200,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 1
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .5
+    _penetrateCount: 100
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 20
   _obPoint: 0
   _selectIdel: 8
   _stopTimeLine: 1
@@ -25143,15 +25222,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 1173781480}
   _drowSprite: {fileID: 1173781481}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 1
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .5
-    _penetrateCount: 100
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 20
 --- !u!114 &1706420910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25457,6 +25527,136 @@ Renderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_SortingLayerID: 0
+--- !u!1 &1753317811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 6d451a336a0974f798e535532856675c, type: 2}
+  m_PrefabInternal: {fileID: 1363985452}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1753317812}
+  - 23: {fileID: 1753317817}
+  - 33: {fileID: 1753317816}
+  - 114: {fileID: 1753317815}
+  - 114: {fileID: 1753317814}
+  - 114: {fileID: 1753317813}
+  m_Layer: 0
+  m_Name: Bullet_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1753317812
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
+  m_PrefabInternal: {fileID: 1363985452}
+  m_GameObject: {fileID: 1753317811}
+  m_LocalRotation: {x: .446198106, y: 0, z: 0, w: .894934237}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 265271484}
+--- !u!114 &1753317813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1753317811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e54113e5604435b8ae87c7754f2725, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  library: {fileID: 11400000, guid: b25b8040af7464e83b467602b4df1a00, type: 2}
+  defaultClipId: 3
+  playAutomatically: 0
+--- !u!114 &1753317814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1753317811}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 0
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 1
+    _drowCrushEffectAni: 1
+    _dieCreateCoinNumber: 1
+  _obPoint: 1
+  _selectIdel: 12
+  _stopTimeLine: 0
+  _RandomAngle: 0
+  _CrushRandomAngle: 1
+  _LookAtOption: 0
+  _notResetAngle: 0
+  _enabledObjectList: []
+  _crushEffect: {fileID: 1753317813}
+  _drowSprite: {fileID: 1753317815}
+  _drowParticle: {fileID: 0}
+--- !u!114 &1753317815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 6d451a336a0974f798e535532856675c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1363985452}
+  m_GameObject: {fileID: 1753317811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fac570381f34f647b768dc5a5aa1364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collection: {fileID: 11400000, guid: 6d1086537491841b8af96a3de89048ff, type: 2}
+  _color: {r: 1, g: 1, b: 1, a: 1}
+  _scale: {x: 1, y: 1, z: 1}
+  _spriteId: 62
+  boxCollider2D: {fileID: 0}
+  polygonCollider2D: []
+  edgeCollider2D: []
+  boxCollider: {fileID: 0}
+  meshCollider: {fileID: 0}
+  meshColliderPositions: []
+  meshColliderMesh: {fileID: 0}
+  renderLayer: -2
+--- !u!33 &1753317816
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: 6d451a336a0974f798e535532856675c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1363985452}
+  m_GameObject: {fileID: 1753317811}
+  m_Mesh: {fileID: 0}
+--- !u!23 &1753317817
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: 6d451a336a0974f798e535532856675c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1363985452}
+  m_GameObject: {fileID: 1753317811}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 396fbbc4e3c654a43806691d03eb30d6, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: -2
+  m_SortingLayerID: 0
 --- !u!1 &1753380026
 GameObject:
   m_ObjectHideFlags: 0
@@ -25553,17 +25753,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _obPoint: 1
-  _selectIdel: 0
-  _stopTimeLine: 0
-  _RandomAngle: 0
-  _CrushRandomAngle: 1
-  _LookAtOption: 0
-  _notResetAngle: 0
-  _enabledObjectList: []
-  _crushEffect: {fileID: 1753380032}
-  _drowSprite: {fileID: 1753380027}
-  _drowParticle: {fileID: 0}
   _destroyOption:
     _collistionControl: {fileID: 1146370973}
     _destroyChack: 0
@@ -25573,6 +25762,17 @@ MonoBehaviour:
     _penetrateCount: 1
     _drowCrushEffectAni: 1
     _dieCreateCoinNumber: 1
+  _obPoint: 1
+  _selectIdel: 10
+  _stopTimeLine: 0
+  _RandomAngle: 0
+  _CrushRandomAngle: 1
+  _LookAtOption: 0
+  _notResetAngle: 0
+  _enabledObjectList: []
+  _crushEffect: {fileID: 1753380032}
+  _drowSprite: {fileID: 1753380027}
+  _drowParticle: {fileID: 0}
 --- !u!114 &1753380032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26993,6 +27193,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 1
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 20
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 7
   _stopTimeLine: 1
@@ -27004,15 +27213,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 963224264}
   _drowSprite: {fileID: 963224263}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 1
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .300000012
-    _penetrateCount: 20
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!1 &1797392878
 GameObject:
   m_ObjectHideFlags: 0
@@ -27601,8 +27801,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collection: {fileID: 11400000, guid: 6d1086537491841b8af96a3de89048ff, type: 2}
   _color: {r: .668478251, g: .0938874111, b: 0, a: 1}
-  _scale: {x: 1, y: 1, z: 1}
-  _spriteId: 4
+  _scale: {x: .5, y: .5, z: 1}
+  _spriteId: 77
   boxCollider2D: {fileID: 0}
   polygonCollider2D: []
   edgeCollider2D: []
@@ -27692,6 +27892,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 1
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 5
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 0
   _stopTimeLine: 0
@@ -27703,15 +27912,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 1984452667}
   _drowSprite: {fileID: 1984452664}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 1
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .300000012
-    _penetrateCount: 5
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!114 &1833865674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27837,7 +28037,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
   m_PrefabInternal: {fileID: 1887040702}
   m_GameObject: {fileID: 1846836211}
-  m_LocalRotation: {x: .707106888, y: 0, z: 0, w: .707106769}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -27995,7 +28195,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
   m_PrefabInternal: {fileID: 47955620}
   m_GameObject: {fileID: 1861856847}
-  m_LocalRotation: {x: .707106888, y: 0, z: 0, w: .707106769}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -28535,6 +28735,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 0
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .100000001
+    _penetrateCount: 1
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 3
   _stopTimeLine: 0
@@ -28546,15 +28755,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 1878766167}
   _drowSprite: {fileID: 1878766168}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 0
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .100000001
-    _penetrateCount: 1
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!1 &1879586919
 GameObject:
   m_ObjectHideFlags: 0
@@ -29184,168 +29384,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c75f084b41d8416fa07065f51c303db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 0
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 1
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _destorySize: .300000012
-  _collistionControl: {fileID: 1146370973}
-  _bossControlOption:
-  - _flightType: 2
-    _delayOption:
-      _drowTime: 0
-      _EndDelayActObject:
-      - {fileID: 244442836}
-      - {fileID: 581358571}
-    _animationControl:
-      _swapChackAni: 
-      _stopChackAni: []
-      _animationList: []
-    _linerOption:
-      _moveSpeed: 4
-      _drowTime: 1
-      _linerType: 0
-      _smoothMoveChack: 1
-      _randomLinerCount: 0
-      _randomLiner: 0
-      _randomForwardCount: 1
-    _loopOption:
-      _loopStartIndex: 0
-  - _flightType: 0
-    _delayOption:
-      _drowTime: .300000012
-      _EndDelayActObject:
-      - {fileID: 244442836}
-      - {fileID: 581358571}
-    _animationControl:
-      _swapChackAni: 
-      _stopChackAni: []
-      _animationList: []
-    _linerOption:
-      _moveSpeed: 4
-      _drowTime: 0
-      _linerType: 0
-      _smoothMoveChack: 0
-      _randomLinerCount: 0
-      _randomLiner: 0
-      _randomForwardCount: 1
-    _loopOption:
-      _loopStartIndex: 0
-  - _flightType: 1
-    _delayOption:
-      _drowTime: 0
-      _EndDelayActObject: []
-    _animationControl:
-      _swapChackAni: 
-      _stopChackAni:
-      - BossAnimation_Appear_Left
-      _animationList:
-      - _actObject:
-        - {fileID: 833453854}
-        - {fileID: 347721711}
-        _playChackAni: 
-    _linerOption:
-      _moveSpeed: 4
-      _drowTime: 0
-      _linerType: 0
-      _smoothMoveChack: 0
-      _randomLinerCount: 0
-      _randomLiner: 0
-      _randomForwardCount: 1
-    _loopOption:
-      _loopStartIndex: 0
-  - _flightType: 1
-    _delayOption:
-      _drowTime: -1
-      _EndDelayActObject: []
-    _animationControl:
-      _swapChackAni: BossAnimation_Idle_Left
-      _stopChackAni:
-      - BossAnimation_HugeAttack_Left
-      - BossAnimation_HugeAttack_Right
-      _animationList:
-      - _actObject:
-        - {fileID: 833453854}
-        _playChackAni: AttackLeft
-      - _actObject:
-        - {fileID: 347721711}
-        _playChackAni: AttackRight
-    _linerOption:
-      _moveSpeed: 4
-      _drowTime: 0
-      _linerType: 0
-      _smoothMoveChack: 0
-      _randomLinerCount: 0
-      _randomLiner: 0
-      _randomForwardCount: 1
-    _loopOption:
-      _loopStartIndex: 0
-  - _flightType: 1
-    _delayOption:
-      _drowTime: -1
-      _EndDelayActObject: []
-    _animationControl:
-      _swapChackAni: BossAnimation_Idle_Left
-      _stopChackAni:
-      - BossAnimation_HugeAttack_Left
-      - BossAnimation_HugeAttack_Right
-      _animationList:
-      - _actObject:
-        - {fileID: 833453854}
-        _playChackAni: AttackLeft
-      - _actObject:
-        - {fileID: 347721711}
-        _playChackAni: AttackRight
-    _linerOption:
-      _moveSpeed: 4
-      _drowTime: 0
-      _linerType: 0
-      _smoothMoveChack: 0
-      _randomLinerCount: 0
-      _randomLiner: 0
-      _randomForwardCount: 1
-    _loopOption:
-      _loopStartIndex: 0
-  - _flightType: 1
-    _delayOption:
-      _drowTime: -1
-      _EndDelayActObject: []
-    _animationControl:
-      _swapChackAni: BossAnimation_Idle_Left
-      _stopChackAni:
-      - BossAnimation_HugeAttack_Left
-      - BossAnimation_HugeAttack_Right
-      _animationList:
-      - _actObject:
-        - {fileID: 347721711}
-        _playChackAni: AttackLeft
-      - _actObject:
-        - {fileID: 833453854}
-        _playChackAni: AttackRight
-    _linerOption:
-      _moveSpeed: 4
-      _drowTime: 0
-      _linerType: 0
-      _smoothMoveChack: 0
-      _randomLinerCount: 0
-      _randomLiner: 0
-      _randomForwardCount: 1
-    _loopOption:
-      _loopStartIndex: 0
-  - _flightType: 3
-    _delayOption:
-      _drowTime: -1
-      _EndDelayActObject: []
-    _animationControl:
-      _swapChackAni: 
-      _stopChackAni: []
-      _animationList: []
-    _linerOption:
-      _moveSpeed: 4
-      _drowTime: 0
-      _linerType: 0
-      _smoothMoveChack: 0
-      _randomLinerCount: 0
-      _randomLiner: 0
-      _randomForwardCount: 1
-    _loopOption:
-      _loopStartIndex: 3
+  _bossControlOption: []
 --- !u!1001 &1924278686
 Prefab:
   m_ObjectHideFlags: 0
@@ -29815,6 +29864,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 0
+    _NonDestroyChack: 1
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 0
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 0
   _stopTimeLine: 0
@@ -29826,15 +29884,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 2146892008}
   _drowSprite: {fileID: 2146892005}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 0
-    _NonDestroyChack: 1
-    _backDrowOption: 0
-    _destroySize: .300000012
-    _penetrateCount: 0
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!1 &1958712605
 GameObject:
   m_ObjectHideFlags: 0
@@ -29934,7 +29983,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400012, guid: 68e00c98c9d8e4c3c80bac097f3bc631, type: 2}
   m_PrefabInternal: {fileID: 790459175}
   m_GameObject: {fileID: 1963454075}
-  m_LocalRotation: {x: .106364205, y: .00489867525, z: -.045745369, w: .993262351}
+  m_LocalRotation: {x: .106364198, y: .00489867479, z: -.0457453653, w: .993262291}
   m_LocalPosition: {x: -.202657193, y: -.0157970786, z: .00109592883}
   m_LocalScale: {x: .600000024, y: .600000024, z: .600000024}
   m_Children:
@@ -30873,6 +30922,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 0
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 1
+    _drowCrushEffectAni: 1
+    _dieCreateCoinNumber: 1
   _obPoint: 1
   _selectIdel: 0
   _stopTimeLine: 0
@@ -30884,15 +30942,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 2015933855}
   _drowSprite: {fileID: 2015933854}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 0
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .300000012
-    _penetrateCount: 1
-    _drowCrushEffectAni: 1
-    _dieCreateCoinNumber: 1
 --- !u!114 &2015933854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30987,7 +31036,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 6d451a336a0974f798e535532856675c, type: 2}
   m_PrefabInternal: {fileID: 1307176118}
   m_GameObject: {fileID: 2016439287}
-  m_LocalRotation: {x: .707106888, y: 0, z: 0, w: .707106769}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -31182,6 +31231,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 1
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .100000001
+    _penetrateCount: 1
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 4
   _stopTimeLine: 0
@@ -31193,15 +31251,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 1569386983}
   _drowSprite: {fileID: 1569386982}
   _drowParticle: {fileID: 1778517297}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 1
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .100000001
-    _penetrateCount: 1
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!1 &2030301915
 GameObject:
   m_ObjectHideFlags: 0
@@ -32098,7 +32147,7 @@ MonoBehaviour:
   _drowSprite: {fileID: 943566231}
   _drowIdleImgName: Laser_beam_2
   _ImgScaleTF: {fileID: 1846836212}
-  _scaleSize: 3.5
+  _scaleSize: 2.0999999
 --- !u!1001 &2110701573
 Prefab:
   m_ObjectHideFlags: 0
@@ -32317,6 +32366,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3297f371d95f2499aac6510bd3fa61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyOption:
+    _collistionControl: {fileID: 1146370973}
+    _destroyChack: 1
+    _NonDestroyChack: 0
+    _backDrowOption: 0
+    _destroySize: .300000012
+    _penetrateCount: 5
+    _drowCrushEffectAni: 0
+    _dieCreateCoinNumber: 1
   _obPoint: 0
   _selectIdel: 0
   _stopTimeLine: 0
@@ -32328,15 +32386,6 @@ MonoBehaviour:
   _crushEffect: {fileID: 1019652754}
   _drowSprite: {fileID: 1019652753}
   _drowParticle: {fileID: 0}
-  _destroyOption:
-    _collistionControl: {fileID: 1146370973}
-    _destroyChack: 1
-    _NonDestroyChack: 0
-    _backDrowOption: 0
-    _destroySize: .300000012
-    _penetrateCount: 5
-    _drowCrushEffectAni: 0
-    _dieCreateCoinNumber: 1
 --- !u!1001 &2114418076
 Prefab:
   m_ObjectHideFlags: 0

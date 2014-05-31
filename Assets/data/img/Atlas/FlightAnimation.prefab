@@ -407,23 +407,23 @@ MonoBehaviour:
     wrapMode: 0
   - name: Laser_beam_1
     frames:
-    - spriteCollection: {fileID: 11400000, guid: 6d1086537491841b8af96a3de89048ff,
+    - spriteCollection: {fileID: 11400000, guid: 885a4371decc0d343ba1f7e6b23f30c3,
         type: 2}
-      spriteId: 59
+      spriteId: 1
       triggerEvent: 0
       eventInfo: 
       eventInt: 0
       eventFloat: 0
-    - spriteCollection: {fileID: 11400000, guid: 6d1086537491841b8af96a3de89048ff,
+    - spriteCollection: {fileID: 11400000, guid: 885a4371decc0d343ba1f7e6b23f30c3,
         type: 2}
-      spriteId: 59
+      spriteId: 1
       triggerEvent: 0
       eventInfo: 
       eventInt: 0
       eventFloat: 0
-    - spriteCollection: {fileID: 11400000, guid: 6d1086537491841b8af96a3de89048ff,
+    - spriteCollection: {fileID: 11400000, guid: 885a4371decc0d343ba1f7e6b23f30c3,
         type: 2}
-      spriteId: 59
+      spriteId: 1
       triggerEvent: 0
       eventInfo: 
       eventInt: 0
@@ -433,23 +433,23 @@ MonoBehaviour:
     wrapMode: 0
   - name: Laser_beam_2
     frames:
-    - spriteCollection: {fileID: 11400000, guid: 6d1086537491841b8af96a3de89048ff,
+    - spriteCollection: {fileID: 11400000, guid: 885a4371decc0d343ba1f7e6b23f30c3,
         type: 2}
-      spriteId: 52
+      spriteId: 8
       triggerEvent: 0
       eventInfo: 
       eventInt: 0
       eventFloat: 0
-    - spriteCollection: {fileID: 11400000, guid: 6d1086537491841b8af96a3de89048ff,
+    - spriteCollection: {fileID: 11400000, guid: 885a4371decc0d343ba1f7e6b23f30c3,
         type: 2}
-      spriteId: 66
+      spriteId: 7
       triggerEvent: 0
       eventInfo: 
       eventInt: 0
       eventFloat: 0
-    - spriteCollection: {fileID: 11400000, guid: 6d1086537491841b8af96a3de89048ff,
+    - spriteCollection: {fileID: 11400000, guid: 885a4371decc0d343ba1f7e6b23f30c3,
         type: 2}
-      spriteId: 65
+      spriteId: 2
       triggerEvent: 0
       eventInfo: 
       eventInt: 0
@@ -1473,6 +1473,61 @@ MonoBehaviour:
     fps: 8
     loopStart: 0
     wrapMode: 2
+  - name: player_shot
+    frames:
+    - spriteCollection: {fileID: 11400000, guid: 885a4371decc0d343ba1f7e6b23f30c3,
+        type: 2}
+      spriteId: 13
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    fps: 1
+    loopStart: 0
+    wrapMode: 0
+  - name: player_shot_1
+    frames:
+    - spriteCollection: {fileID: 11400000, guid: 885a4371decc0d343ba1f7e6b23f30c3,
+        type: 2}
+      spriteId: 10
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    fps: 1
+    loopStart: 0
+    wrapMode: 2
+  - name: player_shot_2
+    frames:
+    - spriteCollection: {fileID: 11400000, guid: 885a4371decc0d343ba1f7e6b23f30c3,
+        type: 2}
+      spriteId: 17
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    fps: 1
+    loopStart: 0
+    wrapMode: 2
+  - name: Enemy_4
+    frames:
+    - spriteCollection: {fileID: 11400000, guid: 6d1086537491841b8af96a3de89048ff,
+        type: 2}
+      spriteId: 78
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    - spriteCollection: {fileID: 11400000, guid: 6d1086537491841b8af96a3de89048ff,
+        type: 2}
+      spriteId: 4
+      triggerEvent: 0
+      eventInfo: 
+      eventInt: 0
+      eventFloat: 0
+    fps: 14
+    loopStart: 0
+    wrapMode: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

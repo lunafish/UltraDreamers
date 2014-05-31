@@ -62,15 +62,15 @@ MonoBehaviour:
   atlasWidth: 2048
   atlasHeight: 2048
   forceSquareAtlas: 1
-  atlasWastage: 44.3156967
+  atlasWastage: 49.769928
   allowMultipleAtlases: 0
   removeDuplicates: 1
   textureParams:
-  - name: Bullet
+  - name: small_Enemy_2
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 6805cafa7ff2d4b028aaaa5d0601da86, type: 3}
+    texture: {fileID: 2800000, guid: 9c74142f1729d41d185ed16d6436a7ba, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -230,11 +230,11 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: E_Bullet_1
+  - name: boss_Character_2
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 654a7074c60c84269a9fc096fa415ba7, type: 3}
+    texture: {fileID: 2800000, guid: c495d2c761b7f43c4b79269109cc76ee, type: 3}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -271,11 +271,11 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: E_Bullet_2
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 8acb6da72faaf48669ef75a9aacc0957, type: 3}
+    texture: {fileID: 0}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -2157,11 +2157,11 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: bullet_player
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 03c69cc5f137e419d8368a4053800940, type: 3}
+    texture: {fileID: 0}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -2198,93 +2198,11 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: laser_beam_2_3_2
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 14285d7ee8a00423da020662761087dd, type: 3}
-    materialId: 0
-    anchor: 7
-    anchorX: 0
-    anchorY: 0
-    overrideMesh: {fileID: 0}
-    doubleSidedSprite: 0
-    customSpriteGeometry: 0
-    geometryIslands: []
-    dice: 0
-    diceUnitX: 64
-    diceUnitY: 64
-    diceFilter: 0
-    pad: 0
-    extraPadding: 0
-    source: 0
-    fromSpriteSheet: 0
-    hasSpriteSheetId: 0
-    spriteSheetId: 0
-    spriteSheetX: 0
-    spriteSheetY: 0
-    extractRegion: 0
-    regionX: 0
-    regionY: 0
-    regionW: 0
-    regionH: 0
-    regionId: 0
-    colliderType: 0
-    colliderData: []
-    boxColliderMin: {x: 0, y: 0}
-    boxColliderMax: {x: 0, y: 0}
-    polyColliderIslands: []
-    polyColliderCap: 1
-    colliderConvex: 0
-    colliderSmoothSphereCollisions: 0
-    colliderColor: 0
-    attachPoints: []
-  - name: laser_beam_2_3_1
-    disableTrimming: 0
-    additive: 0
-    scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 2e39fc4b754f74ab99d94074fd04d5f5, type: 3}
-    materialId: 0
-    anchor: 7
-    anchorX: 0
-    anchorY: 0
-    overrideMesh: {fileID: 0}
-    doubleSidedSprite: 0
-    customSpriteGeometry: 0
-    geometryIslands: []
-    dice: 0
-    diceUnitX: 64
-    diceUnitY: 64
-    diceFilter: 0
-    pad: 0
-    extraPadding: 0
-    source: 0
-    fromSpriteSheet: 0
-    hasSpriteSheetId: 0
-    spriteSheetId: 0
-    spriteSheetX: 0
-    spriteSheetY: 0
-    extractRegion: 0
-    regionX: 0
-    regionY: 0
-    regionW: 0
-    regionH: 0
-    regionId: 0
-    colliderType: 0
-    colliderData: []
-    boxColliderMin: {x: 0, y: 0}
-    boxColliderMax: {x: 0, y: 0}
-    polyColliderIslands: []
-    polyColliderCap: 1
-    colliderConvex: 0
-    colliderSmoothSphereCollisions: 0
-    colliderColor: 0
-    attachPoints: []
-  - name: laser_beam_1_1
-    disableTrimming: 0
-    additive: 0
-    scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 3b80ce28346be42db9b85163e00446f3, type: 3}
+    texture: {fileID: 0}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -2321,134 +2239,11 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: laser_beam_2_2
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 842c8a1d2e5b54851812263dd99cf011, type: 3}
-    materialId: 0
-    anchor: 1
-    anchorX: 0
-    anchorY: 0
-    overrideMesh: {fileID: 0}
-    doubleSidedSprite: 0
-    customSpriteGeometry: 0
-    geometryIslands: []
-    dice: 0
-    diceUnitX: 64
-    diceUnitY: 64
-    diceFilter: 0
-    pad: 0
-    extraPadding: 0
-    source: 0
-    fromSpriteSheet: 0
-    hasSpriteSheetId: 0
-    spriteSheetId: 0
-    spriteSheetX: 0
-    spriteSheetY: 0
-    extractRegion: 0
-    regionX: 0
-    regionY: 0
-    regionW: 0
-    regionH: 0
-    regionId: 0
-    colliderType: 0
-    colliderData: []
-    boxColliderMin: {x: 0, y: 0}
-    boxColliderMax: {x: 0, y: 0}
-    polyColliderIslands: []
-    polyColliderCap: 1
-    colliderConvex: 0
-    colliderSmoothSphereCollisions: 0
-    colliderColor: 0
-    attachPoints: []
-  - name: laser_beam_1_2
-    disableTrimming: 0
-    additive: 0
-    scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 8494f9408351f4e35ba9fdd697ed8e64, type: 3}
-    materialId: 0
-    anchor: 1
-    anchorX: 0
-    anchorY: 0
-    overrideMesh: {fileID: 0}
-    doubleSidedSprite: 0
-    customSpriteGeometry: 0
-    geometryIslands: []
-    dice: 0
-    diceUnitX: 64
-    diceUnitY: 64
-    diceFilter: 0
-    pad: 0
-    extraPadding: 0
-    source: 0
-    fromSpriteSheet: 0
-    hasSpriteSheetId: 0
-    spriteSheetId: 0
-    spriteSheetX: 0
-    spriteSheetY: 0
-    extractRegion: 0
-    regionX: 0
-    regionY: 0
-    regionW: 0
-    regionH: 0
-    regionId: 0
-    colliderType: 0
-    colliderData: []
-    boxColliderMin: {x: 0, y: 0}
-    boxColliderMax: {x: 0, y: 0}
-    polyColliderIslands: []
-    polyColliderCap: 1
-    colliderConvex: 0
-    colliderSmoothSphereCollisions: 0
-    colliderColor: 0
-    attachPoints: []
-  - name: laser_beam_2_1
-    disableTrimming: 0
-    additive: 0
-    scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 8b7623feeaf094981b02f8b379e586b2, type: 3}
-    materialId: 0
-    anchor: 1
-    anchorX: 185
-    anchorY: 180
-    overrideMesh: {fileID: 0}
-    doubleSidedSprite: 0
-    customSpriteGeometry: 0
-    geometryIslands: []
-    dice: 0
-    diceUnitX: 64
-    diceUnitY: 64
-    diceFilter: 0
-    pad: 0
-    extraPadding: 0
-    source: 0
-    fromSpriteSheet: 0
-    hasSpriteSheetId: 0
-    spriteSheetId: 0
-    spriteSheetX: 0
-    spriteSheetY: 0
-    extractRegion: 0
-    regionX: 0
-    regionY: 0
-    regionW: 0
-    regionH: 0
-    regionId: 0
-    colliderType: 0
-    colliderData: []
-    boxColliderMin: {x: 0, y: 0}
-    boxColliderMax: {x: 0, y: 0}
-    polyColliderIslands: []
-    polyColliderCap: 1
-    colliderConvex: 0
-    colliderSmoothSphereCollisions: 0
-    colliderColor: 0
-    attachPoints: []
-  - name: laser_beam_1_3_1
-    disableTrimming: 0
-    additive: 0
-    scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: a7ae3dacdcfc24c689d707893c81081f, type: 3}
+    texture: {fileID: 0}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -2485,11 +2280,11 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: laser_beam_1_3_2
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b4510650eb9f2435ca2251c22ec1fe8d, type: 3}
+    texture: {fileID: 0}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -2526,11 +2321,11 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: E_Bullet_4
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 8e05d377b927f4df6b845ed9d6018d35, type: 3}
+    texture: {fileID: 0}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -2567,11 +2362,11 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: E_Bullet_3
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 9214f96353570441d8a844a48c11dd64, type: 3}
+    texture: {fileID: 0}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -2608,11 +2403,216 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: bullet_player_1
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 12c8cb13911e248fa8812399a656bdb6, type: 3}
+    texture: {fileID: 0}
+    materialId: 0
+    anchor: 4
+    anchorX: 0
+    anchorY: 0
+    overrideMesh: {fileID: 0}
+    doubleSidedSprite: 0
+    customSpriteGeometry: 0
+    geometryIslands: []
+    dice: 0
+    diceUnitX: 64
+    diceUnitY: 64
+    diceFilter: 0
+    pad: 0
+    extraPadding: 0
+    source: 0
+    fromSpriteSheet: 0
+    hasSpriteSheetId: 0
+    spriteSheetId: 0
+    spriteSheetX: 0
+    spriteSheetY: 0
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    regionId: 0
+    colliderType: 0
+    colliderData: []
+    boxColliderMin: {x: 0, y: 0}
+    boxColliderMax: {x: 0, y: 0}
+    polyColliderIslands: []
+    polyColliderCap: 1
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    colliderColor: 0
+    attachPoints: []
+  - name: 
+    disableTrimming: 0
+    additive: 0
+    scale: {x: 1, y: 1, z: 1}
+    texture: {fileID: 0}
+    materialId: 0
+    anchor: 4
+    anchorX: 0
+    anchorY: 0
+    overrideMesh: {fileID: 0}
+    doubleSidedSprite: 0
+    customSpriteGeometry: 0
+    geometryIslands: []
+    dice: 0
+    diceUnitX: 64
+    diceUnitY: 64
+    diceFilter: 0
+    pad: 0
+    extraPadding: 0
+    source: 0
+    fromSpriteSheet: 0
+    hasSpriteSheetId: 0
+    spriteSheetId: 0
+    spriteSheetX: 0
+    spriteSheetY: 0
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    regionId: 0
+    colliderType: 0
+    colliderData: []
+    boxColliderMin: {x: 0, y: 0}
+    boxColliderMax: {x: 0, y: 0}
+    polyColliderIslands: []
+    polyColliderCap: 1
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    colliderColor: 0
+    attachPoints: []
+  - name: 
+    disableTrimming: 0
+    additive: 0
+    scale: {x: 1, y: 1, z: 1}
+    texture: {fileID: 0}
+    materialId: 0
+    anchor: 4
+    anchorX: 0
+    anchorY: 0
+    overrideMesh: {fileID: 0}
+    doubleSidedSprite: 0
+    customSpriteGeometry: 0
+    geometryIslands: []
+    dice: 0
+    diceUnitX: 64
+    diceUnitY: 64
+    diceFilter: 0
+    pad: 0
+    extraPadding: 0
+    source: 0
+    fromSpriteSheet: 0
+    hasSpriteSheetId: 0
+    spriteSheetId: 0
+    spriteSheetX: 0
+    spriteSheetY: 0
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    regionId: 0
+    colliderType: 0
+    colliderData: []
+    boxColliderMin: {x: 0, y: 0}
+    boxColliderMax: {x: 0, y: 0}
+    polyColliderIslands: []
+    polyColliderCap: 1
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    colliderColor: 0
+    attachPoints: []
+  - name: 
+    disableTrimming: 0
+    additive: 0
+    scale: {x: 1, y: 1, z: 1}
+    texture: {fileID: 0}
+    materialId: 0
+    anchor: 4
+    anchorX: 0
+    anchorY: 0
+    overrideMesh: {fileID: 0}
+    doubleSidedSprite: 0
+    customSpriteGeometry: 0
+    geometryIslands: []
+    dice: 0
+    diceUnitX: 64
+    diceUnitY: 64
+    diceFilter: 0
+    pad: 0
+    extraPadding: 0
+    source: 0
+    fromSpriteSheet: 0
+    hasSpriteSheetId: 0
+    spriteSheetId: 0
+    spriteSheetX: 0
+    spriteSheetY: 0
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    regionId: 0
+    colliderType: 0
+    colliderData: []
+    boxColliderMin: {x: 0, y: 0}
+    boxColliderMax: {x: 0, y: 0}
+    polyColliderIslands: []
+    polyColliderCap: 1
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    colliderColor: 0
+    attachPoints: []
+  - name: 
+    disableTrimming: 0
+    additive: 0
+    scale: {x: 1, y: 1, z: 1}
+    texture: {fileID: 0}
+    materialId: 0
+    anchor: 4
+    anchorX: 0
+    anchorY: 0
+    overrideMesh: {fileID: 0}
+    doubleSidedSprite: 0
+    customSpriteGeometry: 0
+    geometryIslands: []
+    dice: 0
+    diceUnitX: 64
+    diceUnitY: 64
+    diceFilter: 0
+    pad: 0
+    extraPadding: 0
+    source: 0
+    fromSpriteSheet: 0
+    hasSpriteSheetId: 0
+    spriteSheetId: 0
+    spriteSheetX: 0
+    spriteSheetY: 0
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    regionId: 0
+    colliderType: 0
+    colliderData: []
+    boxColliderMin: {x: 0, y: 0}
+    boxColliderMax: {x: 0, y: 0}
+    polyColliderIslands: []
+    polyColliderCap: 1
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    colliderColor: 0
+    attachPoints: []
+  - name: 
+    disableTrimming: 0
+    additive: 0
+    scale: {x: 1, y: 1, z: 1}
+    texture: {fileID: 0}
     materialId: 0
     anchor: 4
     anchorX: 0
@@ -2731,13 +2731,13 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: laser_beam_2_3_4
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 0336fd231bcae4962b1ffde7f16e6be1, type: 3}
+    texture: {fileID: 0}
     materialId: 0
-    anchor: 7
+    anchor: 4
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -2772,13 +2772,13 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: laser_beam_2_3_3
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: fdb7fb5d0a53041dba8c583a16cf5a51, type: 3}
+    texture: {fileID: 0}
     materialId: 0
-    anchor: 7
+    anchor: 4
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}

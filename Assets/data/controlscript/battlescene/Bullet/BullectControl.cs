@@ -3,37 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class BullectControl : BulletBase {
-	/*
-	[System.Serializable]
-	private class rotateOption{
-		public enum rotateDirection{
-			left,
-			right
-		}
-
-		public bool _rotateEnabled = false;
-		public rotateDirection _direction = rotateDirection.left;
-		public float _rotateSpeed = 2;
-	}*/
-
-	[System.Serializable]
-	private class destroyOption{
-
-		public enum crushEffectList{
-			CrushEffect,
-			BackDrowEffect,
-			non
-		}
-
-		public collisionChack _collistionControl = null;
-		public bool _destroyChack = false;
-		public bool _NonDestroyChack = false;
-		public bool _backDrowOption = false;
-		public float _destroySize = 0.3f;
-		public int _penetrateCount = 1;
-		public crushEffectList _drowCrushEffectAni = crushEffectList.CrushEffect;
-		public int _dieCreateCoinNumber = 1;
-	}
 
 	public enum idelAnimation{
 		non,
@@ -45,7 +14,10 @@ public class BullectControl : BulletBase {
 		Enemy_1,
 		Enemy_2,
 		Enemy_3,
-		PowerUp_Bear
+		PowerUp_Bear,
+		player_shot,
+		player_shot_1,
+		player_shot_2
 	}
 	
 	[SerializeField] objectPosition _obPoint = objectPosition.enemy;
@@ -63,13 +35,11 @@ public class BullectControl : BulletBase {
 	[SerializeField] ParticleSystem _drowParticle = null;
 
 	//[SerializeField] rotateOption _rotateOption;
-	[SerializeField] destroyOption _destroyOption;
 	
 	private List<BullectControl> _bullectList = new List<BullectControl>();
 	private int _nameObject = 0;
 	
-	private Vector3 _backDrowPoint = Vector3.zero;
-	private int _currentPenetrate = 0;
+	//private Vector3 _backDrowPoint = Vector3.zero;
 
 	private BullectControl _originalData;
 	private bullectOption _bullectOp;
@@ -79,8 +49,7 @@ public class BullectControl : BulletBase {
 	private bool _curshEffectChack = false;
 	private BulletCreate _createBullet = null;
 	private bool _powerOption = false;
-
-	public override bool destroyChack { get { return _destroyOption._destroyChack; } }
+	
 	public override BulletBase CreateBullectValue(bullectOption bullectOp, Transform baseTF, Vector3 startPosition, BulletCreate parentCreate, bool createParent, bool dropPowerUp){
 
 		BullectControl copyBullect = null;
@@ -96,7 +65,6 @@ public class BullectControl : BulletBase {
 			_bullectList.RemoveAt(0);
 		}
 
-		//destroyChack
 		copyBullect.transform.position = baseTF != null ? baseTF.position : startPosition;
 		copyBullect._bullectOp = bullectOp;
 		copyBullect._createBullet = parentCreate;
@@ -112,8 +80,7 @@ public class BullectControl : BulletBase {
 	
 	void addCollisitionControl(bool createParent){
 		_fristChack = _curshEffectChack = false;
-		_currentPenetrate = _destroyOption._penetrateCount;
-		_destroyOption._collistionControl.setDrowStage(/*_childBullet? null : */_selfTF, this, _obPoint, _stopTimeLine, _destroyOption._NonDestroyChack);
+		setDrowStage(/*_childBullet? null : */_selfTF, this, _obPoint, _stopTimeLine, _destroyOption._NonDestroyChack);
 		if(createParent && _baseTFValue != null) {
 			_selfTF.parent = _baseTFValue; 
 			if(!_notResetAngle){
@@ -191,13 +158,13 @@ public class BullectControl : BulletBase {
 
 		_copyVPosition = _selfTF.position;
 		_copyVPosition.y = 0;
-		_copyBounds.center = _copyVPosition;
+		SetDestoryCenter(_copyVPosition);
 
 		switch(_selectFlight.flightType){
 		case FlightOption.FlightTypeList.chaser:
 			_bullectModeControl = 2;
 			bool noAngleChack = false;
-			BulletBase copyChaseBullet = null;
+			DestoryOption copyChaseBullet = null;
 			switch(_obPoint){
 			case BullectControl.objectPosition.palyer:
 				copyChaseBullet = _destroyOption._collistionControl.enemyChasePosition(_copyVPosition);
@@ -274,7 +241,7 @@ public class BullectControl : BulletBase {
 		
 		_drowPoint = _endPosition.normalized * _selectFlight.MoveSpeed;
 		_drowPoint.y = 0;
-		_backDrowPoint = _endPosition.normalized/2;
+		//_backDrowPoint = _endPosition.normalized/2;
 	}
 
 	//private bool _childBullet = false;
@@ -441,24 +408,20 @@ public class BullectControl : BulletBase {
 		if(_drowSprite != null) _drowSprite.scale = _startSpriteScale;
 	}
 
-	bool destroyBullectChack(Vector3 backDropwPoint, bool PlayerChack = false, bool bladeDelete = false){
-		if(_currentPenetrate < 0) return false;
-		if(--_currentPenetrate > 0){
-			if(_destroyOption._backDrowOption){
-				_backMoveTime = 0;
-				_drowPoint *= -1.2f;
-				_bullectModeControl = 3;
-				//_selfTF.position += backDropwPoint;
-			}
-			//if(_selectFlight.TrackAfterACrash) controlMoveOption();
-
-			return false;
+	protected override void crushAndLiveControl(){
+		if(_destroyOption._backDrowOption){
+			_backMoveTime = 0;
+			_drowPoint *= -1.2f;
+			_bullectModeControl = 3;
+			//_selfTF.position += backDropwPoint;
 		}
+		//if(_selectFlight.TrackAfterACrash) controlMoveOption();
+	}
 
+	protected override void crushAndDieControl(bool destroyCheck, bool bladeDelete){
 		if(_powerOption) _destroyOption._collistionControl.createPowerUpIter(VPosition);
-		if(_crushEffect != null && !PlayerChack) crushAniControl(bladeDelete);
+		if(_crushEffect != null && !destroyCheck) crushAniControl(bladeDelete);
 		else stopBulletObject();
-		return true;
 	}
 
 	void crushAniControl(bool bladeDelete){
@@ -499,8 +462,8 @@ public class BullectControl : BulletBase {
 		_copyMagnitude = returnMagnitude(chackBullet._copyVPosition);
 		if(_copyMagnitude < _destroyOption._destroySize || _copyMagnitude < chackBullet._destroyOption._destroySize){
 			_returnBulletValue = 0;
-			if(destroyBullectChack(chackBullet._backDrowPoint)) _returnBulletValue = 1;
-			if(chackBullet.destroyBullectChack(_backDrowPoint)) _returnBulletValue += 2;
+			if(destroyBullectChack(false/*chackBullet._backDrowPoint*/)) _returnBulletValue = 1;
+			if(chackBullet.destroyBullectChack(false/*_backDrowPoint*/)) _returnBulletValue += 2;
 			return _returnBulletValue;
 		}
 
@@ -509,17 +472,6 @@ public class BullectControl : BulletBase {
 
 	public override float returnMagnitude(Vector3 basePositon){
 		return (_copyVPosition - basePositon).magnitude;
-	}
-
-	public override bool destroyBullectChack(bool bladeDelete){
-		return destroyBullectChack(_backDrowPoint, !destroyChack, bladeDelete);
-	}
-
-	public override int chackCrushPlayerValue(Vector3 _playerPS){
-		if(returnMagnitude(_playerPS) <= _destroyOption._destroySize){
-			return destroyBullectChack(false) ? 2 : 1;
-		}
-		return 0;
 	}
 
 	public override void coinChaseFlowAct(bool actChack){

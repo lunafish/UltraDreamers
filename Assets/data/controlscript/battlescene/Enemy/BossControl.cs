@@ -255,7 +255,7 @@ public class bossControlOption{
 public class BossControl : BulletBase {
 
 	[SerializeField] float _destorySize = 0.3f;
-	[SerializeField] collisionChack _collistionControl = null;
+	//[SerializeField] collisionChack _collistionControl = null;
 	[SerializeField] List<bossControlOption> _bossControlOption = new List<bossControlOption>();
 
 	private bool _awakeChack = false;
@@ -269,13 +269,13 @@ public class BossControl : BulletBase {
 
 	public override BulletBase CreateBullectValue(bullectOption bullectOp, Transform baseTF, Vector3 startPosition, BulletCreate parentCreate, bool createParent, bool dropPowerUp){
 		Awake();
-		_collistionControl.setDrowStage(_selfTF, null/*this*/, BulletBase.objectPosition.enemy, stopTimeLine: true, NonDestroyChack: false);
+		setDrowStage(_selfTF, this, BulletBase.objectPosition.enemy, stopTimeLine: true, NonDestroyChack: false);
 		_selfTF.position = baseTF.position;
 		_currentCount = 0;
 		
 		_copyVPosition = _selfTF.position;
 		_copyVPosition.y = 0;
-		_copyBounds.center = _copyVPosition;
+		SetDestoryCenter(_copyVPosition);
 		
 		nextBlockObject();
 		return null;
@@ -327,6 +327,10 @@ public class BossControl : BulletBase {
 	
 	void Update(){
 
+		_copyVPosition = _selfTF.position;
+		_copyVPosition.y = 0;
+		SetDestoryCenter(_copyVPosition);
+
 		switch(_flightList){
 		case bossControlOption.selectControlOption.LinerOption:
 			MoveControlFunction();
@@ -347,11 +351,6 @@ public class BossControl : BulletBase {
 	}
 
 	//public override void allStopBulletValue(bool enabledControl){}
+	public override bool destroyChack { get { return false; } }
 	public override bool stopBulletObject(bool notAddStorage = false, bool notDestroyParent = true){ return false; }
-	public override int chackCollisionValue(BullectControl chackBullet){ return 0; }
-	
-	public override float returnMagnitude(Vector3 basePositon){ return 0; }
-	public override bool destroyBullectChack(bool bladeDelete){ return false;}
-	public override int chackCrushPlayerValue(Vector3 _playerPS){ return 0;}
-	public override void coinChaseFlowAct(bool actChack){}
 }

@@ -289,51 +289,25 @@ public class FlightOption{
 	}*/
 }
 
-public class BulletBase : MonoBehaviour {
-	public enum objectPosition{
-		enemy,
-		palyer,
-		coin,
-		powerUp
-	}
-
+public class BulletBase : DestoryOption {
+	
 	protected float _chackDrowTime = 0;
 	protected float _currentTime = 0;
 
 	protected bool _nextObjectChack = false;
-	protected Transform _selfTF;
 	protected int _currentCount = 0;
-	protected Bounds _copyBounds;
 	protected Vector3 _copyVPosition = Vector3.zero;
 	protected Vector3 _drowPoint = Vector3.zero;
 	protected FlightOption.moveSpeedOption _smoothOption = FlightOption.moveSpeedOption.linear;
-
-	protected void SetDestorySize(float widthSize, float heightSize){
-		_copyBounds.size = new Vector3(widthSize,0,heightSize);
-	}
-
-	public Vector3 LPosition { get { return _selfTF.localPosition; } }
-	public Vector3 VPosition { get { return _selfTF.position; } }
-	public Bounds destroyBound { get { return _copyBounds; } }
-	public virtual bool destroyChack { get { return true; } }
+	
 	public virtual BulletBase CreateBullectValue(bullectOption bullectOp, Transform baseTF, Vector3 startPosition, BulletCreate parentCreate, bool createParent, bool dropPowerUp){
 		return null;
 	}
 
 	//public virtual void allStopBulletValue(bool enabledControl){}
 	public virtual bool stopBulletObject(bool notAddStorage = false, bool notDestroyParent = true){ return false; }
-	public virtual int chackCollisionValue(BullectControl chackBullet){ return 0; }
-	
-	public virtual float returnMagnitude(Vector3 basePositon){ return 0; }
-	public virtual bool destroyBullectChack(bool bladeDelete){ return false;}
-	public virtual int chackCrushPlayerValue(Vector3 _playerPS){ return 0;}
-	public virtual void coinChaseFlowAct(bool actChack){}
 	protected virtual void nextBlockObject(){}
-
-	protected virtual void resetBullet(bool resetChack, bool bladeDelete = false){
-		_randomLinerControl.Clear();
-	}
-
+	protected virtual void resetBullet(bool resetChack, bool bladeDelete = false){ _randomLinerControl.Clear(); }
 	protected Vector3 getDirectionValue(FlightOption.LinerTypeList linerType, Transform baseTFValue){
 
  		Vector3 endPosition = Vector3.zero;
@@ -497,7 +471,7 @@ public class BulletBase : MonoBehaviour {
 		_selfTF.localPosition += (_drowPoint*Time.deltaTime*delta);
 		_copyVPosition = _selfTF.position;
 		_copyVPosition.y = 0;
-		_copyBounds.center = _copyVPosition;
+		SetDestoryCenter(_copyVPosition);
 		
 		return _copyVPosition;
 	}

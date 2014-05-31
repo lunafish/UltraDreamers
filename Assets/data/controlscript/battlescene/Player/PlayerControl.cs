@@ -236,13 +236,12 @@ public class PlayerControl : MonoBehaviour {
 
 		float drowTime = 0.3f;
 		// power up eat effect
-		iTween.Stop(_PowerUpEffect);
 		_PowerUpEffect.transform.eulerAngles = new Vector3(53,0,0);
 		ObjectRotateControl.rotateToObject(_PowerUpEffect, drowTime, new Vector3(53,0,-180));
 		ObjectScaleControl.scaleToObject(_PowerUpEffect, drowTime * 0.5f, Vector3.one * 2.0f);
 		ObjectScaleControl.scaleToObject(_PowerUpEffect, drowTime * 0.5f, Vector3.zero, delayValue:drowTime);
 
-		if(_PowerControl >= _createBullet.Length) {
+		if(_PowerControl > _createBullet.Length) {
 			_currentCoinValue += 5;
 			_coinNumberCount.ViewNumberCount(_currentCoinValue, 0.3f);
 		}else bulletEnabledControl(true);
@@ -425,6 +424,8 @@ public class PlayerControl : MonoBehaviour {
 
 		this.enabled = true;
 	}
+
+	public int getPlayerStatus { get{ return _drowSwitchIndex; } }
 
 	private int _dieCount = 5;
 	private float _drowChackTime = 0;
