@@ -96,7 +96,7 @@ public class RankControl : MonoBehaviour {
 			this.enabled = true;
 			_pressButton.SetActive(true);
 			_KeyBoard = TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default, false, false, false);
-			TouchScreenKeyboard.hideInput = true;
+			//TouchScreenKeyboard.hideInput = true;
 		}
 #else
 		if(_viewNumverControl >= 8) _pressButton.SetActive(true);
