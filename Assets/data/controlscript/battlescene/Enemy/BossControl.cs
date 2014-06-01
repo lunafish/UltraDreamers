@@ -300,7 +300,6 @@ public class BossControl : BulletBase {
 	}
 	
 	void controlMoveOption(){
-		//Debug.Log("--------------" + _flightList);
 		switch(_flightList){
 		case bossControlOption.selectControlOption.LinerOption:
 			Vector3 endPosition = linerOptionControl(_selectFlight.randomLinerChack, _selectFlight.linerType, _selfTF, _selectFlight.randomForwardCount);
@@ -348,8 +347,25 @@ public class BossControl : BulletBase {
 			break;
 		}
 	}
+	/*
+	private float _copyMagnitude = 0;
+	public override int chackCollisionValue(BullectControl chackBullet){
+		_copyMagnitude = returnMagnitude(chackBullet.transform.position);
+		Debug.Log(_copyMagnitude + " " + destroySize + " " + chackBullet.destroySize);
+		if(_copyMagnitude < destroySize || _copyMagnitude < chackBullet.destroySize){
+			return 2;
+		}
+		
+		return 0;
+	}*/
 
+	/*public virtual float returnMagnitude(Vector3 basePositon){
+		Vector3 copyV = VPosition;
+		copyV.y = 0;
+		return (copyV - basePositon).magnitude;
+	}*/
 	//public override void allStopBulletValue(bool enabledControl){}
+
 	public override bool destroyChack { get { return false; } }
 	public override bool stopBulletObject(bool notAddStorage = false, bool notDestroyParent = true){ return false; }
 }

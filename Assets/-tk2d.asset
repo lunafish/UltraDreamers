@@ -319,21 +319,21 @@ MonoBehaviour:
     - Enemy_2_1
     - Boss1_main
     - Enemy_2_2
-    - particle_1_00006
-    - particle_1_00008
-    - particle_1_00004
-    - particle_1_00011
-    - particle_1_00005
-    - particle_1_00015
-    - particle_1_00014
-    - particle_1_00001
-    - particle_1_00007
-    - particle_1_00012
-    - particle_1_00003
-    - particle_1_00010
-    - particle_1_00013
-    - particle_1_00002
-    - particle_1_00009
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
     - b_00016
     - b_00007
     - b_00013
@@ -399,21 +399,21 @@ MonoBehaviour:
     - 05612c347426e41f5ad82320224590f7
     - 4296db5cf854349f5bc463bbe6502ca5
     - 0846979243941474b9b31f52c5074519
-    - 0368cdf8044ab4dda975a7b39f0adc42
-    - 0945b18cbb18c47e080c4c1a40d74ada
-    - 095af0330d6f742ab9530d86c7d34fa5
-    - 11a2f009d4f8b4731a81f1bbe9d48bd1
-    - 15f63a2101884446eb84eafc3f094301
-    - 1f81bcb35d9144f42bc027875ca828fc
-    - 31a74200de1484997b6594760cae0450
-    - 32cb999131cc641408e26e63121ec7d4
-    - 40d9cee0f50bc4bad9bb20d2985e8e38
-    - 52a712bb51b78464e923e945f4dbfd3d
-    - 60e82fa03f5094c3f83b8dff4398ec1c
-    - b20571c969727412997313687650e4a7
-    - c4c808c73a92a4fff940b1c86d5de863
-    - dc71edd53e8cf430a84e05b29b2e053d
-    - ea6c07b746322495f821b06bf829d8ba
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
     - 030145633c6e143ed9776c8cbe824bef
     - 1d287170cdf524537a01ad64c5b18c23
     - 1e3aafe4c6d554f948fe3f2771524b5b
@@ -479,21 +479,21 @@ MonoBehaviour:
     - 1401535941
     - 1401535940
     - 1401535941
-    - 1401535940
-    - 1401535940
-    - 1401535940
-    - 1401535940
-    - 1401535940
-    - 1401535940
-    - 1401535940
-    - 1401535940
-    - 1401535940
-    - 1401535940
-    - 1401535940
-    - 1401535940
-    - 1401535940
-    - 1401535940
-    - 1401535940
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 1401535940
     - 1401535940
     - 1401535940
@@ -673,6 +673,22 @@ MonoBehaviour:
     - E_Bullet_2
     - bullet
     - bullet_player_2
+    - particle_1_00014
+    - particle_1_00003
+    - particle_1_00007
+    - particle_1_00005
+    - particle_1_00001
+    - particle_1_00004
+    - particle_1_00015
+    - particle_1_00002
+    - particle_1_00009
+    - particle_1_00013
+    - particle_1_00006
+    - particle_1_00011
+    - particle_1_00010
+    - particle_1_00012
+    - particle_1_00008
+    - Img_blank
     spriteTextureGUIDs:
     - 8494f9408351f4e35ba9fdd697ed8e64
     - b4510650eb9f2435ca2251c22ec1fe8d
@@ -692,6 +708,22 @@ MonoBehaviour:
     - 8acb6da72faaf48669ef75a9aacc0957
     - 6805cafa7ff2d4b028aaaa5d0601da86
     - 76361e9b2911e41c89efad3292d56895
+    - 31a74200de1484997b6594760cae0450
+    - 60e82fa03f5094c3f83b8dff4398ec1c
+    - 40d9cee0f50bc4bad9bb20d2985e8e38
+    - 15f63a2101884446eb84eafc3f094301
+    - 32cb999131cc641408e26e63121ec7d4
+    - 095af0330d6f742ab9530d86c7d34fa5
+    - 1f81bcb35d9144f42bc027875ca828fc
+    - dc71edd53e8cf430a84e05b29b2e053d
+    - ea6c07b746322495f821b06bf829d8ba
+    - c4c808c73a92a4fff940b1c86d5de863
+    - 0368cdf8044ab4dda975a7b39f0adc42
+    - 11a2f009d4f8b4731a81f1bbe9d48bd1
+    - b20571c969727412997313687650e4a7
+    - 52a712bb51b78464e923e945f4dbfd3d
+    - 0945b18cbb18c47e080c4c1a40d74ada
+    - 827f719c2da2f4071b626475de6bcdc5
     spriteTextureTimeStamps:
     - 1401535940
     - 1401535940
@@ -711,6 +743,22 @@ MonoBehaviour:
     - 1401535940
     - 1401535940
     - 1401323638
+    - 1401535940
+    - 1401535940
+    - 1401535940
+    - 1401535940
+    - 1401535940
+    - 1401535940
+    - 1401535940
+    - 1401535940
+    - 1401535940
+    - 1401535940
+    - 1401535940
+    - 1401535940
+    - 1401535940
+    - 1401535940
+    - 1401535940
+    - 1401535939
     managedSpriteCollection: 0
     loadable: 0
     assetName: 

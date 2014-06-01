@@ -44,22 +44,22 @@ public class DestoryOption : MonoBehaviour{
 	public virtual int chackCollisionValue(BullectControl chackBullet){ return 0; }
 
 	protected virtual void crushAndLiveControl(){}
-	protected virtual void crushAndDieControl(bool PlayerChack, bool bladeDelete){}
+	protected virtual void crushAndDieControl(bool bladeDelete, bool playerCheck){}
 
-	public bool destroyBullectChack(bool bladeDelete = false){
+	public bool destroyBullectChack(bool bladeDelete = false, bool playerCheck = false){
 		if(_currentPenetrate < 0) return false;
 		if(--_currentPenetrate > 0){
 			crushAndLiveControl();
 			return false;
 		}
 		
-		crushAndDieControl(!destroyChack, bladeDelete);
+		crushAndDieControl(bladeDelete, playerCheck);
 		return true;
 	}
 
 	public int chackCrushPlayerValue(Vector3 _playerPS){
 		if(returnMagnitude(_playerPS) <= _destroyOption._destroySize){
-			return destroyBullectChack(false) ? 2 : 1;
+			return destroyBullectChack(false, true) ? 2 : 1;
 		}
 		return 0;
 	}
@@ -75,6 +75,6 @@ public class DestoryOption : MonoBehaviour{
 		return (VPosition - basePositon).magnitude;
 	}
 	
-	
+	public float destroySize{ get { return _destroyOption._destroySize; }}
 	public virtual void coinChaseFlowAct(bool actChack){}
 }

@@ -14,10 +14,7 @@ public class BullectControl : BulletBase {
 		Enemy_1,
 		Enemy_2,
 		Enemy_3,
-		PowerUp_Bear,
-		player_shot,
-		player_shot_1,
-		player_shot_2
+		PowerUp_Bear
 	}
 	
 	[SerializeField] objectPosition _obPoint = objectPosition.enemy;
@@ -418,9 +415,9 @@ public class BullectControl : BulletBase {
 		//if(_selectFlight.TrackAfterACrash) controlMoveOption();
 	}
 
-	protected override void crushAndDieControl(bool destroyCheck, bool bladeDelete){
+	protected override void crushAndDieControl(bool bladeDelete, bool playerCheck){
 		if(_powerOption) _destroyOption._collistionControl.createPowerUpIter(VPosition);
-		if(_crushEffect != null && !destroyCheck) crushAniControl(bladeDelete);
+		if(_crushEffect != null && !playerCheck) crushAniControl(bladeDelete);
 		else stopBulletObject();
 	}
 

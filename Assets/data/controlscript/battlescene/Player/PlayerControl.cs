@@ -565,7 +565,7 @@ public class PlayerControl : MonoBehaviour {
 		_barrierObject.SetActive(false);
 	}
 
-	void ActTransformUnit(){
+	void ActTransformUnit(GameObject selectbutton){
 		if(_drowSwitchIndex == 0 || _drowSwitchIndex == 10) {
 			bulletEnabledControl(false);
 			_blockScript.ActSpriteAni(true);
@@ -590,6 +590,7 @@ public class PlayerControl : MonoBehaviour {
 			_drowChackTime = 0;
 			this.enabled = true;
 			collisionChack._allstopBulletCreate = true;
+			selectbutton.SetActive(false);
 		}
 	}
 }

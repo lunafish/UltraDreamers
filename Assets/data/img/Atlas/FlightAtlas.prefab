@@ -62,7 +62,7 @@ MonoBehaviour:
   atlasWidth: 2048
   atlasHeight: 2048
   forceSquareAtlas: 1
-  atlasWastage: 48.3035583
+  atlasWastage: 50.4824638
   allowMultipleAtlases: 0
   removeDuplicates: 1
   textureParams:
@@ -517,13 +517,13 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: particle_1_00006
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 0368cdf8044ab4dda975a7b39f0adc42, type: 3}
+    texture: {fileID: 0}
     materialId: 0
-    anchor: 7
+    anchor: 4
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -558,13 +558,13 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: particle_1_00008
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 0945b18cbb18c47e080c4c1a40d74ada, type: 3}
+    texture: {fileID: 0}
     materialId: 0
-    anchor: 7
+    anchor: 4
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -599,13 +599,13 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: particle_1_00004
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 095af0330d6f742ab9530d86c7d34fa5, type: 3}
+    texture: {fileID: 0}
     materialId: 0
-    anchor: 7
+    anchor: 4
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -640,13 +640,13 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: particle_1_00011
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 11a2f009d4f8b4731a81f1bbe9d48bd1, type: 3}
+    texture: {fileID: 0}
     materialId: 0
-    anchor: 7
+    anchor: 4
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -681,13 +681,13 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: particle_1_00005
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 15f63a2101884446eb84eafc3f094301, type: 3}
+    texture: {fileID: 0}
     materialId: 0
-    anchor: 7
+    anchor: 4
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -722,13 +722,13 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: particle_1_00015
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 1f81bcb35d9144f42bc027875ca828fc, type: 3}
+    texture: {fileID: 0}
     materialId: 0
-    anchor: 7
+    anchor: 4
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -763,13 +763,13 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: particle_1_00014
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 31a74200de1484997b6594760cae0450, type: 3}
+    texture: {fileID: 0}
     materialId: 0
-    anchor: 7
+    anchor: 4
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -804,13 +804,13 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: particle_1_00001
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 32cb999131cc641408e26e63121ec7d4, type: 3}
+    texture: {fileID: 0}
     materialId: 0
-    anchor: 7
+    anchor: 4
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -845,13 +845,13 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: particle_1_00007
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 40d9cee0f50bc4bad9bb20d2985e8e38, type: 3}
+    texture: {fileID: 0}
     materialId: 0
-    anchor: 7
+    anchor: 4
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -886,13 +886,13 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: particle_1_00012
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 52a712bb51b78464e923e945f4dbfd3d, type: 3}
+    texture: {fileID: 0}
     materialId: 0
-    anchor: 7
+    anchor: 4
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -927,13 +927,13 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: particle_1_00003
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: 60e82fa03f5094c3f83b8dff4398ec1c, type: 3}
+    texture: {fileID: 0}
     materialId: 0
-    anchor: 7
+    anchor: 4
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -968,13 +968,13 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: particle_1_00010
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: b20571c969727412997313687650e4a7, type: 3}
+    texture: {fileID: 0}
     materialId: 0
-    anchor: 7
+    anchor: 4
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -1009,13 +1009,13 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: particle_1_00013
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: c4c808c73a92a4fff940b1c86d5de863, type: 3}
+    texture: {fileID: 0}
     materialId: 0
-    anchor: 7
+    anchor: 4
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -1050,13 +1050,13 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: particle_1_00002
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: dc71edd53e8cf430a84e05b29b2e053d, type: 3}
+    texture: {fileID: 0}
     materialId: 0
-    anchor: 7
+    anchor: 4
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
@@ -1091,13 +1091,13 @@ MonoBehaviour:
     colliderSmoothSphereCollisions: 0
     colliderColor: 0
     attachPoints: []
-  - name: particle_1_00009
+  - name: 
     disableTrimming: 0
     additive: 0
     scale: {x: 1, y: 1, z: 1}
-    texture: {fileID: 2800000, guid: ea6c07b746322495f821b06bf829d8ba, type: 3}
+    texture: {fileID: 0}
     materialId: 0
-    anchor: 7
+    anchor: 4
     anchorX: 0
     anchorY: 0
     overrideMesh: {fileID: 0}
